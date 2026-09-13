@@ -1557,3 +1557,34 @@ ul, ol { list-style: none; }
 }
 .visually-hidden { display: none; }
 
+/* ────────────────────────────────────────────────────────────
+   21. ABOUT PAGE — CAPABILITY LIST
+   New, additive component. Does not modify any existing selector
+   and is not referenced by the homepage — safe to add without
+   affecting current pages.
+   ──────────────────────────────────────────────────────────── */
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.about-list__icon {
+  width: 18px;
+  height: 18px;
+  background: rgba(111,115,87,0.1);
+  border: 1px solid rgba(111,115,87,0.25);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.about-list__text {
+  font-size: 14px;
+  color: var(--clr-body-text);
+  line-height: 1.65;
+}
+

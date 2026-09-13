@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>About Katie West, Operations Consultant | Elevate Consulting</title>
+  <meta name="description" content="Meet Katie West, founder of Elevate Consulting. Learn how she learns your business fast, listens to the people doing the work, and builds operational systems your team will actually use.">
+  <link rel="canonical" href="https://everyoneneedsakatiewest.com/about">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://everyoneneedsakatiewest.com/about">
+  <meta property="og:title"       content="About Katie West | Elevate Consulting">
+  <meta property="og:description" content="Meet Katie West, founder of Elevate Consulting — an operations consultant who learns your business fast, simplifies what isn't working, and builds systems your team will actually use.">
+  <!-- TODO: no page-specific OG image yet — sitewide og-home.jpg also not yet supplied (see Phase 1A). Add one here once About photography is finalized. -->
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Favicon placeholder (file not yet supplied — see Phase 1A) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION (identical to homepage — About marked active)
+═══════════════════════════════════════════════════════════ -->
+<nav id="site-nav" class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="nav__logo" aria-label="Elevate Consulting home">
+      Elevate <span>Consulting</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav__links" role="list">
+
+      <!-- Services dropdown -->
+      <li class="nav__item">
+        <a href="/services" class="nav__link" aria-haspopup="true">Services</a>
+        <div class="nav__dropdown" role="menu">
+          <a href="/services/google-workspace-systems" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Google Workspace Systems</div>
+            <div class="nav__drop-desc">Folder systems, SOP libraries, dashboards, CRM trackers</div>
+          </a>
+          <a href="/services/sops-playbooks" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">SOPs &amp; Playbooks</div>
+            <div class="nav__drop-desc">Documented processes your whole team can follow</div>
+          </a>
+          <a href="/services/crm-automation" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">CRM &amp; Automation</div>
+            <div class="nav__drop-desc">Lead tracking and follow-up systems</div>
+          </a>
+          <a href="/services/operations-consulting" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Operations Consulting</div>
+            <div class="nav__drop-desc">Scaling, structure, and process improvement</div>
+          </a>
+          <a href="/work-with-me" class="nav__drop-item nav__drop-item--cta" role="menuitem">
+            <div class="nav__drop-name">Work With Me →</div>
+            <div class="nav__drop-desc">See how engagements work</div>
+          </a>
+        </div>
+      </li>
+
+      <!-- Industries dropdown -->
+      <li class="nav__item">
+        <a href="/industries" class="nav__link" aria-haspopup="true">Industries</a>
+        <div class="nav__dropdown" role="menu">
+          <a href="/industries/roofing" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Roofing Companies</div>
+            <div class="nav__drop-desc">Operations, estimating, crew systems</div>
+          </a>
+          <a href="/industries/real-estate" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Real Estate Professionals</div>
+            <div class="nav__drop-desc">Agent systems, CRM, transaction workflows</div>
+          </a>
+          <a href="/industries/service-businesses" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Service Businesses</div>
+            <div class="nav__drop-desc">Operations and scaling systems</div>
+          </a>
+          <a href="https://apply.elevateconsulting.co/discovery" target="_blank" rel="noopener noreferrer" class="nav__drop-item nav__drop-item--cta" role="menuitem">
+            <div class="nav__drop-name">Not sure? Start here →</div>
+            <div class="nav__drop-desc">Book a free discovery call</div>
+          </a>
+        </div>
+      </li>
+
+      <li><a href="/about" class="nav__link active" aria-current="page">About</a></li>
+      <li><a href="/resources" class="nav__link">Resources</a></li>
+      <li><a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="nav__link">Templates</a></li>
+    </ul>
+
+    <!-- Desktop CTAs -->
+    <div class="nav__ctas">
+      <a href="https://apply.elevateconsulting.co/audit"
+         target="_blank" rel="noopener noreferrer"
+         class="nav__cta-audit">Free Audit</a>
+      <a href="https://apply.elevateconsulting.co/discovery"
+         target="_blank" rel="noopener noreferrer"
+         class="nav__cta-book">Book a Call</a>
+    </div>
+
+    <!-- Mobile: always-visible book button + hamburger -->
+    <a href="https://apply.elevateconsulting.co/discovery"
+       target="_blank" rel="noopener noreferrer"
+       class="nav__cta-book-mobile"
+       aria-label="Book a discovery call">Book a Call</a>
+    <button id="nav-hamburger" class="nav__hamburger"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-mobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div id="nav-mobile" class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="/services" class="nav__mobile-link">Services</a>
+  <a href="/industries" class="nav__mobile-link">Industries</a>
+  <a href="/about" class="nav__mobile-link" aria-current="page">About</a>
+  <a href="/resources" class="nav__mobile-link">Resources</a>
+  <a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="nav__mobile-link">Templates</a>
+  <div class="nav__mobile-ctas">
+    <a href="https://apply.elevateconsulting.co/audit"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn--ghost-light" style="width:100%;justify-content:center;">Free Audit</a>
+    <a href="https://apply.elevateconsulting.co/discovery"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn--primary-dark" style="width:100%;justify-content:center;">Book a Discovery Call</a>
+  </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════════════════════════════════
+     A01 · ABOUT HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="hero" aria-label="About Katie West">
+  <div class="hero__content">
+    <span class="eyebrow">About Katie West</span>
+    <h1 class="h1">I Don't Just Study Operations.<br><em>I've Lived Inside Them.</em></h1>
+    <p class="body-copy body-copy--dark" style="max-width:480px;">
+      I'm the founder of Elevate Consulting — and before I built systems for other people's businesses, I was inside them: learning the software, sitting with the team, watching where the real friction was. That's still how I work today. I walk into whatever you're already using, figure out how your people actually operate, and build the systems that make the work easier instead of heavier.
+    </p>
+    <div class="btn-pair">
+      <a href="https://apply.elevateconsulting.co/discovery"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn--primary">Book a Discovery Call</a>
+      <a href="#how-i-work" class="btn btn--ghost-dark">See How I Work</a>
+    </div>
+    <div class="hero__chips" aria-label="Focus areas">
+      <span class="hero__chip">Operations · Systems · People</span>
+      <span class="hero__chip">Texas-Based · Remote-Capable</span>
+      <span class="hero__chip">Roofing · Real Estate · Service Businesses</span>
+    </div>
+  </div>
+
+  <div class="hero__photo" aria-hidden="true">
+    <!-- Recommended asset: /assets/images/katie/about-hero.jpg
+         Once supplied, replace this placeholder div with:
+         <img src="/assets/images/katie/about-hero.jpg" alt="Katie West, Operations Consultant, Elevate Consulting"> -->
+    <div class="hero__photo-placeholder">
+      <span>Katie West<br>[ Brand Photography ]</span>
+    </div>
+    <div class="hero__credential">
+      <span>Operations Expert<br>Texas-Based</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     A02 · THE REAL PROBLEM I SOLVE
+═══════════════════════════════════════════════════════════ -->
+<section id="the-real-problem" class="section section--ivory" aria-labelledby="real-problem-heading">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow">The Real Problem</span>
+      <h2 class="h2" id="real-problem-heading">
+        You Don't Need More Tools.<br>You Need Someone Who Can See the Whole Business.
+      </h2>
+      <p class="body-copy problem__body">
+        Most of the businesses I work with haven't failed at effort. They've hired good people, tried the software, built the spreadsheets. What's usually missing isn't another platform — it's someone who can step back, see how the pieces are actually supposed to connect, and build the structure underneath everything else. That's the work I do. Not adding complexity. Removing it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     A03 · HOW I THINK & WORK
+═══════════════════════════════════════════════════════════ -->
+<section id="how-i-work" class="section section--ivory-deep" aria-labelledby="how-i-work-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow eyebrow--olive">How I Think &amp; Work</span>
+      <h2 class="h2" id="how-i-work-heading">
+        Systems Only Work When<br>They're Built Around People.
+      </h2>
+      <p class="body-copy">
+        Every engagement comes down to the same combination: understanding people, mapping process, and choosing the right technology to support both — in that order. Technology is never the starting point. It's the last piece, once I know how your team actually works and what's getting in their way.
+      </p>
+    </div>
+
+    <div class="pain-cards" role="list">
+      <div class="pain-card" role="listitem">
+        <h3 class="pain-card__title">People First</h3>
+        <p class="pain-card__body">Before I touch a single tool, I talk to the people actually doing the work — not just leadership. The gap between what leadership thinks is happening and what's really happening is usually where the friction lives.</p>
+      </div>
+      <div class="pain-card" role="listitem">
+        <h3 class="pain-card__title">Process Before Platform</h3>
+        <p class="pain-card__body">I map how work actually moves through your business before I recommend anything. A system built on an undocumented process just automates the chaos faster.</p>
+      </div>
+      <div class="pain-card" role="listitem">
+        <h3 class="pain-card__title">Technology That Gets Adopted</h3>
+        <p class="pain-card__body">The best system in the world is worthless if your team won't use it. I build things simple enough to actually stick — and I teach it back in a way people can run without me.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     A04 · WHY MY APPROACH IS DIFFERENT
+═══════════════════════════════════════════════════════════ -->
+<section id="why-different" class="section section--ivory" aria-labelledby="why-different-heading">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about__text">
+        <span class="eyebrow eyebrow--mauve">Why It's Different</span>
+        <h2 class="h2" id="why-different-heading">
+          I Learn Your Business Fast<br>— Then I Simplify It.
+        </h2>
+        <div class="about__body body-copy">
+          <p>
+            One of the things clients notice quickly is how fast I can walk into an unfamiliar business, an unfamiliar tool, or an unfamiliar process and understand not just how it's supposed to work, but how people are actually using it day to day. I'm not attached to a single software stack or a one-size-fits-all framework. I look at what you already have, figure out what's creating friction, and personalize the system to how your business actually runs — instead of asking you to change how you work to fit a template.
+          </p>
+          <p>
+            I also spend as much time listening as I do building. A lot of operational breakdowns aren't really technology problems — they're communication gaps between leadership, the team doing the work, and the customer on the other end. Part of what I do is sit in that gap and translate: turning what leadership needs, what the team can realistically execute, and what the customer experiences into one system everyone can actually follow.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-list" aria-label="What that looks like in practice">
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Learns new software and workflows quickly — no long ramp-up required</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Talks to the people actually doing the work, not just leadership</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Simplifies before automating, instead of automating the chaos</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Builds systems documented and simple enough for your team to run without you</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Bridges the gap between leadership, employees, systems, and customers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     A05 · EXPERIENCE & CREDIBILITY
+═══════════════════════════════════════════════════════════ -->
+<section id="experience" class="section section--ivory-deep" aria-labelledby="experience-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Experience</span>
+      <h2 class="h2" id="experience-heading">A Track Record Built<br>Inside Real Operations.</h2>
+    </div>
+
+    <div class="about__stats" aria-label="Experience highlights" style="justify-content:center; margin-inline:auto; max-width:520px;">
+      <div>
+        <div class="about__stat-num">10<span>+</span></div>
+        <div class="about__stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="about__stat-num">50<span>+</span></div>
+        <div class="about__stat-label">Businesses Served</div>
+      </div>
+      <div>
+        <div class="about__stat-num">3</div>
+        <div class="about__stat-label">Core Industries</div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top:32px;">
+      <p class="body-copy" style="margin-bottom:14px;">Industries I've worked inside:</p>
+      <div class="industry-tile__tags" style="justify-content:center;" aria-label="Industries served">
+        <span class="industry-tag">Roofing Companies</span>
+        <span class="industry-tag">Real Estate Professionals</span>
+        <span class="industry-tag">Service Businesses</span>
+      </div>
+    </div>
+
+    <!--
+      CONTENT PLACEHOLDER — KATIE, PLEASE REVIEW:
+      This section currently uses only the stats and industry list already
+      established on the homepage. If you have specific, verifiable proof
+      points to strengthen this section — certifications, notable client
+      outcomes, before/after examples, a case study — send them over and
+      they can be added here. Nothing has been invented or estimated.
+    -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     A06 · PERSONAL / HUMAN
+═══════════════════════════════════════════════════════════ -->
+<section id="personal" class="section section--ivory" aria-labelledby="personal-heading">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow eyebrow--olive">Beyond the Systems</span>
+      <h2 class="h2" id="personal-heading">The Person Behind Elevate Consulting.</h2>
+      <p class="body-copy problem__body">
+        I'm based in Texas and work with clients remotely across the country. What drew me to this work in the first place wasn't operations for its own sake — it was watching a team go from overwhelmed and disorganized to confident, almost overnight, once the right system finally clicked into place.
+      </p>
+      <p class="body-copy problem__body" style="margin-top:-20px;">
+        I like the puzzle of a messy operation. I like sitting with the person who's been quietly holding a business together with sticky notes and group texts, and building them something that finally works the way their business actually runs. If that sounds like where your business is right now, I'd like to hear about it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     A07 · CONVERSION
+═══════════════════════════════════════════════════════════ -->
+<section id="lets-talk" class="section section--gold" aria-labelledby="about-cta-heading">
+  <div class="container">
+    <div class="cta-gold">
+      <p class="cta-gold__eyebrow">Let's Work Together</p>
+      <h2 class="h2 h2--white" id="about-cta-heading">
+        Ready to Build a Business<br>That Runs Without You in Every Decision?
+      </h2>
+      <p class="cta-gold__body">
+        You've read how I think and how I work. If that sounds like what your business needs right now, the next step is a conversation — not a sales pitch.
+      </p>
+      <div class="btn-pair" style="justify-content:center;">
+        <a href="https://apply.elevateconsulting.co/discovery"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--primary-gold">Book a Discovery Call</a>
+        <a href="https://apply.elevateconsulting.co/audit"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--ghost-gold">Get the Free Audit</a>
+      </div>
+      <p class="cta-gold__micro">Free 30-minute call. No commitment required.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER (identical to homepage)
+═══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+
+      <!-- Brand column -->
+      <div>
+        <a href="/" class="footer__logo" aria-label="Elevate Consulting home">
+          Elevate <span>Consulting</span>
+        </a>
+        <p class="footer__tagline">
+          Operational clarity for service-based businesses — through systems, processes, and the infrastructure to scale with confidence.
+        </p>
+        <div class="footer__socials" aria-label="Social media">
+          <a href="https://linkedin.com/in/katiewest" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="LinkedIn">in</a>
+          <a href="https://instagram.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Instagram">ig</a>
+          <a href="https://facebook.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+
+      <!-- Services column -->
+      <nav aria-label="Services navigation">
+        <div class="footer__col-head">Services</div>
+        <ul class="footer__links" role="list">
+          <li><a href="/services/google-workspace-systems" class="footer__link">Google Workspace Systems</a></li>
+          <li><a href="/services/sops-playbooks" class="footer__link">SOPs &amp; Playbooks</a></li>
+          <li><a href="/services/crm-automation" class="footer__link">CRM &amp; Automation</a></li>
+          <li><a href="/services/operations-consulting" class="footer__link">Operations Consulting</a></li>
+        </ul>
+      </nav>
+
+      <!-- Company column -->
+      <nav aria-label="Company navigation">
+        <div class="footer__col-head">Company</div>
+        <ul class="footer__links" role="list">
+          <li><a href="/about" class="footer__link">About</a></li>
+          <li><a href="/industries" class="footer__link">Industries</a></li>
+          <li><a href="/work-with-me" class="footer__link">Work With Me</a></li>
+          <li><a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="footer__link">Templates</a></li>
+          <li>
+            <a href="https://apply.elevateconsulting.co/discovery"
+               target="_blank" rel="noopener noreferrer"
+               class="footer__link footer__link--cta">Book a Discovery Call →</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact column -->
+      <div>
+        <div class="footer__col-head">Contact</div>
+        <ul class="footer__links" role="list">
+          <li><a href="mailto:hello@elevateconsulting.co" class="footer__link">hello@elevateconsulting.co</a></li>
+          <li><span class="footer__link">Texas · Remote-Capable</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="year"></span> Elevate Consulting. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/js/script.js" defer></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<!-- Scroll-reveal CSS (inline — zero additional request; not currently used on this page, kept for parity with homepage) -->
+<style>
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease var(--reveal-delay, 0s),
+              transform 0.5s ease var(--reveal-delay, 0s);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+</body>
+</html>
