@@ -188,6 +188,16 @@ ul, ol { list-style: none; }
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
 }
+/* .services-grid: added for the Services page's 4-up card layout — new,
+   additive utility, does not modify grid-4/grid-6. Placed here (rather
+   than appended at end of file) so it precedes the RESPONSIVE section
+   below, matching this file's cascade order. Responsive rules for it
+   live alongside the other grids in section 19. */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
 
 .section-header {
   text-align: center;
@@ -1484,6 +1494,7 @@ ul, ol { list-style: none; }
   .hero__photo { display: none; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .eco-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 28px; }
 }
 
@@ -1516,6 +1527,7 @@ ul, ol { list-style: none; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-6 { grid-template-columns: 1fr; }
   .industry-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
   .testi-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; gap: 8px; }
   .step::after { display: none; }
