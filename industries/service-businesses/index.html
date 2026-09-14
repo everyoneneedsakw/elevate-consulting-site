@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    TEMPORARY COMING SOON PAGE
-    Replace this file when the full page is built.
-    Shared template — see git history / other /*/index.html placeholder
-    pages created alongside this one for the reusable structure.
-  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Primary SEO (temporary placeholder — intentionally minimal, noindex until built) -->
-  <title>Service Businesses — Coming Soon | Elevate Consulting</title>
-  <meta name="description" content="This page is still being built. In the meantime, explore Elevate Consulting's services or reach out to work with Katie directly.">
-  <meta name="robots" content="noindex, follow">
+  <!-- Primary SEO -->
+  <title>Service Businesses | Elevate Consulting</title>
+  <meta name="description" content="How Katie West helps service-based businesses standardize intake, scheduling, and handoffs so the client experience doesn't depend on who's working that day.">
   <link rel="canonical" href="https://everyoneneedsakatiewest.com/industries/service-businesses">
 
   <!-- Open Graph -->
-  <meta property="og:type"  content="website">
-  <meta property="og:url"   content="https://everyoneneedsakatiewest.com/industries/service-businesses">
-  <meta property="og:title" content="Service Businesses — Coming Soon | Elevate Consulting">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://everyoneneedsakatiewest.com/industries/service-businesses">
+  <meta property="og:title"       content="Service Businesses | Elevate Consulting">
+  <meta property="og:description" content="Operational systems built for service-based businesses — whatever the service actually is.">
+  <!-- TODO: no page-specific OG image yet — see Phase 1A/2 notes on sitewide og-home.jpg -->
+  <meta name="twitter:card"       content="summary_large_image">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +31,8 @@
 <body>
 
 <!-- ═══════════════════════════════════════════════════════════
-     NAVIGATION (identical to homepage/About/Services/Work With Me/Industries)
+     NAVIGATION (identical to homepage/About/Services/Work With Me/Industries —
+     Industries marked active)
 ═══════════════════════════════════════════════════════════ -->
 <nav id="site-nav" class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav__inner">
@@ -128,7 +125,7 @@
 <!-- Mobile drawer -->
 <div id="nav-mobile" class="nav__mobile" role="dialog" aria-label="Mobile navigation">
   <a href="/services" class="nav__mobile-link">Services</a>
-  <a href="/industries" class="nav__mobile-link">Industries</a>
+  <a href="/industries" class="nav__mobile-link" aria-current="page">Industries</a>
   <a href="/about" class="nav__mobile-link">About</a>
   <a href="/resources" class="nav__mobile-link">Resources</a>
   <a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="nav__mobile-link">Templates</a>
@@ -147,24 +144,221 @@
 <main id="main-content">
 
 <!-- ═══════════════════════════════════════════════════════════
-     CS01 · COMING SOON
+     ID01 · HERO
 ═══════════════════════════════════════════════════════════ -->
-<section class="section section--charcoal" aria-label="Coming Soon" style="min-height:calc(100vh - var(--nav-h)); display:flex; align-items:center;">
+<section class="section section--charcoal" aria-label="Service Businesses Hero">
   <div class="container">
     <div class="problem__inner">
-      <span class="eyebrow">Service Businesses · Coming Soon</span>
-      <h1 class="h1">Patience Is a<br>System <em>Too.</em></h1>
+      <span class="eyebrow">Service Businesses</span>
+      <h1 class="h1">Whatever You Run,<br>It Can Run <em>Consistently.</em></h1>
       <p class="body-copy body-copy--dark problem__body">
-        This page is still being built — thoughtfully, not slowly.
-      </p>
-      <p class="body-copy body-copy--dark" style="margin-top:-24px; margin-bottom:36px;">
-        Need help before we finish decorating? Reach out.
+        If your business runs on appointments, projects, or client work, the operational patterns tend to look similar no matter what the actual service is. Intake is inconsistent, scheduling depends on one person, and the client experience varies by who's handling it that day. The fix isn't more software — it's the structure underneath it.
       </p>
       <div class="btn-pair" style="justify-content:center;">
-        <a href="/work-with-me" class="btn btn--primary">Work With Me</a>
-        <a href="/services" class="btn btn--ghost-dark">View Services</a>
-        <a href="/" class="btn btn--ghost-dark">Return Home</a>
+        <a href="https://apply.elevateconsulting.co/discovery"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--primary">Book a Discovery Call</a>
+        <a href="#how-i-help" class="btn btn--ghost-dark">See How I Help</a>
       </div>
+      <div class="hero__chips" aria-label="Focus areas" style="justify-content:center;">
+        <span class="hero__chip">Intake · Scheduling · Client Experience</span>
+        <span class="hero__chip">Built for Any Service-Based Business</span>
+        <span class="hero__chip">People + Process + Technology</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID02 · THE FRICTION
+═══════════════════════════════════════════════════════════ -->
+<section id="the-friction" class="section section--ivory" aria-labelledby="friction-heading">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow">The Friction</span>
+      <h2 class="h2" id="friction-heading">Where Service Businesses<br>Commonly Break Down.</h2>
+      <p class="body-copy problem__body">
+        This looks different depending on the business, but the underlying patterns tend to repeat.
+      </p>
+
+      <div class="pain-cards" role="list">
+        <div class="pain-card" role="listitem">
+          <h3 class="pain-card__title">Inconsistent Intake</h3>
+          <p class="pain-card__body">How a new inquiry gets handled depends entirely on who answers — the questions asked, the information collected, and the first impression a potential client gets all vary.</p>
+        </div>
+        <div class="pain-card" role="listitem">
+          <h3 class="pain-card__title">Scheduling That Leans on One Person</h3>
+          <p class="pain-card__body">One person holds the calendar, the client communication, and the internal handoffs together — which works until they're out, overwhelmed, or gone.</p>
+        </div>
+        <div class="pain-card" role="listitem">
+          <h3 class="pain-card__title">Undocumented Handoffs</h3>
+          <p class="pain-card__body">Work moves between team members with no clear process for what information needs to travel with it, so things get repeated, missed, or dropped.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID03 · HOW I HELP
+═══════════════════════════════════════════════════════════ -->
+<section id="how-i-help" class="section section--ivory-deep" aria-labelledby="help-heading">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about__text">
+        <span class="eyebrow eyebrow--olive">How I Help</span>
+        <h2 class="h2" id="help-heading">Systems Built Around<br>How Your Business Actually Runs.</h2>
+        <div class="about__body body-copy">
+          <p>Every service business is a little different, so I start by understanding how work actually moves through yours today — intake, scheduling, delivery, follow-up — before recommending anything.</p>
+          <p>From there, it's usually some combination of documenting the handoffs, organizing intake and scheduling, and building in automation where it actually reduces manual work instead of adding another tool to manage.</p>
+        </div>
+        <p class="body-copy" style="margin-top:6px;">
+          <a href="/work-with-me" class="service-card__link">See how engagements start</a>
+        </p>
+      </div>
+
+      <div class="about-list" aria-label="How I typically help">
+        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Standardize intake so the experience doesn't depend on who answers</span></div>
+        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Document the handoffs between team members</span></div>
+        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Organize scheduling and client communication</span></div>
+        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Reduce reliance on one person holding the process together</span></div>
+        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Build in automation where it actually helps, not just because it's available</span></div>
+        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Create documentation your team can actually follow</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID04 · PEOPLE + PROCESS + TECHNOLOGY
+═══════════════════════════════════════════════════════════ -->
+<section id="approach" class="section section--ivory" aria-labelledby="approach-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow eyebrow--mauve">The Approach</span>
+      <h2 class="h2" id="approach-heading">People + Process + Technology<br>in Service Businesses.</h2>
+    </div>
+
+    <div class="pain-cards" role="list">
+      <div class="pain-card" role="listitem">
+        <h3 class="pain-card__title">People</h3>
+        <p class="pain-card__body">Whatever the service, the people delivering it and the people booking it are the starting point — not the software.</p>
+      </div>
+      <div class="pain-card" role="listitem">
+        <h3 class="pain-card__title">Process</h3>
+        <p class="pain-card__body">I map how a client actually moves from first contact to delivered service in your business, and find where that path is inconsistent.</p>
+      </div>
+      <div class="pain-card" role="listitem">
+        <h3 class="pain-card__title">Technology</h3>
+        <p class="pain-card__body">Whatever scheduling or CRM tool you're using, the question is whether your team is actually using it consistently — and fixing that before adding something new.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID05 · AREAS THAT MAY BE IMPROVED
+═══════════════════════════════════════════════════════════ -->
+<section id="areas-to-improve" class="section section--ivory-deep" aria-labelledby="areas-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow eyebrow--olive">Where to Start</span>
+      <h2 class="h2" id="areas-heading">Areas That May Be Worth Improving.</h2>
+      <p class="body-copy">Every business is different — but these are the areas that come up most often.</p>
+    </div>
+
+    <div class="about-list" style="max-width:640px; margin-inline:auto;" aria-label="Common areas for improvement">
+      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Intake and first-contact consistency</span></div>
+      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Scheduling and calendar management</span></div>
+      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Internal handoffs and documentation</span></div>
+      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Client communication and follow-up</span></div>
+      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Team consistency and training</span></div>
+      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Automation opportunities that reduce manual work</span></div>
+      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Documentation your team can actually maintain</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID06 · RELEVANT SERVICES
+═══════════════════════════════════════════════════════════ -->
+<section id="relevant-services" class="section section--ivory" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow eyebrow--olive">Relevant Services</span>
+      <h2 class="h2" id="services-heading">Where This Usually Starts.</h2>
+      <p class="body-copy problem__body">
+        For most service businesses, the work touches some combination of these:
+      </p>
+      <div class="industry-tile__tags" style="justify-content:center;" aria-label="Relevant services">
+        <span class="industry-tag">Google Workspace Systems</span>
+        <span class="industry-tag">SOPs &amp; Playbooks</span>
+        <span class="industry-tag">CRM &amp; Automation</span>
+        <span class="industry-tag">Operations Consulting</span>
+      </div>
+      <p class="body-copy problem__body" style="margin-top:24px; margin-bottom:0;">
+        <a href="/services" class="btn btn--ghost-light">See the Full Services Breakdown</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID07 · WHAT IT FEELS LIKE
+═══════════════════════════════════════════════════════════ -->
+<section id="what-it-feels-like" class="section section--ivory-deep" aria-labelledby="feels-heading">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow">What It Feels Like</span>
+      <h2 class="h2" id="feels-heading">A Client Experience That Doesn't<br>Depend on Who's Working That Day.</h2>
+      <p class="body-copy problem__body">
+        When the systems are working, intake feels the same no matter who answers, scheduling doesn't live entirely in one person's head, and the client experience is consistent — not dependent on catching the right person on a good day.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID08 · HOW TO START
+═══════════════════════════════════════════════════════════ -->
+<section id="how-to-start" class="section section--ivory" aria-labelledby="start-heading">
+  <div class="container">
+    <div class="process__header">
+      <span class="eyebrow">How to Start</span>
+      <h2 class="h2" id="start-heading">Start With a Conversation.</h2>
+      <p class="body-copy" style="max-width:560px; margin:12px auto 0;">
+        The fastest way to find out what your business actually needs is a discovery call — thirty minutes, no pressure, no pitch.
+      </p>
+    </div>
+
+    <div class="process__cta">
+      <a href="https://apply.elevateconsulting.co/discovery"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn--primary">Book Your Discovery Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ID09 · CONVERSION
+═══════════════════════════════════════════════════════════ -->
+<section id="lets-talk" class="section section--gold" aria-labelledby="industry-cta-heading">
+  <div class="container">
+    <div class="cta-gold">
+      <p class="cta-gold__eyebrow">Let's Work Together</p>
+      <h2 class="h2 h2--white" id="industry-cta-heading">Ready to Make Your Business<br>Easier to Run?</h2>
+      <p class="cta-gold__body">
+        You've seen where the friction usually lives and how I help fix it. If that sounds like your business, the next step is a conversation.
+      </p>
+      <div class="btn-pair" style="justify-content:center;">
+        <a href="https://apply.elevateconsulting.co/discovery"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--primary-gold">Book a Discovery Call</a>
+        <a href="https://apply.elevateconsulting.co/audit"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--ghost-gold">Get the Free Audit</a>
+      </div>
+      <p class="cta-gold__micro">Free 30-minute call. No commitment required.</p>
     </div>
   </div>
 </section>
@@ -244,6 +438,20 @@
 <!-- Scripts -->
 <script src="/assets/js/script.js" defer></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<!-- Scroll-reveal CSS (inline — zero additional request; not currently used on this page, kept for parity) -->
+<style>
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease var(--reveal-delay, 0s),
+              transform 0.5s ease var(--reveal-delay, 0s);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 
 </body>
 </html>
