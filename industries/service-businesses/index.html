@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    TEMPORARY COMING SOON PAGE
+    Replace this file when the full page is built.
+    Shared template — see git history / other /*/index.html placeholder
+    pages created alongside this one for the reusable structure.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO (temporary placeholder — intentionally minimal, noindex until built) -->
+  <title>Service Businesses — Coming Soon | Elevate Consulting</title>
+  <meta name="description" content="This page is still being built. In the meantime, explore Elevate Consulting's services or reach out to work with Katie directly.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://everyoneneedsakatiewest.com/industries/service-businesses">
+
+  <!-- Open Graph -->
+  <meta property="og:type"  content="website">
+  <meta property="og:url"   content="https://everyoneneedsakatiewest.com/industries/service-businesses">
+  <meta property="og:title" content="Service Businesses — Coming Soon | Elevate Consulting">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Favicon placeholder (file not yet supplied — see Phase 1A) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION (identical to homepage/About/Services/Work With Me/Industries)
+═══════════════════════════════════════════════════════════ -->
+<nav id="site-nav" class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="nav__logo" aria-label="Elevate Consulting home">
+      Elevate <span>Consulting</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav__links" role="list">
+
+      <!-- Services dropdown -->
+      <li class="nav__item">
+        <a href="/services" class="nav__link" aria-haspopup="true">Services</a>
+        <div class="nav__dropdown" role="menu">
+          <a href="/services/google-workspace-systems" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Google Workspace Systems</div>
+            <div class="nav__drop-desc">Folder systems, SOP libraries, dashboards, CRM trackers</div>
+          </a>
+          <a href="/services/sops-playbooks" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">SOPs &amp; Playbooks</div>
+            <div class="nav__drop-desc">Documented processes your whole team can follow</div>
+          </a>
+          <a href="/services/crm-automation" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">CRM &amp; Automation</div>
+            <div class="nav__drop-desc">Lead tracking and follow-up systems</div>
+          </a>
+          <a href="/services/operations-consulting" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Operations Consulting</div>
+            <div class="nav__drop-desc">Scaling, structure, and process improvement</div>
+          </a>
+          <a href="/work-with-me" class="nav__drop-item nav__drop-item--cta" role="menuitem">
+            <div class="nav__drop-name">Work With Me →</div>
+            <div class="nav__drop-desc">See how engagements work</div>
+          </a>
+        </div>
+      </li>
+
+      <!-- Industries dropdown -->
+      <li class="nav__item">
+        <a href="/industries" class="nav__link active" aria-haspopup="true" aria-current="page">Industries</a>
+        <div class="nav__dropdown" role="menu">
+          <a href="/industries/roofing" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Roofing Companies</div>
+            <div class="nav__drop-desc">Operations, estimating, crew systems</div>
+          </a>
+          <a href="/industries/real-estate" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Real Estate Professionals</div>
+            <div class="nav__drop-desc">Agent systems, CRM, transaction workflows</div>
+          </a>
+          <a href="/industries/service-businesses" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Service Businesses</div>
+            <div class="nav__drop-desc">Operations and scaling systems</div>
+          </a>
+          <a href="https://apply.elevateconsulting.co/discovery" target="_blank" rel="noopener noreferrer" class="nav__drop-item nav__drop-item--cta" role="menuitem">
+            <div class="nav__drop-name">Not sure? Start here →</div>
+            <div class="nav__drop-desc">Book a free discovery call</div>
+          </a>
+        </div>
+      </li>
+
+      <li><a href="/about" class="nav__link">About</a></li>
+      <li><a href="/resources" class="nav__link">Resources</a></li>
+      <li><a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="nav__link">Templates</a></li>
+    </ul>
+
+    <!-- Desktop CTAs -->
+    <div class="nav__ctas">
+      <a href="https://apply.elevateconsulting.co/audit"
+         target="_blank" rel="noopener noreferrer"
+         class="nav__cta-audit">Free Audit</a>
+      <a href="https://apply.elevateconsulting.co/discovery"
+         target="_blank" rel="noopener noreferrer"
+         class="nav__cta-book">Book a Call</a>
+    </div>
+
+    <!-- Mobile: always-visible book button + hamburger -->
+    <a href="https://apply.elevateconsulting.co/discovery"
+       target="_blank" rel="noopener noreferrer"
+       class="nav__cta-book-mobile"
+       aria-label="Book a discovery call">Book a Call</a>
+    <button id="nav-hamburger" class="nav__hamburger"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-mobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div id="nav-mobile" class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="/services" class="nav__mobile-link">Services</a>
+  <a href="/industries" class="nav__mobile-link">Industries</a>
+  <a href="/about" class="nav__mobile-link">About</a>
+  <a href="/resources" class="nav__mobile-link">Resources</a>
+  <a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="nav__mobile-link">Templates</a>
+  <div class="nav__mobile-ctas">
+    <a href="https://apply.elevateconsulting.co/audit"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn--ghost-light" style="width:100%;justify-content:center;">Free Audit</a>
+    <a href="https://apply.elevateconsulting.co/discovery"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn--primary-dark" style="width:100%;justify-content:center;">Book a Discovery Call</a>
+  </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════════════════════════════════
+     CS01 · COMING SOON
+═══════════════════════════════════════════════════════════ -->
+<section class="section section--charcoal" aria-label="Coming Soon" style="min-height:calc(100vh - var(--nav-h)); display:flex; align-items:center;">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow">Service Businesses · Coming Soon</span>
+      <h1 class="h1">Patience Is a<br>System <em>Too.</em></h1>
+      <p class="body-copy body-copy--dark problem__body">
+        This page is still being built — thoughtfully, not slowly.
+      </p>
+      <p class="body-copy body-copy--dark" style="margin-top:-24px; margin-bottom:36px;">
+        Need help before we finish decorating? Reach out.
+      </p>
+      <div class="btn-pair" style="justify-content:center;">
+        <a href="/work-with-me" class="btn btn--primary">Work With Me</a>
+        <a href="/services" class="btn btn--ghost-dark">View Services</a>
+        <a href="/" class="btn btn--ghost-dark">Return Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER (identical to homepage/About/Services/Work With Me/Industries)
+═══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+
+      <!-- Brand column -->
+      <div>
+        <a href="/" class="footer__logo" aria-label="Elevate Consulting home">
+          Elevate <span>Consulting</span>
+        </a>
+        <p class="footer__tagline">
+          Operational clarity for service-based businesses — through systems, processes, and the infrastructure to scale with confidence.
+        </p>
+        <div class="footer__socials" aria-label="Social media">
+          <a href="https://linkedin.com/in/katiewest" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="LinkedIn">in</a>
+          <a href="https://instagram.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Instagram">ig</a>
+          <a href="https://facebook.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+
+      <!-- Services column -->
+      <nav aria-label="Services navigation">
+        <div class="footer__col-head">Services</div>
+        <ul class="footer__links" role="list">
+          <li><a href="/services/google-workspace-systems" class="footer__link">Google Workspace Systems</a></li>
+          <li><a href="/services/sops-playbooks" class="footer__link">SOPs &amp; Playbooks</a></li>
+          <li><a href="/services/crm-automation" class="footer__link">CRM &amp; Automation</a></li>
+          <li><a href="/services/operations-consulting" class="footer__link">Operations Consulting</a></li>
+        </ul>
+      </nav>
+
+      <!-- Company column -->
+      <nav aria-label="Company navigation">
+        <div class="footer__col-head">Company</div>
+        <ul class="footer__links" role="list">
+          <li><a href="/about" class="footer__link">About</a></li>
+          <li><a href="/industries" class="footer__link">Industries</a></li>
+          <li><a href="/work-with-me" class="footer__link">Work With Me</a></li>
+          <li><a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="footer__link">Templates</a></li>
+          <li>
+            <a href="https://apply.elevateconsulting.co/discovery"
+               target="_blank" rel="noopener noreferrer"
+               class="footer__link footer__link--cta">Book a Discovery Call →</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact column -->
+      <div>
+        <div class="footer__col-head">Contact</div>
+        <ul class="footer__links" role="list">
+          <li><a href="mailto:hello@elevateconsulting.co" class="footer__link">hello@elevateconsulting.co</a></li>
+          <li><span class="footer__link">Texas · Remote-Capable</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="year"></span> Elevate Consulting. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/js/script.js" defer></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
