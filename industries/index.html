@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Industries | Elevate Consulting</title>
+  <meta name="description" content="See how operational friction shows up differently across roofing companies, real estate professionals, and service businesses — and how Katie West's systems approach adapts to each.">
+  <link rel="canonical" href="https://everyoneneedsakatiewest.com/industries">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://everyoneneedsakatiewest.com/industries">
+  <meta property="og:title"       content="Industries | Elevate Consulting">
+  <meta property="og:description" content="Roofing companies, real estate professionals, and service businesses — different operating realities, the same underlying systems approach.">
+  <!-- TODO: no page-specific OG image yet — see Phase 1A/2 notes on sitewide og-home.jpg -->
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Favicon placeholder (file not yet supplied — see Phase 1A) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION (identical to homepage/About/Services/Work With Me —
+     Industries marked active)
+═══════════════════════════════════════════════════════════ -->
+<nav id="site-nav" class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="nav__logo" aria-label="Elevate Consulting home">
+      Elevate <span>Consulting</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav__links" role="list">
+
+      <!-- Services dropdown -->
+      <li class="nav__item">
+        <a href="/services" class="nav__link" aria-haspopup="true">Services</a>
+        <div class="nav__dropdown" role="menu">
+          <a href="/services/google-workspace-systems" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Google Workspace Systems</div>
+            <div class="nav__drop-desc">Folder systems, SOP libraries, dashboards, CRM trackers</div>
+          </a>
+          <a href="/services/sops-playbooks" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">SOPs &amp; Playbooks</div>
+            <div class="nav__drop-desc">Documented processes your whole team can follow</div>
+          </a>
+          <a href="/services/crm-automation" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">CRM &amp; Automation</div>
+            <div class="nav__drop-desc">Lead tracking and follow-up systems</div>
+          </a>
+          <a href="/services/operations-consulting" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Operations Consulting</div>
+            <div class="nav__drop-desc">Scaling, structure, and process improvement</div>
+          </a>
+          <a href="/work-with-me" class="nav__drop-item nav__drop-item--cta" role="menuitem">
+            <div class="nav__drop-name">Work With Me →</div>
+            <div class="nav__drop-desc">See how engagements work</div>
+          </a>
+        </div>
+      </li>
+
+      <!-- Industries dropdown -->
+      <li class="nav__item">
+        <a href="/industries" class="nav__link active" aria-haspopup="true" aria-current="page">Industries</a>
+        <div class="nav__dropdown" role="menu">
+          <a href="/industries/roofing" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Roofing Companies</div>
+            <div class="nav__drop-desc">Operations, estimating, crew systems</div>
+          </a>
+          <a href="/industries/real-estate" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Real Estate Professionals</div>
+            <div class="nav__drop-desc">Agent systems, CRM, transaction workflows</div>
+          </a>
+          <a href="/industries/service-businesses" class="nav__drop-item" role="menuitem">
+            <div class="nav__drop-name">Service Businesses</div>
+            <div class="nav__drop-desc">Operations and scaling systems</div>
+          </a>
+          <a href="https://apply.elevateconsulting.co/discovery" target="_blank" rel="noopener noreferrer" class="nav__drop-item nav__drop-item--cta" role="menuitem">
+            <div class="nav__drop-name">Not sure? Start here →</div>
+            <div class="nav__drop-desc">Book a free discovery call</div>
+          </a>
+        </div>
+      </li>
+
+      <li><a href="/about" class="nav__link">About</a></li>
+      <li><a href="/resources" class="nav__link">Resources</a></li>
+      <li><a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="nav__link">Templates</a></li>
+    </ul>
+
+    <!-- Desktop CTAs -->
+    <div class="nav__ctas">
+      <a href="https://apply.elevateconsulting.co/audit"
+         target="_blank" rel="noopener noreferrer"
+         class="nav__cta-audit">Free Audit</a>
+      <a href="https://apply.elevateconsulting.co/discovery"
+         target="_blank" rel="noopener noreferrer"
+         class="nav__cta-book">Book a Call</a>
+    </div>
+
+    <!-- Mobile: always-visible book button + hamburger -->
+    <a href="https://apply.elevateconsulting.co/discovery"
+       target="_blank" rel="noopener noreferrer"
+       class="nav__cta-book-mobile"
+       aria-label="Book a discovery call">Book a Call</a>
+    <button id="nav-hamburger" class="nav__hamburger"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-mobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div id="nav-mobile" class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="/services" class="nav__mobile-link">Services</a>
+  <a href="/industries" class="nav__mobile-link" aria-current="page">Industries</a>
+  <a href="/about" class="nav__mobile-link">About</a>
+  <a href="/resources" class="nav__mobile-link">Resources</a>
+  <a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="nav__mobile-link">Templates</a>
+  <div class="nav__mobile-ctas">
+    <a href="https://apply.elevateconsulting.co/audit"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn--ghost-light" style="width:100%;justify-content:center;">Free Audit</a>
+    <a href="https://apply.elevateconsulting.co/discovery"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn--primary-dark" style="width:100%;justify-content:center;">Book a Discovery Call</a>
+  </div>
+</div>
+
+<div class="nav-spacer"></div>
+
+<main id="main-content">
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN01 · HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="section section--charcoal" aria-label="Industries Hero">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow">Industries</span>
+      <h1 class="h1">Different Business.<br>Same Underlying <em>Breakdowns.</em></h1>
+      <p class="body-copy body-copy--dark problem__body">
+        Roofing, real estate, and service businesses don't operate the same way day to day — but underneath the surface, the operational breakdowns tend to look strikingly similar: inconsistent processes, poor information flow, tools that exist but aren't really used, and a leadership team still approving things that shouldn't need them anymore.
+      </p>
+      <div class="btn-pair" style="justify-content:center;">
+        <a href="https://apply.elevateconsulting.co/discovery"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--primary">Book a Discovery Call</a>
+        <a href="#industry-overview" class="btn btn--ghost-dark">See the Industries</a>
+      </div>
+      <div class="hero__chips" aria-label="Focus areas" style="justify-content:center;">
+        <span class="hero__chip">Roofing · Real Estate · Service Businesses</span>
+        <span class="hero__chip">Same Method, Different Environment</span>
+        <span class="hero__chip">People + Process + Technology</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN02 · INDUSTRY OVERVIEW (intro)
+═══════════════════════════════════════════════════════════ -->
+<section id="industry-overview" class="section section--ivory" aria-labelledby="overview-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow eyebrow--olive">Industry Overview</span>
+      <h2 class="h2" id="overview-heading">Where I Most Often Come In.</h2>
+      <p class="body-copy">
+        Every industry has its own rhythm and its own vocabulary — but the friction underneath tends to fall into the same handful of patterns. Here's how that usually shows up in the businesses I work with most.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN03 · ROOFING COMPANIES
+═══════════════════════════════════════════════════════════ -->
+<!--
+  NOTE FOR ACTIVATION: once /industries/roofing exists, replace the
+  .service-card__link href below (currently "#how-to-start") with
+  "/industries/roofing".
+-->
+<section id="roofing-companies" class="section section--ivory-deep" aria-labelledby="roofing-heading">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about__text">
+        <div class="service-card__icon" aria-hidden="true">
+          <span class="service-card__icon-text">RF</span>
+        </div>
+        <span class="eyebrow">Roofing Companies</span>
+        <h2 class="h2" id="roofing-heading">Roofing Companies</h2>
+        <div class="about__body body-copy">
+          <p>
+            Roofing operations move fast and involve a lot of handoffs — from the first estimate, to production, to the office, to whoever's fielding the customer's calls in between. When those handoffs aren't clearly systemized, things get dropped, and it's usually the customer who notices first.
+          </p>
+          <p>
+            I work inside that chain — cleaning up how leads and estimates get followed up on, how information moves between sales and production, and how the office stays looped in without everything running through one person.
+          </p>
+        </div>
+        <p class="body-copy" style="margin-top:6px;">
+          <a href="#how-to-start" class="service-card__link">Talk to Katie About Roofing Operations</a>
+        </p>
+      </div>
+
+      <div class="about-list" aria-label="Common friction in roofing operations">
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Leads and estimates that don't get consistent follow-up</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Handoffs between sales, production, and the office that lose information along the way</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">A CRM that's in place but not actually being used</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Project documentation that lives in someone's head — or a truck</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Scheduling and communication that depends on who you catch on the phone</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">SOPs that exist on paper but aren't followed day to day</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Leadership fielding decisions that should run without them</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN04 · REAL ESTATE PROFESSIONALS
+═══════════════════════════════════════════════════════════ -->
+<!--
+  NOTE FOR ACTIVATION: once /industries/real-estate exists, replace the
+  .service-card__link href below (currently "#how-to-start") with
+  "/industries/real-estate".
+-->
+<section id="real-estate-professionals" class="section section--ivory" aria-labelledby="realestate-heading">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about__text">
+        <div class="service-card__icon" aria-hidden="true">
+          <span class="service-card__icon-text">RE</span>
+        </div>
+        <span class="eyebrow">Real Estate Professionals</span>
+        <h2 class="h2" id="realestate-heading">Real Estate Professionals</h2>
+        <div class="about__body body-copy">
+          <p>
+            Agents and teams juggle a lot at once — leads at every stage, transactions on different timelines, and a client experience that's supposed to feel seamless even when the backend isn't. When the systems behind it are inconsistent, it shows up as dropped follow-up and a transaction process that depends on memory.
+          </p>
+          <p>
+            I clean up the database and CRM, build repeatable systems for onboarding and follow-up, and organize the administrative side of transactions so less depends on manual coordination.
+          </p>
+        </div>
+        <p class="body-copy" style="margin-top:6px;">
+          <a href="#how-to-start" class="service-card__link">Talk to Katie About Real Estate Systems</a>
+        </p>
+      </div>
+
+      <div class="about-list" aria-label="Common friction in real estate operations">
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Leads that go cold because follow-up isn't systemized</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">A client journey that's inconsistent from one transaction to the next</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">A CRM or database that's outdated or underused</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Transaction paperwork and deadlines tracked manually</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Onboarding that has to be re-explained to every new hire or assistant</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Administrative work that eats time that should go to clients</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN05 · SERVICE BUSINESSES
+═══════════════════════════════════════════════════════════ -->
+<!--
+  NOTE FOR ACTIVATION: once /industries/service-businesses exists,
+  replace the .service-card__link href below (currently "#how-to-start")
+  with "/industries/service-businesses".
+-->
+<section id="service-businesses" class="section section--ivory-deep" aria-labelledby="servicebiz-heading">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about__text">
+        <div class="service-card__icon" aria-hidden="true">
+          <span class="service-card__icon-text">SB</span>
+        </div>
+        <span class="eyebrow">Service Businesses</span>
+        <h2 class="h2" id="servicebiz-heading">Service Businesses</h2>
+        <div class="about__body body-copy">
+          <p>
+            This category is intentionally broad — if your business runs on appointments, projects, or client work, the operational patterns tend to look similar no matter what the service actually is. Intake is inconsistent, scheduling depends on one person, and the client experience varies by who's handling it that day.
+          </p>
+          <p>
+            I organize intake and scheduling, document the handoffs between team members, and build the systems — and automation, where it actually helps — that make the client experience consistent no matter who's involved.
+          </p>
+        </div>
+        <p class="body-copy" style="margin-top:6px;">
+          <a href="#how-to-start" class="service-card__link">Talk to Katie About Your Business</a>
+        </p>
+      </div>
+
+      <div class="about-list" aria-label="Common friction in service businesses">
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Intake that looks different depending on who answers</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Scheduling and communication that leans on one person to hold it together</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Internal handoffs where information gets lost</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Little to no documentation of how things are actually supposed to run</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">A client experience that depends on who's handling it that day</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Manual work that could be simplified or automated, but hasn't been yet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN06 · WHAT STAYS THE SAME ACROSS INDUSTRIES
+═══════════════════════════════════════════════════════════ -->
+<section id="what-stays-the-same" class="section section--ivory" aria-labelledby="samemethod-heading">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about__text">
+        <span class="eyebrow eyebrow--mauve">What Stays the Same</span>
+        <h2 class="h2" id="samemethod-heading">
+          Same Method.<br>Different Environment.
+        </h2>
+        <div class="about__body body-copy">
+          <p>
+            Roofing, real estate, and service businesses don't get the same playbook just because they hired the same person. Every engagement starts from scratch — because your business, your team, and your friction points are specific to you.
+          </p>
+          <p>
+            What doesn't change is how I get there.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-list" aria-label="The consistent method behind every engagement">
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Understand the people doing the work</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Map how the process actually runs today</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Identify where the real friction is — not just where it shows up</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Simplify before automating</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Choose and configure the right technology for it</span>
+        </div>
+        <div class="about-list__item">
+          <div class="about-list__icon" aria-hidden="true"></div>
+          <span class="about-list__text">Document it and teach it so your team can run it without me</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN07 · WHICH SERVICE FITS?
+═══════════════════════════════════════════════════════════ -->
+<section id="which-service-fits" class="section section--ivory-deep" aria-labelledby="fits-heading">
+  <div class="container">
+    <div class="problem__inner">
+      <span class="eyebrow eyebrow--olive">Which Service Fits?</span>
+      <h2 class="h2" id="fits-heading">
+        Industry Tells Us the Context.<br>Services Tells Us the Support.
+      </h2>
+      <p class="body-copy problem__body">
+        Knowing your industry helps me understand the environment your business operates in. Figuring out which service actually fits — Google Workspace, SOPs, CRM, or broader operations consulting — usually depends on what's actually causing the friction, not just what industry you're in.
+      </p>
+      <a href="/services" class="btn btn--ghost-light">See the Full Services Breakdown</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN08 · HOW TO START
+═══════════════════════════════════════════════════════════ -->
+<section id="how-to-start" class="section section--ivory" aria-labelledby="start-heading">
+  <div class="container">
+    <div class="process__header">
+      <span class="eyebrow">How to Start</span>
+      <h2 class="h2" id="start-heading">
+        Start With a Conversation,<br>Not an Assumption.
+      </h2>
+      <p class="body-copy" style="max-width:560px; margin:12px auto 0;">
+        Whatever industry your business is in, the fastest way to find out what's actually going on is a discovery call — thirty minutes, no pressure, no pitch.
+      </p>
+    </div>
+
+    <div class="process__cta">
+      <a href="https://apply.elevateconsulting.co/discovery"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn--primary">Book Your Discovery Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     IN09 · CONVERSION
+═══════════════════════════════════════════════════════════ -->
+<section id="lets-talk" class="section section--gold" aria-labelledby="industries-cta-heading">
+  <div class="container">
+    <div class="cta-gold">
+      <p class="cta-gold__eyebrow">Let's Work Together</p>
+      <h2 class="h2 h2--white" id="industries-cta-heading">
+        Ready to See How This<br>Applies to Your Business?
+      </h2>
+      <p class="cta-gold__body">
+        Whatever industry you're in, if the friction sounds familiar, the next step is the same: a conversation.
+      </p>
+      <div class="btn-pair" style="justify-content:center;">
+        <a href="https://apply.elevateconsulting.co/discovery"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--primary-gold">Book a Discovery Call</a>
+        <a href="https://apply.elevateconsulting.co/audit"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn--ghost-gold">Get the Free Audit</a>
+      </div>
+      <p class="cta-gold__micro">Free 30-minute call. No commitment required.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER (identical to homepage/About/Services/Work With Me)
+═══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+
+      <!-- Brand column -->
+      <div>
+        <a href="/" class="footer__logo" aria-label="Elevate Consulting home">
+          Elevate <span>Consulting</span>
+        </a>
+        <p class="footer__tagline">
+          Operational clarity for service-based businesses — through systems, processes, and the infrastructure to scale with confidence.
+        </p>
+        <div class="footer__socials" aria-label="Social media">
+          <a href="https://linkedin.com/in/katiewest" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="LinkedIn">in</a>
+          <a href="https://instagram.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Instagram">ig</a>
+          <a href="https://facebook.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+
+      <!-- Services column -->
+      <nav aria-label="Services navigation">
+        <div class="footer__col-head">Services</div>
+        <ul class="footer__links" role="list">
+          <li><a href="/services/google-workspace-systems" class="footer__link">Google Workspace Systems</a></li>
+          <li><a href="/services/sops-playbooks" class="footer__link">SOPs &amp; Playbooks</a></li>
+          <li><a href="/services/crm-automation" class="footer__link">CRM &amp; Automation</a></li>
+          <li><a href="/services/operations-consulting" class="footer__link">Operations Consulting</a></li>
+        </ul>
+      </nav>
+
+      <!-- Company column -->
+      <nav aria-label="Company navigation">
+        <div class="footer__col-head">Company</div>
+        <ul class="footer__links" role="list">
+          <li><a href="/about" class="footer__link">About</a></li>
+          <li><a href="/industries" class="footer__link">Industries</a></li>
+          <li><a href="/work-with-me" class="footer__link">Work With Me</a></li>
+          <li><a href="https://shop.elevateconsulting.co" target="_blank" rel="noopener noreferrer" class="footer__link">Templates</a></li>
+          <li>
+            <a href="https://apply.elevateconsulting.co/discovery"
+               target="_blank" rel="noopener noreferrer"
+               class="footer__link footer__link--cta">Book a Discovery Call →</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact column -->
+      <div>
+        <div class="footer__col-head">Contact</div>
+        <ul class="footer__links" role="list">
+          <li><a href="mailto:hello@elevateconsulting.co" class="footer__link">hello@elevateconsulting.co</a></li>
+          <li><span class="footer__link">Texas · Remote-Capable</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="year"></span> Elevate Consulting. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/js/script.js" defer></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<!-- Scroll-reveal CSS (inline — zero additional request; not currently used on this page, kept for parity) -->
+<style>
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease var(--reveal-delay, 0s),
+              transform 0.5s ease var(--reveal-delay, 0s);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+</body>
+</html>
