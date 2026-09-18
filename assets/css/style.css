@@ -1521,6 +1521,7 @@ ul, ol { list-style: none; }
   .nav__links { display: none; }
   .nav__ctas { display: none; }
   .nav__hamburger { display: flex; }
+  .nav__inner { gap: 8px; }
   .nav__cta-book-mobile {
     display: flex;
     font-family: var(--ff-head);
@@ -1530,9 +1531,10 @@ ul, ol { list-style: none; }
     text-transform: uppercase;
     color: var(--clr-ivory);
     background: var(--clr-charcoal);
-    padding: 9px 16px;
+    padding: 9px 12px;
     border-radius: 0;
-    margin-right: 8px;
+    margin-right: 0;
+    white-space: nowrap;
   }
 
   .hero__content { padding: 52px var(--sp-section-h) 52px; }
