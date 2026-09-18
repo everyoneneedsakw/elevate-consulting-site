@@ -1279,6 +1279,20 @@ ul, ol { list-style: none; }
   margin-top: 32px;
 }
 
+/* Disabled "Coming Soon" treatment for CTAs with no approved destination yet
+   (sitewide pricing/link cleanup) — muted, non-interactive, no invented link */
+.is-coming-soon {
+  color: var(--clr-warm-gray) !important;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.is-coming-soon.eco-card--soon__link::after { content: ''; }
+.eco-card__btn.is-coming-soon {
+  background: var(--clr-ivory-deep);
+  color: var(--clr-warm-gray) !important;
+}
+
 /* ────────────────────────────────────────────────────────────
    16. LEAD MAGNET / AUDIT CTA (S10 — V2 version)
    ──────────────────────────────────────────────────────────── */
