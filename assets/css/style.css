@@ -1279,6 +1279,20 @@ ul, ol { list-style: none; }
   margin-top: 32px;
 }
 
+/* Disabled "Coming Soon" treatment for CTAs with no approved destination yet
+   (sitewide pricing/link cleanup) — muted, non-interactive, no invented link */
+.is-coming-soon {
+  color: var(--clr-warm-gray) !important;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.is-coming-soon.eco-card--soon__link::after { content: ''; }
+.eco-card__btn.is-coming-soon {
+  background: var(--clr-ivory-deep);
+  color: var(--clr-warm-gray) !important;
+}
+
 /* ────────────────────────────────────────────────────────────
    16. LEAD MAGNET / AUDIT CTA (S10 — V2 version)
    ──────────────────────────────────────────────────────────── */
@@ -1507,6 +1521,7 @@ ul, ol { list-style: none; }
   .nav__links { display: none; }
   .nav__ctas { display: none; }
   .nav__hamburger { display: flex; }
+  .nav__inner { gap: 8px; }
   .nav__cta-book-mobile {
     display: flex;
     font-family: var(--ff-head);
@@ -1516,9 +1531,10 @@ ul, ol { list-style: none; }
     text-transform: uppercase;
     color: var(--clr-ivory);
     background: var(--clr-charcoal);
-    padding: 9px 16px;
+    padding: 9px 12px;
     border-radius: 0;
-    margin-right: 8px;
+    margin-right: 0;
+    white-space: nowrap;
   }
 
   .hero__content { padding: 52px var(--sp-section-h) 52px; }
@@ -1547,6 +1563,26 @@ ul, ol { list-style: none; }
   .steps { grid-template-columns: 1fr; }
   .hero__chips { display: none; }
   .cta-gold { padding-block: 72px; }
+  /* Pre-existing ~4px overflow: this disabled label is long enough that
+     .btn's global white-space:nowrap pushes it past the viewport on
+     narrow phones. Letting only this element wrap fixes it without
+     touching .btn anywhere else. */
+  .eco__footer .is-coming-soon { white-space: normal; max-width: calc(100% - 8px); }
+}
+
+/* Extra-narrow phones (iPhone SE/5, small Android): the fixed-width
+   wordmark plus hamburger + mobile CTA no longer fit at 8px gap alone.
+   Tightens logo tracking slightly and the CTA's padding — mobile nav
+   only, 1440px desktop nav is untouched. */
+@media (max-width: 360px) {
+  .nav__inner { gap: 6px; }
+  .nav__logo { letter-spacing: 0.5px; font-size: 12px; }
+  .nav__logo span { letter-spacing: 0.5px; }
+  .nav__cta-book-mobile { padding: 9px 10px; }
+  /* "See the Full Services Breakdown" is long enough to overflow at this
+     width under .btn's global nowrap; letting long ghost-light buttons
+     wrap here fixes it without touching .btn elsewhere. */
+  .btn--ghost-light { white-space: normal; }
 }
 
 /* ────────────────────────────────────────────────────────────
