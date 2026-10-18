@@ -1,0 +1,100 @@
+seo:
+  title: "Roofing Companies | Elevate Consulting"
+  description: "How Katie West helps roofing companies fix estimate follow-up, sales-to-production handoffs, CRM adoption, and scheduling so less depends on any one person."
+  og_title: "Roofing Companies | Elevate Consulting"
+  og_description: "Operational systems built for how roofing companies actually run — from estimate to production to completion."
+
+site:
+  brand_text: "Elevate Consulting"
+
+hero:
+  eyebrow: "Roofing Companies"
+  headline_line1: "Roofing Operations,"
+  headline_prefix: "Actually "
+  headline_italic: "Organized."
+  paragraph: "Roofing companies run on handoffs — estimate to production, office to field, one crew to the next. When those handoffs aren't systemized, nothing catastrophic happens all at once. Things just quietly slip: a follow-up that doesn't happen, a job status nobody can find, a process three different people run three different ways."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "See How We Help"
+  tag1: "Estimating · Production · Office · Field"
+  tag2: "Built From Inside Roofing Operations"
+  tag3: "People + Process + Technology"
+
+friction:
+  eyebrow: "The Friction"
+  headline_line1: "Where Roofing Operations"
+  headline_line2: "Commonly Break Down."
+  intro: "Every roofing company is a little different, but the breakdowns tend to cluster in the same few places."
+  card1_title: "Lead-to-Estimate"
+  card1_desc: "Leads come in fast and from everywhere — referrals, ads, insurance calls. Without a consistent intake and follow-up process, estimates go out inconsistently and follow-up depends on who remembers to do it."
+  card2_title: "Sales-to-Production Handoff"
+  card2_desc: "The information that closes a sale doesn't always make it to the crew that has to execute it. Job details, customer preferences, and site notes get lost somewhere between the estimate and the first day on the roof."
+  card3_title: "Office-to-Field Communication"
+  card3_desc: "Scheduling changes, material issues, and customer questions all have to travel between the field and the office in real time — and when that channel isn't systemized, everyone ends up playing phone tag."
+
+help:
+  eyebrow: "How We Help"
+  headline_line1: "Systems Built Around"
+  headline_line2: "How Roofing Actually Runs."
+  paragraph1: "We don't start by recommending software. We start by mapping how a job actually moves through your business today — from the first phone call to the final walkthrough — and figure out where it's actually breaking down versus where it just feels chaotic."
+  paragraph2: "From there, the work usually involves cleaning up CRM adoption, documenting the handoff between sales and production, and building the project documentation and scheduling systems your team will actually use."
+  cta_label: "See how engagements start"
+  check1: "Build a consistent process for tracking leads and estimates and following up on them, so it doesn't depend on memory"
+  check2: "Document the handoff between sales and production"
+  check3: "Build a project documentation system, so job details don't live in someone's truck — or someone's head"
+  check4: "Build scheduling and communication systems the office and field both use"
+  check5: "Get more consistent use out of the CRM you already have"
+  check6: "Reduce how many decisions have to run through you personally"
+
+approach:
+  eyebrow: "The Approach"
+  headline_line1: "People + Process + Technology"
+  headline_line2: "in Roofing Companies."
+  card1_title: "People"
+  card1_desc: "Roofing operations run on people first — sales reps, production managers, crew leads, the office staff holding it all together. Any system we build starts with understanding how they actually work day to day, not how an org chart says they should."
+  card2_title: "Process"
+  card2_desc: "Before we touch a tool, we map the actual path a job takes — lead to estimate to contract to production to completion — and find where that path breaks down or depends on one person remembering something."
+  card3_title: "Technology"
+  card3_desc: "Whatever CRM, scheduling tool, or project management system you're already using, we look at whether it's actually being used the way it was meant to be — and fix that before recommending something new."
+
+improve:
+  eyebrow: "Where to Start"
+  headline: "Areas That May Be Worth Improving."
+  intro: "Every business is different — but these are the areas that come up most often."
+  check1: "Every lead gets followed up on, even during the busy weeks when it's easy for one to slip through"
+  check2: "The details from the sale actually make it to the crew, instead of getting lost between sales and production"
+  check3: "The CRM gets used the way it's supposed to — by everyone, not just whoever remembers to log in"
+  check4: "Anyone on the team can check where a job stands without having to track someone down"
+  check5: "The office and the field are working off the same information, so schedules don't fall apart over a miscommunication"
+  check6: "Every crew follows the same core standards, without the process changing depending on who's running the job"
+  check7: "Customers hear from you at the right moments during a job, instead of only when something's gone wrong"
+
+relevant:
+  eyebrow: "Relevant Services"
+  headline: "Where This Usually Starts."
+  intro: "For most roofing companies, the work touches some combination of these:"
+  tag1: "Google Workspace Systems"
+  tag2: "SOPs & Playbooks"
+  tag3: "CRM & Automation"
+  tag4: "Operations Consulting"
+  cta_label: "See the Full Services Breakdown"
+
+feel:
+  eyebrow: "What It Feels Like"
+  headline_line1: "A Business That Runs"
+  headline_line2: "Without Everything Going Through You."
+  paragraph: "When the systems are working, estimates go out consistently, the crew shows up with the right information, and you're not the one fielding every scheduling question. It doesn't mean the business runs itself — it means it runs without depending entirely on you being everywhere at once."
+
+start:
+  eyebrow: "How to Start"
+  headline: "Start With a Conversation."
+  paragraph: "The fastest way to find out what your business actually needs is a discovery call — thirty minutes, no pressure, no pitch."
+  cta_label: "Book Your Discovery Call"
+
+finale:
+  eyebrow: "Let's Work Together"
+  headline_line1: "Ready to Get Your Roofing"
+  headline_line2: "Operations Organized?"
+  paragraph: "You've seen where the friction usually lives and how we help fix it. If that sounds like your business, the next step is a conversation."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "Get the Free Audit"
+  note: "Free 30-minute call. No commitment required."

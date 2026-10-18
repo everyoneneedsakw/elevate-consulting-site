@@ -1,0 +1,126 @@
+seo:
+  title: "Work With Me | Elevate Consulting"
+  description: "Find out if working with Katie West is the right fit — how engagements start, what she helps with, and the next step toward systems your business can actually run on."
+  og_title: "Work With Me | Elevate Consulting"
+  og_description: "How working with Katie West starts, what she helps with, and whether it's the right fit for your business."
+
+site:
+  brand_text: "Elevate Consulting"
+
+# This page's nav/footer text differs slightly from the sitewide values in
+# content/shared/ (it avoids linking to itself and uses direct-email CTA
+# wording instead) — these page-specific overrides preserve that exact,
+# already-approved wording rather than forcing the shared text onto it.
+nav_override:
+  industries_cta_desc: "Email Katie directly"
+  mobile_cta_secondary: "Email Us"
+
+footer_override:
+  company_cta: "Contact Katie"
+
+hero:
+  eyebrow: "Work With Me"
+  headline_line1: "From Operational Friction"
+  headline_prefix: "to Systems That "
+  headline_italic: "Run."
+  paragraph: "If you're reading this, you probably already know something in your business isn't running the way it should. This page is for figuring out whether working together makes sense — and what that would actually look like."
+  cta_primary: "Start the Conversation"
+  cta_secondary: "Is This a Fit?"
+  tag1: "People · Process · Technology · Implementation"
+  tag2: "Diagnose Before Prescribing"
+  tag3: "Built for Your Team to Run"
+
+fit:
+  eyebrow: "Is This a Fit?"
+  headline_line1: "You Might Be a Good Fit"
+  headline_line2: "If Any of This Sounds Familiar."
+  paragraph: "Every business we've worked with has recognized at least one of these."
+  card1_title: "You've Outgrown Your Systems"
+  card1_desc: "The business has grown faster than the systems underneath it. Leadership is still involved in decisions that shouldn't need you anymore."
+  card2_title: "Consistency Depends on the Person"
+  card2_desc: "Knowledge lives in someone's head instead of a document. Three people handle the same task three different ways, and nobody's quite sure which way is right."
+  card3_title: "Nothing's Actually Being Used"
+  card3_desc: "You bought the software. You tried the system. It's technically there — but leads slip through, processes go undocumented, and you're not sure where to start fixing it."
+
+help:
+  eyebrow: "What We Help With"
+  headline: "Where We Typically Come In."
+  paragraph: "Every engagement looks a little different depending on what's actually happening inside the business. Sometimes that's a focused project. Sometimes it's ongoing fractional operations support. Often, it's a combination of both. The work itself usually falls into some combination of the following:"
+  cta_label: "See the full services breakdown"
+  check1: "Operations and workflow design"
+  check2: "SOPs and playbooks"
+  check3: "Google Workspace systems"
+  check4: "CRM and automation, including AI where it helps"
+  check5: "Client experience and journey design"
+  check6: "Onboarding systems for new clients or new hires"
+  check7: "Reporting and accountability systems"
+  check8: "Project and program management"
+  check9: "Team adoption and training"
+  check10: "Implementation support — not just recommendations"
+
+starts:
+  eyebrow: "How Working Together Starts"
+  headline_line1: "A Simple Path From"
+  headline_line2: "Confusion to Clarity."
+  step1_label: "Step 01"
+  step1_title: "Understand"
+  step1_desc: "We start with a conversation about where your business is today, what's working, and what isn't. No assumptions, no pitch — just a real look at what's going on."
+  step2_label: "Step 02"
+  step2_title: "Diagnose"
+  step2_desc: "We look at what's actually causing the friction — not just where it shows up. Sometimes it's one thing. Sometimes it's several, tangled together."
+  step3_label: "Step 03"
+  step3_title: "Build & Implement"
+  step3_desc: "We build the systems your business actually needs — documented, organized, and built around how your team really works."
+  step4_label: "Step 04"
+  step4_title: "Document & Teach"
+  step4_desc: "You get more than a finished system. You get a team that understands it, and the documentation to keep running it long after we're done."
+
+different:
+  eyebrow: "What Makes This Different"
+  headline_line1: "This Isn't About"
+  headline_line2: "Selling You Software."
+  paragraph1: "A lot of consultants walk in already knowing what they're going to recommend. We don't work that way. Before we suggest anything, we spend time understanding your business as it actually runs today — not as an org chart says it should."
+  paragraph2: "We also build with an exit in mind. The goal was never for you to need us forever — it's for your team to have systems simple enough, documented enough, and theirs enough to run without us in the room."
+  check1: "Listens to the people actually doing the work"
+  check2: "Doesn't force your business into a predetermined software stack"
+  check3: "Learns your existing environment before recommending anything"
+  check4: "Simplifies before automating"
+  check5: "Builds with adoption in mind, not just delivery"
+  check6: "Wants your team to run it without depending on us forever"
+  check7: "Figures out whether the real problem is the system, the process, who owns it, or how it's being used — before deciding what to fix"
+
+who:
+  eyebrow: "Who We Work With"
+  headline_line1: "Primarily — But Not Exclusively —"
+  headline_line2: "These Industries."
+  paragraph1: "Most of our work has been with:"
+  industry1: "Roofing Companies"
+  industry2: "Real Estate Professionals"
+  industry3: "Service Businesses"
+  paragraph2: "The approach isn't industry-specific — the business is. We learn how yours actually runs first, then build around that."
+
+goodfit:
+  eyebrow: "Good Fit"
+  headline: "This Tends to Work Well When"
+  paragraph: "We can't diagnose your business before we've talked — but engagements tend to go well when a few things are true going in."
+  check1: "You're willing to look honestly at how the business currently operates"
+  check2: "You're willing to involve the people actually doing the work"
+  check3: "You want practical implementation, not just ideas"
+  check4: "You're open to simplifying or changing a process that isn't working"
+  check5: "You want systems your team can actually maintain — not just you"
+
+nextstep:
+  eyebrow: "Next Step"
+  headline: "Start With a Conversation."
+  paragraph: "The best way to find out if this is a fit is a discovery call — thirty minutes, no pressure, no pitch. We'll talk through what's going on in your business and whether working together makes sense."
+  cta_label: "Contact Katie"
+
+finale:
+  eyebrow: "Let's Work Together"
+  headline_line1: "Ready to Find Out"
+  headline_prefix: "What's Actually "
+  headline_italic: "Possible?"
+  paragraph: "You've seen how we think, what we help with, and how engagements start. If that sounds like what your business needs, let's talk."
+  cta_primary: "Reach Out"
+  cta_secondary: "Email Us"
+  note: "Free 30-minute call. No commitment required."

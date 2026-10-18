@@ -1,0 +1,100 @@
+seo:
+  title: "Service Businesses | Elevate Consulting"
+  description: "How Katie West helps service-based businesses standardize intake, scheduling, and handoffs so the client experience doesn't depend on who's working that day."
+  og_title: "Service Businesses | Elevate Consulting"
+  og_description: "Operational systems built for service-based businesses — whatever the service actually is."
+
+site:
+  brand_text: "Elevate Consulting"
+
+hero:
+  eyebrow: "Service Businesses"
+  headline_line1: "Whatever You Run,"
+  headline_prefix: "It Can Run "
+  headline_italic: "Consistently."
+  paragraph: "If your business runs on appointments, projects, or client work, the operational patterns tend to look similar no matter what the actual service is. Intake is inconsistent, scheduling depends on one person, and the client experience varies by who's handling it that day. The fix isn't more software — it's the structure underneath it."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "See How We Help"
+  tag1: "Intake · Scheduling · Client Experience"
+  tag2: "Built for Any Service-Based Business"
+  tag3: "People + Process + Technology"
+
+friction:
+  eyebrow: "The Friction"
+  headline_line1: "Where Service Businesses"
+  headline_line2: "Commonly Break Down."
+  intro: "This looks different depending on the business, but the underlying patterns tend to repeat."
+  card1_title: "Inconsistent Intake"
+  card1_desc: "How a new inquiry gets handled depends entirely on who answers — the questions asked, the information collected, and the first impression a potential client gets all vary."
+  card2_title: "Scheduling That Leans on One Person"
+  card2_desc: "One person holds the calendar, the client communication, and the internal handoffs together — which works until they're out, overwhelmed, or gone."
+  card3_title: "Undocumented Handoffs"
+  card3_desc: "Work moves between team members with no clear process for what information needs to travel with it, so things get repeated, missed, or dropped."
+
+help:
+  eyebrow: "How We Help"
+  headline_line1: "Systems Built Around"
+  headline_line2: "How Your Business Actually Runs."
+  paragraph1: "Every service business is a little different, so we start by understanding how work actually moves through yours today — intake, scheduling, delivery, follow-up — before recommending anything."
+  paragraph2: "From there, it's usually some combination of documenting the handoffs, structuring intake and scheduling, and building in automation where it actually reduces manual work instead of adding another tool to manage."
+  cta_label: "See how engagements start"
+  check1: "Standardize intake so the experience doesn't depend on who answers"
+  check2: "Document the handoffs between team members"
+  check3: "Structure scheduling and client communication"
+  check4: "Reduce reliance on one person holding the process together"
+  check5: "Build in automation where it actually helps, not just because it's available"
+  check6: "Create documentation your team can actually follow"
+
+approach:
+  eyebrow: "The Approach"
+  headline_line1: "People + Process + Technology"
+  headline_line2: "in Service Businesses."
+  card1_title: "People"
+  card1_desc: "Whatever the service, the people delivering it and the people booking it are the starting point — not the software."
+  card2_title: "Process"
+  card2_desc: "We map how a client actually moves from first contact to delivered service in your business, and find where that path is inconsistent."
+  card3_title: "Technology"
+  card3_desc: "Whatever scheduling or CRM tool you're using, the question is whether your team is actually using it consistently — and fixing that before adding something new."
+
+improve:
+  eyebrow: "Where to Start"
+  headline: "Areas That May Be Worth Improving."
+  intro: "Every business is different — but these are the areas that come up most often."
+  check1: "Every new inquiry gets the same first impression, no matter who happens to answer"
+  check2: "The calendar doesn't live in one person's head, so a day off doesn't mean scheduling grinds to a halt"
+  check3: "Work moves between team members with the right information attached, so nothing gets repeated or dropped"
+  check4: "Clients hear from you consistently, without follow-up depending on who remembers to send it"
+  check5: "New team members pick up the process the same way, instead of learning it differently from whoever trains them"
+  check6: "The busywork that can be automated actually is, instead of eating time better spent on clients"
+  check7: "The documentation stays current enough that your team actually reaches for it"
+
+relevant:
+  eyebrow: "Relevant Services"
+  headline: "Where This Usually Starts."
+  intro: "For most service businesses, the work touches some combination of these:"
+  tag1: "Google Workspace Systems"
+  tag2: "SOPs & Playbooks"
+  tag3: "CRM & Automation"
+  tag4: "Operations Consulting"
+  cta_label: "See the Full Services Breakdown"
+
+feel:
+  eyebrow: "What It Feels Like"
+  headline_line1: "A Client Experience That Doesn't"
+  headline_line2: "Depend on Who's Working That Day."
+  paragraph: "When the systems are working, intake feels the same no matter who answers, scheduling doesn't live entirely in one person's head, and the client experience is consistent — not dependent on catching the right person on a good day."
+
+start:
+  eyebrow: "How to Start"
+  headline: "Start With a Conversation."
+  paragraph: "The fastest way to find out what your business actually needs is a discovery call — thirty minutes, no pressure, no pitch."
+  cta_label: "Book Your Discovery Call"
+
+finale:
+  eyebrow: "Let's Work Together"
+  headline_line1: "Ready to Make Your Business"
+  headline_line2: "Easier to Run?"
+  paragraph: "You've seen where the friction usually lives and how we help fix it. If that sounds like your business, the next step is a conversation."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "Get the Free Audit"
+  note: "Free 30-minute call. No commitment required."

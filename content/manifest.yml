@@ -14,3 +14,81 @@ pages:
     content: content/pages/about.yml
     output: about/index.html
     footer: full
+  - key: services
+    label: "Services"
+    template: templates/services.html
+    content: content/pages/services.yml
+    output: services/index.html
+    footer: full
+  - key: services-google-workspace-systems
+    label: "Services — Google Workspace Systems"
+    template: templates/services-coming-soon.html
+    content: content/pages/services-google-workspace-systems.yml
+    output: services/google-workspace-systems/index.html
+    footer: full
+  - key: services-sops-playbooks
+    label: "Services — SOPs & Playbooks"
+    template: templates/services-coming-soon.html
+    content: content/pages/services-sops-playbooks.yml
+    output: services/sops-playbooks/index.html
+    footer: full
+  - key: services-crm-automation
+    label: "Services — CRM & Automation"
+    template: templates/services-crm-automation.html
+    content: content/pages/services-crm-automation.yml
+    output: services/crm-automation/index.html
+    footer: full
+  - key: services-operations-consulting
+    label: "Services — Operations Consulting"
+    template: templates/services-operations-consulting.html
+    content: content/pages/services-operations-consulting.yml
+    output: services/operations-consulting/index.html
+    footer: full
+  - key: industries
+    label: "Industries (hub)"
+    template: templates/industries.html
+    content: content/pages/industries.yml
+    output: industries/index.html
+    footer: full
+  - key: industries-real-estate
+    label: "Industries — Real Estate"
+    template: templates/industries-real-estate.html
+    content: content/pages/industries-real-estate.yml
+    output: industries/real-estate/index.html
+    footer: full
+  - key: industries-roofing
+    label: "Industries — Roofing"
+    template: templates/industries-roofing.html
+    content: content/pages/industries-roofing.yml
+    output: industries/roofing/index.html
+    footer: full
+  - key: industries-service-businesses
+    label: "Industries — Service Businesses"
+    template: templates/industries-service-businesses.html
+    content: content/pages/industries-service-businesses.yml
+    output: industries/service-businesses/index.html
+    footer: full
+  - key: work-with-me
+    label: "Work With Me"
+    template: templates/work-with-me.html
+    content: content/pages/work-with-me.yml
+    output: work-with-me/index.html
+    footer: full
+  - key: resources
+    label: "Resources"
+    template: templates/resources.html
+    content: content/pages/resources.yml
+    output: resources/index.html
+    footer: full
+  - key: privacy-policy
+    label: "Privacy Policy"
+    template: templates/privacy-policy.html
+    content: content/pages/privacy-policy.yml
+    output: privacy-policy/index.html
+    footer: full
+  - key: terms
+    label: "Terms of Service"
+    template: templates/terms.html
+    content: content/pages/terms.yml
+    output: terms/index.html
+    footer: full

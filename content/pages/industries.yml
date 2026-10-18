@@ -1,0 +1,104 @@
+seo:
+  title: "Industries | Elevate Consulting"
+  description: "See how operational friction shows up differently across roofing companies, real estate professionals, and service businesses — and how Katie West's systems approach adapts to each."
+  og_title: "Industries | Elevate Consulting"
+  og_description: "Roofing companies, real estate professionals, and service businesses — different operating realities, the same underlying systems approach."
+
+site:
+  brand_text: "Elevate Consulting"
+
+hero:
+  eyebrow: "Industries"
+  headline_line1: "Different Business."
+  headline_italic: "Same Underlying Breakdowns."
+  paragraph: "No two businesses operate the same way day to day — but underneath the surface, the operational breakdowns tend to look strikingly similar: inconsistent processes, poor information flow, tools that exist but aren't really used, and a leadership team still approving things that shouldn't need them anymore. Roofing, real estate, and service businesses are where we've seen this most closely — but the pattern isn't industry-specific."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "See the Industries"
+  tag1: "Roofing · Real Estate · Service Businesses"
+  tag2: "Same Method, Different Environment"
+  tag3: "People + Process + Technology"
+
+overview:
+  eyebrow: "Industry Overview"
+  headline: "Where We Most Often Come In."
+  paragraph: "Every industry has its own rhythm and its own vocabulary — but the friction underneath tends to fall into the same handful of patterns. Here's how that usually shows up in the businesses we work with most."
+
+roofing:
+  badge: "RF"
+  eyebrow: "Roofing Companies"
+  headline: "Roofing Companies"
+  paragraph1: "Roofing operations move fast and involve a lot of handoffs — from the first estimate, to production, to the office, to whoever's fielding the customer's calls in between. When those handoffs aren't clearly systemized, things get dropped, and it's usually the customer who notices first."
+  paragraph2: "We work inside that chain — cleaning up how leads and estimates get followed up on, how information moves between sales and production, and how the office stays looped in without everything running through one person."
+  cta_label: "Talk to Katie About Roofing Operations"
+  check1: "Leads and estimates that don't get consistent follow-up"
+  check2: "Handoffs between sales, production, and the office that lose information along the way"
+  check3: "A CRM that's in place but not actually being used"
+  check4: "Project documentation that lives in someone's head — or a truck"
+  check5: "Scheduling and communication that depends on who you catch on the phone"
+  check6: "SOPs that exist on paper but aren't followed day to day"
+  check7: "Leadership fielding decisions that should run without them"
+
+realestate:
+  badge: "RE"
+  eyebrow: "Real Estate Professionals"
+  headline: "Real Estate Professionals"
+  paragraph1: "Agents and teams juggle a lot at once — leads at every stage, transactions on different timelines, and a client experience that's supposed to feel seamless even when the backend isn't. When the systems behind it are inconsistent, it shows up as dropped follow-up and a transaction process that depends on memory."
+  paragraph2: "We restructure the database and CRM, build repeatable systems for onboarding and follow-up, and streamline the administrative side of transactions so less depends on manual coordination."
+  cta_label: "Talk to Katie About Real Estate Systems"
+  check1: "Leads that go cold because follow-up isn't systemized"
+  check2: "A client journey that's inconsistent from one transaction to the next"
+  check3: "A CRM or database that's outdated or underused"
+  check4: "Transaction paperwork and deadlines tracked manually"
+  check5: "Onboarding that has to be re-explained to every new hire or assistant"
+  check6: "Administrative work that eats time that should go to clients"
+
+servicebiz:
+  badge: "SB"
+  eyebrow: "Service Businesses"
+  headline: "Service Businesses"
+  paragraph1: "This category is intentionally broad — if your business runs on appointments, projects, or client work, the operational patterns tend to look similar no matter what the service actually is. Intake is inconsistent, scheduling depends on one person, and the client experience varies by who's handling it that day."
+  paragraph2: "We organize intake and scheduling, document the handoffs between team members, and build the systems — and automation, where it actually helps — that make the client experience consistent no matter who's involved."
+  cta_label: "Talk to Katie About Your Business"
+  check1: "Intake that looks different depending on who answers"
+  check2: "Scheduling and communication that leans on one person to hold it together"
+  check3: "Internal handoffs where information gets lost"
+  check4: "Little to no documentation of how things are actually supposed to run"
+  check5: "A client experience that depends on who's handling it that day"
+  check6: "Manual work that could be simplified or automated, but hasn't been yet"
+
+consistency:
+  eyebrow: "What Stays the Same"
+  headline_line1: "Same Method."
+  headline_line2: "Different Environment."
+  paragraph1: "Two roofing companies don't get the same playbook just because they're both roofing companies — and neither does a business in a completely different industry. Every engagement starts from scratch, because your business, your team, and your friction points are specific to you."
+  paragraph2: "What doesn't change is how we get there."
+  check1: "Understand the people doing the work"
+  check2: "Map how the process actually runs today"
+  check3: "Identify where the real friction is — not just where it shows up"
+  check4: "Simplify before automating"
+  check5: "Choose and configure the right technology for it"
+  check6: "Document it and teach it so your team can run it without us"
+
+fits:
+  eyebrow: "Which Service Fits?"
+  headline_line1: "Industry Tells Us the Context."
+  headline_line2: "Services Tells Us the Support."
+  paragraph: "Knowing your industry helps us understand the environment your business operates in. Figuring out which service actually fits — Google Workspace, SOPs, CRM, or broader operations consulting — usually depends on what's actually causing the friction, not just what industry you're in."
+  cta_label: "See the Full Services Breakdown"
+
+start:
+  eyebrow: "How to Start"
+  headline_line1: "Start With a Conversation,"
+  headline_line2: "Not an Assumption."
+  paragraph: "Whatever industry your business is in, the fastest way to find out what's actually going on is a discovery call — thirty minutes, no pressure, no pitch."
+  cta_label: "Book Your Discovery Call"
+
+finale:
+  eyebrow: "Let's Work Together"
+  headline_line1: "Ready to See How This"
+  headline_prefix: "Applies to "
+  headline_italic: "Your Business?"
+  paragraph: "Whatever industry you're in, if the friction sounds familiar, the next step is the same: a conversation."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "Get the Free Audit"
+  note: "Free 30-minute call. No commitment required."

@@ -699,3 +699,2230 @@ content:
     - name: note
       label: Note
       type: string
+- name: page_services
+  label: Services
+  type: file
+  path: content/pages/services.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+    - name: og_description
+      label: OG Description
+      type: text
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+  - name: problem
+    label: Problem
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: core
+    label: Core
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: card1_kicker
+      label: Card 1 Kicker
+      type: string
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card1_cta
+      label: Card 1 CTA
+      type: string
+    - name: card2_kicker
+      label: Card 2 Kicker
+      type: string
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card2_cta
+      label: Card 2 CTA
+      type: string
+    - name: card3_kicker
+      label: Card 3 Kicker
+      type: string
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+    - name: card3_cta
+      label: Card 3 CTA
+      type: string
+    - name: card4_kicker
+      label: Card 4 Kicker
+      type: string
+    - name: card4_title
+      label: Card 4 Title
+      type: string
+    - name: card4_desc
+      label: Card 4 Desc
+      type: text
+    - name: card4_cta
+      label: Card 4 CTA
+      type: string
+  - name: connect
+    label: Connect
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: string
+    - name: check3
+      label: Check 3
+      type: text
+    - name: check4
+      label: Check 4
+      type: string
+  - name: strategy
+    label: Strategy
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+  - name: audience
+    label: Audience
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card1_tag1
+      label: Card 1 Tag 1
+      type: string
+    - name: card1_tag2
+      label: Card 1 Tag 2
+      type: string
+    - name: card1_tag3
+      label: Card 1 Tag 3
+      type: string
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card2_tag1
+      label: Card 2 Tag 1
+      type: string
+    - name: card2_tag2
+      label: Card 2 Tag 2
+      type: string
+    - name: card2_tag3
+      label: Card 2 Tag 3
+      type: string
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+    - name: card3_tag1
+      label: Card 3 Tag 1
+      type: string
+    - name: card3_tag2
+      label: Card 3 Tag 2
+      type: string
+    - name: card3_tag3
+      label: Card 3 Tag 3
+      type: string
+  - name: start
+    label: Start
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: finale
+    label: Finale
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: note
+      label: Note
+      type: string
+- name: page_services-google-workspace-systems
+  label: Services — Google Workspace Systems
+  type: file
+  path: content/pages/services-google-workspace-systems.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: canonical_url
+      label: Canonical URL
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: cta1
+      label: CTA 1
+      type: string
+    - name: cta2
+      label: CTA 2
+      type: string
+    - name: cta3
+      label: CTA 3
+      type: string
+- name: page_services-sops-playbooks
+  label: Services — SOPs & Playbooks
+  type: file
+  path: content/pages/services-sops-playbooks.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: canonical_url
+      label: Canonical URL
+      type: string
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: cta1
+      label: CTA 1
+      type: string
+    - name: cta2
+      label: CTA 2
+      type: string
+    - name: cta3
+      label: CTA 3
+      type: string
+- name: page_services-crm-automation
+  label: Services — CRM & Automation
+  type: file
+  path: content/pages/services-crm-automation.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: cta1
+      label: CTA 1
+      type: string
+    - name: cta2
+      label: CTA 2
+      type: string
+    - name: cta3
+      label: CTA 3
+      type: string
+- name: page_services-operations-consulting
+  label: Services — Operations Consulting
+  type: file
+  path: content/pages/services-operations-consulting.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: cta1
+      label: CTA 1
+      type: string
+    - name: cta2
+      label: CTA 2
+      type: string
+    - name: cta3
+      label: CTA 3
+      type: string
+- name: page_industries
+  label: Industries (hub)
+  type: file
+  path: content/pages/industries.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+    - name: og_description
+      label: OG Description
+      type: text
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+  - name: overview
+    label: Overview
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+  - name: roofing
+    label: Roofing
+    type: object
+    fields:
+    - name: badge
+      label: Badge
+      type: string
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: text
+    - name: check3
+      label: Check 3
+      type: string
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: string
+    - name: check7
+      label: Check 7
+      type: string
+  - name: realestate
+    label: Realestate
+    type: object
+    fields:
+    - name: badge
+      label: Badge
+      type: string
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: text
+    - name: check3
+      label: Check 3
+      type: string
+    - name: check4
+      label: Check 4
+      type: string
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: string
+  - name: servicebiz
+    label: Servicebiz
+    type: object
+    fields:
+    - name: badge
+      label: Badge
+      type: string
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: text
+    - name: check3
+      label: Check 3
+      type: string
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: text
+  - name: consistency
+    label: Consistency
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: string
+    - name: check3
+      label: Check 3
+      type: text
+    - name: check4
+      label: Check 4
+      type: string
+    - name: check5
+      label: Check 5
+      type: string
+    - name: check6
+      label: Check 6
+      type: string
+  - name: fits
+    label: Fits
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: start
+    label: Start
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: finale
+    label: Finale
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: note
+      label: Note
+      type: string
+- name: page_industries-real-estate
+  label: Industries — Real Estate
+  type: file
+  path: content/pages/industries-real-estate.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+    - name: og_description
+      label: OG Description
+      type: text
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+  - name: friction
+    label: Friction
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: help
+    label: Help
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: string
+    - name: check3
+      label: Check 3
+      type: string
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: string
+  - name: approach
+    label: Approach
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: improve
+    label: Improve
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: check1
+      label: Check 1
+      type: text
+    - name: check2
+      label: Check 2
+      type: text
+    - name: check3
+      label: Check 3
+      type: text
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: text
+    - name: check7
+      label: Check 7
+      type: text
+  - name: relevant
+    label: Relevant
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+    - name: tag4
+      label: Tag 4
+      type: string
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: feel
+    label: Feel
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+  - name: start
+    label: Start
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: finale
+    label: Finale
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: note
+      label: Note
+      type: string
+- name: page_industries-roofing
+  label: Industries — Roofing
+  type: file
+  path: content/pages/industries-roofing.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+    - name: og_description
+      label: OG Description
+      type: text
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+  - name: friction
+    label: Friction
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: help
+    label: Help
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+    - name: check1
+      label: Check 1
+      type: text
+    - name: check2
+      label: Check 2
+      type: string
+    - name: check3
+      label: Check 3
+      type: text
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: string
+    - name: check6
+      label: Check 6
+      type: string
+  - name: approach
+    label: Approach
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: improve
+    label: Improve
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: check1
+      label: Check 1
+      type: text
+    - name: check2
+      label: Check 2
+      type: text
+    - name: check3
+      label: Check 3
+      type: text
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: text
+    - name: check7
+      label: Check 7
+      type: text
+  - name: relevant
+    label: Relevant
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+    - name: tag4
+      label: Tag 4
+      type: string
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: feel
+    label: Feel
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+  - name: start
+    label: Start
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: finale
+    label: Finale
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: note
+      label: Note
+      type: string
+- name: page_industries-service-businesses
+  label: Industries — Service Businesses
+  type: file
+  path: content/pages/industries-service-businesses.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+    - name: og_description
+      label: OG Description
+      type: text
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+  - name: friction
+    label: Friction
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: help
+    label: Help
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+    - name: check1
+      label: Check 1
+      type: text
+    - name: check2
+      label: Check 2
+      type: string
+    - name: check3
+      label: Check 3
+      type: string
+    - name: check4
+      label: Check 4
+      type: string
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: string
+  - name: approach
+    label: Approach
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: improve
+    label: Improve
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: check1
+      label: Check 1
+      type: text
+    - name: check2
+      label: Check 2
+      type: text
+    - name: check3
+      label: Check 3
+      type: text
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: text
+    - name: check6
+      label: Check 6
+      type: text
+    - name: check7
+      label: Check 7
+      type: text
+  - name: relevant
+    label: Relevant
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+    - name: tag4
+      label: Tag 4
+      type: string
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: feel
+    label: Feel
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+  - name: start
+    label: Start
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: finale
+    label: Finale
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: note
+      label: Note
+      type: string
+- name: page_work-with-me
+  label: Work With Me
+  type: file
+  path: content/pages/work-with-me.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+    - name: og_description
+      label: OG Description
+      type: text
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: nav_override
+    label: Nav Override
+    type: object
+    fields:
+    - name: industries_cta_desc
+      label: Industries CTA Desc
+      type: string
+    - name: mobile_cta_secondary
+      label: Mobile CTA Secondary
+      type: string
+  - name: footer_override
+    label: Footer Override
+    type: object
+    fields:
+    - name: company_cta
+      label: Company CTA
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: tag1
+      label: Tag 1
+      type: string
+    - name: tag2
+      label: Tag 2
+      type: string
+    - name: tag3
+      label: Tag 3
+      type: string
+  - name: fit
+    label: Fit
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: card1_title
+      label: Card 1 Title
+      type: string
+    - name: card1_desc
+      label: Card 1 Desc
+      type: text
+    - name: card2_title
+      label: Card 2 Title
+      type: string
+    - name: card2_desc
+      label: Card 2 Desc
+      type: text
+    - name: card3_title
+      label: Card 3 Title
+      type: string
+    - name: card3_desc
+      label: Card 3 Desc
+      type: text
+  - name: help
+    label: Help
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: string
+    - name: check3
+      label: Check 3
+      type: string
+    - name: check4
+      label: Check 4
+      type: string
+    - name: check5
+      label: Check 5
+      type: string
+    - name: check6
+      label: Check 6
+      type: string
+    - name: check7
+      label: Check 7
+      type: string
+    - name: check8
+      label: Check 8
+      type: string
+    - name: check9
+      label: Check 9
+      type: string
+    - name: check10
+      label: Check 10
+      type: string
+  - name: starts
+    label: Starts
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: step1_label
+      label: Step 1 Label
+      type: string
+    - name: step1_title
+      label: Step 1 Title
+      type: string
+    - name: step1_desc
+      label: Step 1 Desc
+      type: text
+    - name: step2_label
+      label: Step 2 Label
+      type: string
+    - name: step2_title
+      label: Step 2 Title
+      type: string
+    - name: step2_desc
+      label: Step 2 Desc
+      type: text
+    - name: step3_label
+      label: Step 3 Label
+      type: string
+    - name: step3_title
+      label: Step 3 Title
+      type: string
+    - name: step3_desc
+      label: Step 3 Desc
+      type: text
+    - name: step4_label
+      label: Step 4 Label
+      type: string
+    - name: step4_title
+      label: Step 4 Title
+      type: string
+    - name: step4_desc
+      label: Step 4 Desc
+      type: text
+  - name: different
+    label: Different
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: text
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+    - name: check1
+      label: Check 1
+      type: string
+    - name: check2
+      label: Check 2
+      type: text
+    - name: check3
+      label: Check 3
+      type: text
+    - name: check4
+      label: Check 4
+      type: string
+    - name: check5
+      label: Check 5
+      type: string
+    - name: check6
+      label: Check 6
+      type: string
+    - name: check7
+      label: Check 7
+      type: text
+  - name: who
+    label: Who
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: industry1
+      label: Industry 1
+      type: string
+    - name: industry2
+      label: Industry 2
+      type: string
+    - name: industry3
+      label: Industry 3
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: text
+  - name: goodfit
+    label: Goodfit
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: check1
+      label: Check 1
+      type: text
+    - name: check2
+      label: Check 2
+      type: string
+    - name: check3
+      label: Check 3
+      type: string
+    - name: check4
+      label: Check 4
+      type: text
+    - name: check5
+      label: Check 5
+      type: text
+  - name: nextstep
+    label: Nextstep
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline
+      label: Headline
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
+  - name: finale
+    label: Finale
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_prefix
+      label: Headline Prefix
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: cta_primary
+      label: CTA Primary
+      type: string
+    - name: cta_secondary
+      label: CTA Secondary
+      type: string
+    - name: note
+      label: Note
+      type: string
+- name: page_resources
+  label: Resources
+  type: file
+  path: content/pages/resources.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: cta1
+      label: CTA 1
+      type: string
+    - name: cta2
+      label: CTA 2
+      type: string
+    - name: cta3
+      label: CTA 3
+      type: string
+- name: page_privacy-policy
+  label: Privacy Policy
+  type: file
+  path: content/pages/privacy-policy.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: cta1
+      label: CTA 1
+      type: string
+    - name: cta2
+      label: CTA 2
+      type: string
+    - name: cta3
+      label: CTA 3
+      type: string
+- name: page_terms
+  label: Terms of Service
+  type: file
+  path: content/pages/terms.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: site
+    label: Site
+    type: object
+    fields:
+    - name: brand_text
+      label: Brand Text
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_line2
+      label: Headline Line 2
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: paragraph1
+      label: Paragraph 1
+      type: string
+    - name: paragraph2
+      label: Paragraph 2
+      type: string
+    - name: cta1
+      label: CTA 1
+      type: string
+    - name: cta2
+      label: CTA 2
+      type: string
+    - name: cta3
+      label: CTA 3
+      type: string

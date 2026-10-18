@@ -1,0 +1,100 @@
+seo:
+  title: "Real Estate Professionals | Elevate Consulting"
+  description: "How Katie West helps real estate agents and teams organize their CRM, build consistent follow-up, and reduce manual transaction coordination."
+  og_title: "Real Estate Professionals | Elevate Consulting"
+  og_description: "Operational systems built for how real estate agents and teams actually move leads and transactions."
+
+site:
+  brand_text: "Elevate Consulting"
+
+hero:
+  eyebrow: "Real Estate Professionals"
+  headline_line1: "A Business That Runs"
+  headline_prefix: "Like a "
+  headline_italic: "System."
+  paragraph: "Agents and teams juggle leads at every stage, transactions on different timelines, and a client experience that's supposed to feel seamless — even when the backend is held together with sticky notes and memory. The work isn't about working harder. It's about building the systems underneath so less depends on you remembering everything."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "See How We Help"
+  tag1: "Leads · Transactions · Client Experience"
+  tag2: "CRM & Database Restructuring"
+  tag3: "People + Process + Technology"
+
+friction:
+  eyebrow: "The Friction"
+  headline_line1: "Where Real Estate Operations"
+  headline_line2: "Commonly Break Down."
+  intro: "Every agent and team is different, but the same few breakdowns tend to show up again and again."
+  card1_title: "Lead Follow-Up"
+  card1_desc: "Leads come in from a dozen different places — referrals, portals, past clients — and without a consistent follow-up system, the ones that don't convert immediately quietly go cold."
+  card2_title: "Inconsistent Client Journey"
+  card2_desc: "One client gets a seamless, white-glove experience. The next gets whatever's left over on a busy week. Without a documented journey, consistency depends entirely on how much bandwidth you have that day."
+  card3_title: "Manual Transaction Coordination"
+  card3_desc: "Deadlines, disclosures, and paperwork get tracked in someone's head or a mix of apps and sticky notes — which works fine until it doesn't, usually at the worst possible moment."
+
+help:
+  eyebrow: "How We Help"
+  headline_line1: "Systems Built Around"
+  headline_line2: "How Deals Actually Move."
+  paragraph1: "We start by looking at how leads, clients, and transactions actually move through your business today — not how the CRM demo said it should work."
+  paragraph2: "From there, the work usually means restructuring the database, building a repeatable follow-up and client journey, and streamlining the administrative side of transactions so less depends on manual coordination."
+  cta_label: "See how engagements start"
+  check1: "Restructure an outdated or underused CRM/database"
+  check2: "Build a consistent follow-up system so leads stop going cold"
+  check3: "Document a repeatable client journey from lead to closing"
+  check4: "Organize transaction deadlines and paperwork so nothing depends on memory"
+  check5: "Create onboarding that doesn't have to be re-explained to every new hire or assistant"
+  check6: "Free up time currently spent on administrative coordination"
+
+approach:
+  eyebrow: "The Approach"
+  headline_line1: "People + Process + Technology"
+  headline_line2: "in Real Estate Professionals."
+  card1_title: "People"
+  card1_desc: "Real estate runs on relationships — with clients, other agents, lenders, title companies. Systems have to support those relationships, not get in the way of them."
+  card2_title: "Process"
+  card2_desc: "We map how a lead actually becomes a closed transaction in your business, then find where that path is inconsistent or depends on you personally holding it together."
+  card3_title: "Technology"
+  card3_desc: "Whatever CRM or transaction management tool you're already paying for, the first question is whether it's actually being used — and fixing that before adding anything new."
+
+improve:
+  eyebrow: "Where to Start"
+  headline: "Areas That May Be Worth Improving."
+  intro: "Every business is different — but these are the areas that come up most often."
+  check1: "Every lead gets captured and followed up on, whether it comes from a referral, a portal, or a past client reaching back out"
+  check2: "The CRM actually reflects what's happening with your leads and clients, instead of being a system nobody trusts enough to use"
+  check3: "Every client gets a consistent experience, without the process changing depending on who's managing the transaction"
+  check4: "Deadlines and paperwork get tracked in one place, so nothing depends on someone remembering it at the right moment"
+  check5: "A new agent or assistant can get up to speed without everything being re-explained from scratch"
+  check6: "The administrative side of a transaction runs in the background, instead of pulling your attention away from clients"
+  check7: "The systems still hold up when you add another agent, another assistant, or another dozen transactions a year"
+
+relevant:
+  eyebrow: "Relevant Services"
+  headline: "Where This Usually Starts."
+  intro: "For most real estate professionals, the work touches some combination of these:"
+  tag1: "Google Workspace Systems"
+  tag2: "SOPs & Playbooks"
+  tag3: "CRM & Automation"
+  tag4: "Operations Consulting"
+  cta_label: "See the Full Services Breakdown"
+
+feel:
+  eyebrow: "What It Feels Like"
+  headline_line1: "Consistency,"
+  headline_line2: "Without Adding Complexity."
+  paragraph: "When the systems are working, every client gets the same level of experience regardless of how busy your week is, and the deals that are supposed to close on time actually do — without you being the one holding every detail in your head."
+
+start:
+  eyebrow: "How to Start"
+  headline: "Start With a Conversation."
+  paragraph: "The fastest way to find out what your business actually needs is a discovery call — thirty minutes, no pressure, no pitch."
+  cta_label: "Book Your Discovery Call"
+
+finale:
+  eyebrow: "Let's Work Together"
+  headline_line1: "Ready to Build the System"
+  headline_line2: "Behind Your Business?"
+  paragraph: "You've seen where the friction usually lives and how we help fix it. If that sounds like your business, the next step is a conversation."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "Get the Free Audit"
+  note: "Free 30-minute call. No commitment required."
