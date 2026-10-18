@@ -2876,30 +2876,134 @@ content:
     - name: eyebrow
       label: Eyebrow
       type: string
-    - name: headline_line1
-      label: Headline Line 1
+    - name: headline
+      label: Headline
       type: string
-    - name: headline_line2
-      label: Headline Line 2
+    - name: last_updated
+      label: Last Updated
       type: string
-    - name: headline_italic
-      label: Headline Italic
+    - name: intro
+      label: Intro
+      type: text
+  - name: s1
+    label: S 1
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: paragraph1
-      label: Paragraph 1
+    - name: p1
+      label: P 1
+      type: text
+  - name: s2
+    label: S 2
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: paragraph2
-      label: Paragraph 2
+    - name: p1
+      label: P 1
+      type: text
+    - name: p2
+      label: P 2
+      type: text
+  - name: s3
+    label: S 3
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: cta1
-      label: CTA 1
+    - name: p1
+      label: P 1
+      type: text
+    - name: p2
+      label: P 2
+      type: text
+  - name: s4
+    label: S 4
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: cta2
-      label: CTA 2
+    - name: p1
+      label: P 1
+      type: text
+  - name: s5
+    label: S 5
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: cta3
-      label: CTA 3
+    - name: p1
+      label: P 1
+      type: text
+  - name: s6
+    label: S 6
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s7
+    label: S 7
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s8
+    label: S 8
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+    - name: p2
+      label: P 2
+      type: text
+  - name: s9
+    label: S 9
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s10
+    label: S 10
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s11
+    label: S 11
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
 - name: page_terms
   label: Terms of Service
   type: file
@@ -2933,27 +3037,125 @@ content:
     - name: eyebrow
       label: Eyebrow
       type: string
-    - name: headline_line1
-      label: Headline Line 1
+    - name: headline
+      label: Headline
       type: string
-    - name: headline_line2
-      label: Headline Line 2
+    - name: last_updated
+      label: Last Updated
       type: string
-    - name: headline_italic
-      label: Headline Italic
+    - name: intro
+      label: Intro
+      type: text
+  - name: s1
+    label: S 1
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: paragraph1
-      label: Paragraph 1
+    - name: p1
+      label: P 1
+      type: text
+  - name: s2
+    label: S 2
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: paragraph2
-      label: Paragraph 2
+    - name: p1
+      label: P 1
+      type: text
+  - name: s3
+    label: S 3
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: cta1
-      label: CTA 1
+    - name: p1
+      label: P 1
+      type: text
+  - name: s4
+    label: S 4
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: cta2
-      label: CTA 2
+    - name: p1
+      label: P 1
+      type: text
+  - name: s5
+    label: S 5
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
-    - name: cta3
-      label: CTA 3
+    - name: p1
+      label: P 1
+      type: text
+    - name: p2
+      label: P 2
+      type: text
+  - name: s6
+    label: S 6
+    type: object
+    fields:
+    - name: heading
+      label: Heading
       type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s7
+    label: S 7
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s8
+    label: S 8
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s9
+    label: S 9
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s10
+    label: S 10
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text
+  - name: s11
+    label: S 11
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: p1
+      label: P 1
+      type: text

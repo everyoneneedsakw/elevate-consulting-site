@@ -1,18 +1,60 @@
 seo:
-  title: "Privacy Policy — Coming Soon | Elevate Consulting"
-  description: "This page is still being built. In the meantime, explore Elevate Consulting's services or reach out to work with Katie directly."
-  og_title: "Privacy Policy — Coming Soon | Elevate Consulting"
+  title: "Privacy Policy | Elevate Consulting & Concierge"
+  description: "How Elevate Consulting & Concierge LLC collects, uses, and protects information submitted through this website."
+  og_title: "Privacy Policy | Elevate Consulting & Concierge"
 
 site:
   brand_text: "Elevate Consulting"
 
 hero:
-  eyebrow: "Privacy Policy · Coming Soon"
-  headline_line1: "Patience Is a"
-  headline_line2: "System"
-  headline_italic: "Too."
-  paragraph1: "This page is still being built — thoughtfully, not slowly."
-  paragraph2: "Need help before we finish decorating? Reach out."
-  cta1: "Email Us"
-  cta2: "View Services"
-  cta3: "Return Home"
+  eyebrow: "Privacy Policy"
+  headline: "Privacy Policy"
+  last_updated: "Last updated: October 18, 2026"
+  intro: "This Privacy Policy explains what information Elevate Consulting & Concierge LLC collects through this website, why we collect it, and how it's handled. It applies to everyoneneedsakatiewest.com only — not to any separate client agreement, proposal, or engagement paperwork you may sign with us."
+
+s1:
+  heading: "1. Who We Are"
+  p1: "This website is operated by Elevate Consulting & Concierge LLC, a Texas limited liability company based in San Antonio, Texas, providing remote operations consulting services nationwide. For any question about this policy or your information, contact us at katie@everyoneneedsakatiewest.com."
+
+s2:
+  heading: "2. Information You Provide to Us"
+  p1: "When you submit the inquiry form on our Work With Me page, we collect the information you enter: your name, email address, business or company name, and the message you write describing what you need help with."
+  p2: "We do not ask for or knowingly collect payment information, Social Security numbers, or other sensitive personal data through this website."
+
+s3:
+  heading: "3. Information Collected Automatically"
+  p1: "When you submit the inquiry form, our form-hosting provider automatically records your IP address, browser/device user-agent string, and the page that referred you to the form, alongside the message you submitted. We use this only to understand where inquiries come from and to help identify spam; we do not use it to track your activity elsewhere on the web."
+  p2: "This website does not currently use analytics software (such as Google Analytics), advertising pixels, or non-essential tracking cookies. If that changes, we'll update this policy before any such tool goes live."
+
+s4:
+  heading: "4. How We Use Your Information"
+  p1: "We use the information submitted through the inquiry form to respond to your inquiry, evaluate whether working together is a fit, and follow up about our services. We do not sell, rent, or trade your information to third parties, and we do not use it for advertising."
+
+s5:
+  heading: "5. Who We Share Information With"
+  p1: "Form submissions are processed and stored by Netlify, Inc., the hosting provider for this website, which acts as our data processor for that purpose. We don't share your information with any other third party except where required by law, to protect our legal rights, or with your explicit permission."
+
+s6:
+  heading: "6. Data Retention"
+  p1: "We retain inquiry form submissions for as long as reasonably necessary to respond to your inquiry and maintain business records, after which they may be deleted. You can request earlier deletion at any time — see Section 8 below."
+
+s7:
+  heading: "7. How We Protect Your Information"
+  p1: "This site is served over HTTPS, and form submissions are handled by Netlify's infrastructure rather than a custom database we maintain ourselves. No method of transmission or storage is 100% secure, but we don't ask for or store information beyond what's described in this policy."
+
+s8:
+  heading: "8. Your Choices and Rights"
+  p1: "You can ask us at any time to tell you what information we have about you, correct it, or delete it, by emailing katie@everyoneneedsakatiewest.com. We will respond and honor reasonable requests within a reasonable timeframe."
+  p2: "We do not sell personal information, as that term is defined under California and other state privacy laws, and we do not need to maintain a formal opt-out process for a sale that doesn't happen. If you are a California resident and have questions about your rights under the CCPA, you're welcome to reach out using the contact information above."
+
+s9:
+  heading: "9. Children's Privacy"
+  p1: "This website and our services are directed at businesses and business owners, not children. We do not knowingly collect information from anyone under 16 years of age."
+
+s10:
+  heading: "10. Changes to This Policy"
+  p1: "We may update this Privacy Policy as our website or practices change. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of the site after a change means you accept the updated policy."
+
+s11:
+  heading: "11. Contact Us"
+  p1: "Questions about this policy or your information can be sent to katie@everyoneneedsakatiewest.com."

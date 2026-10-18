@@ -1,18 +1,58 @@
 seo:
-  title: "Terms of Service — Coming Soon | Elevate Consulting"
-  description: "This page is still being built. In the meantime, explore Elevate Consulting's services or reach out to work with Katie directly."
-  og_title: "Terms of Service — Coming Soon | Elevate Consulting"
+  title: "Terms of Use | Elevate Consulting & Concierge"
+  description: "The terms that govern your use of the Elevate Consulting & Concierge website."
+  og_title: "Terms of Use | Elevate Consulting & Concierge"
 
 site:
   brand_text: "Elevate Consulting"
 
 hero:
-  eyebrow: "Terms of Service · Coming Soon"
-  headline_line1: "Patience Is a"
-  headline_line2: "System"
-  headline_italic: "Too."
-  paragraph1: "This page is still being built — thoughtfully, not slowly."
-  paragraph2: "Need help before we finish decorating? Reach out."
-  cta1: "Email Us"
-  cta2: "View Services"
-  cta3: "Return Home"
+  eyebrow: "Terms of Use"
+  headline: "Terms of Use"
+  last_updated: "Last updated: October 18, 2026"
+  intro: "These Terms of Use govern your use of everyoneneedsakatiewest.com, operated by Elevate Consulting & Concierge LLC. They cover the website only. If you become a client, the services we actually deliver — scope, deliverables, fees, timelines — are governed by the separate signed agreement or statement of work for that engagement, not by this page."
+
+s1:
+  heading: "1. Acceptance of These Terms"
+  p1: "By visiting or using this website, you agree to these Terms of Use. If you don't agree, please don't use the site."
+
+s2:
+  heading: "2. Who We Are"
+  p1: "This website is operated by Elevate Consulting & Concierge LLC, a Texas limited liability company based in San Antonio, Texas."
+
+s3:
+  heading: "3. Permitted Use of This Site"
+  p1: "You may browse this site and use the inquiry form to contact us about our services. You agree not to misuse the site — including attempting to scrape, copy, or republish its content at scale, interfere with its normal operation, or submit the inquiry form for any purpose other than a genuine business inquiry."
+
+s4:
+  heading: "4. Intellectual Property"
+  p1: "The text, design, layout, graphics, and branding on this website belong to Elevate Consulting & Concierge LLC unless otherwise noted, and are protected by applicable copyright and trademark law. You may view and share pages of this site for personal, non-commercial reference, but you may not copy, reproduce, or reuse our content, design, or branding for your own commercial purposes without our written permission."
+
+s5:
+  heading: "5. No Professional Advice, No Guaranteed Results"
+  p1: "Content on this website — including service descriptions, process explanations, and general guidance — is provided for general informational purposes only. It isn't a substitute for an actual engagement tailored to your business, and nothing on this site should be treated as a specific recommendation for your situation."
+  p2: "Every business is different, and we don't guarantee any particular outcome, timeline, or result from reading this site or from working with us, except as expressly stated in a signed engagement agreement."
+
+s6:
+  heading: "6. Third-Party Links"
+  p1: "This site may link to third-party websites (for example, our social media profiles). We don't control those sites and aren't responsible for their content, policies, or practices."
+
+s7:
+  heading: "7. Disclaimer of Warranties"
+  p1: "This website and its content are provided \"as is,\" without warranties of any kind, express or implied, including — to the fullest extent permitted by law — warranties of merchantability, fitness for a particular purpose, and non-infringement. We don't warrant that the site will be uninterrupted, error-free, or completely secure."
+
+s8:
+  heading: "8. Limitation of Liability"
+  p1: "To the fullest extent permitted by law, Elevate Consulting & Concierge LLC is not liable for any indirect, incidental, or consequential damages arising from your use of this website. This limitation does not apply to liability arising under a separate signed services agreement, which is governed by its own terms."
+
+s9:
+  heading: "9. Governing Law"
+  p1: "These Terms of Use are governed by the laws of the State of Texas, without regard to its conflict-of-law principles, and any dispute arising from them will be resolved in the state or federal courts located in Texas."
+
+s10:
+  heading: "10. Changes to These Terms"
+  p1: "We may update these Terms of Use from time to time. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of the site after a change means you accept the updated terms."
+
+s11:
+  heading: "11. Contact Us"
+  p1: "Questions about these Terms of Use can be sent to katie@everyoneneedsakatiewest.com."

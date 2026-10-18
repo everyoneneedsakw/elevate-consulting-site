@@ -500,6 +500,28 @@ button:hover > .v4-arrow--up {
 .v4-industry--emerald .v4-link:hover,
 .v4-industry--emerald .v4-service-list a:hover { color: #2f8066; }
 
+/* ── 11b. Legal document prose (Privacy Policy / Terms) ──────
+   Reuses the existing palette and type scale but at reading size —
+   these pages are long-form text, not cinematic marketing chapters. */
+.v4-legal-hero { min-height: auto; height: auto; max-height: none; padding: 180px 0 40px; }
+.v4-legal-hero .v4-display { font-size: clamp(42px, 7vw, 76px); }
+.v4-legal__updated { font-size: 13px; letter-spacing: .04em; color: var(--muted); margin: 18px 0 0; }
+.v4-legal__intro { font-size: clamp(17px, 1.6vw, 19px); line-height: 1.6; max-width: 640px; margin: 26px 0 0; color: #d9cfd2; }
+
+.v4-legal { padding: 20px 0 150px; }
+.v4-legal__article { max-width: 720px; margin: 0 auto; }
+.v4-legal__section { padding: 36px 0; border-top: 1px solid #ffffff14; }
+.v4-legal__section:first-child { border-top: none; padding-top: 0; }
+.v4-legal__section h2 {
+  font-family: var(--ff-sans); font-size: 21px; font-weight: 800; letter-spacing: -.01em;
+  margin: 0 0 16px; color: var(--cream);
+}
+.v4-legal__section p {
+  font-size: 16px; line-height: 1.7; color: #cdc3c6; margin: 0 0 14px; max-width: 100%;
+}
+.v4-legal__section p:last-child { margin-bottom: 0; }
+.v4-legal__section a { color: var(--mauve); text-decoration: underline; text-underline-offset: 2px; }
+
 /* ── 12. Reduced motion ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .v4 *, .v4 *::before, .v4 *::after {
