@@ -10,12 +10,21 @@ unless asked for.
 
 ## Specifically locked right now
 
-- **About page headline is explicitly locked**: *"I Don't Just Study
-  Operations. I've Lived Inside Them."* — do not change this under any
-  circumstances without direct, explicit approval naming this headline.
-- All current page copy across all 15 pages reflects a verified content
+- **The About page headline is locked to whatever Katie has it set to via
+  Pages CMS right now** — treat `content/pages/about.yml`'s `hero.headline_line1`
+  / `hero.headline_italic` as the source of truth, not any wording quoted in
+  this repo's docs or in a prior conversation. It changed once already
+  (originally *"I Don't Just Study Operations. I've Lived Inside Them,"*
+  updated by Katie directly through Pages CMS to *"THE VISIONARY. THE
+  STRATEGIST. The Problem-Solver."*) — that's the CMS working as designed,
+  not a freeze violation. The freeze is about Claude not changing it without
+  approval; it was never a restriction on Katie's own edits through her own
+  editor. Never "correct" the live headline back to an older version you
+  remember from context — always check the current YAML first.
+- All other page copy across the 15 pages reflects a verified content
   freeze pass (word-diffed against the prior approved state when the V4
-  rebuild happened) — treat it as the source of truth.
+  rebuild happened) — treat it as the source of truth, with the same caveat
+  that a real Pages CMS edit always wins over anything documented here.
 
 ## Flagged for a future copy review (not yet approved to change)
 
