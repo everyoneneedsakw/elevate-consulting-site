@@ -292,6 +292,22 @@ body.v4 {
 .v4-finale { min-height: 750px; display: flex; align-items: center; background: radial-gradient(circle at 84% 55%, #986f8159, transparent 36%); }
 .v4-finale .v4-copy { color: #e7dcde; }
 
+/* Small founder "signature" portrait beside the closing CTA — a personal
+   sign-off, not a second hero image. Fixed small size, never stretches. */
+.v4-finale__row { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+.v4-finale__content { flex: 1 1 420px; min-width: 280px; }
+.v4-finale__photo { width: 200px; flex-shrink: 0; }
+.v4-finale__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #ffffff26;
+  box-shadow: 0 25px 50px -20px #000000a6, 0 0 40px -16px #b58a8a30;
+}
+
 /* ── 7. Footer ────────────────────────────────────────────── */
 .v4-foot { border-top: 1px solid #ffffff2e; padding: 40px 0; color: #b9b0b5; font-size: 13px; position: relative; z-index: 2; background: var(--night); }
 .v4-foot .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
@@ -397,6 +413,8 @@ body.v4 {
   .v4-foot .wrap { flex-direction: column; gap: 14px; }
   .v4-foot a { margin: 0 14px 0 0; }
   .v4-ticker span { font-size: 15px; }
+  .v4-finale__row { gap: 32px; justify-content: center; }
+  .v4-finale__photo { width: 150px; }
 }
 @media (max-width: 460px) {
   .v4-steps { grid-template-columns: 1fr; }
