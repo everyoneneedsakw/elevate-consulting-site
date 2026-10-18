@@ -97,14 +97,12 @@
     </ul>
 
     <div class="v4-nav__ctas">
-      <!-- Working contact method — direct email, until a booking system is selected -->
-      <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-ghost">Free Audit</a>
-      <!-- Working contact method — direct email, until a booking system is selected -->
-      <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-solid">Book a Call</a>
+      <!-- On this page, "Free Audit" and "Book a Call" point to the inquiry form, not email -->
+      <a href="#inquiryForm" class="v4-nav__cta-ghost">Free Audit</a>
+      <a href="#inquiryForm" class="v4-nav__cta-solid">Book a Call</a>
     </div>
 
-    <!-- Working contact method — direct email, until a booking system is selected -->
-    <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-mobile" aria-label="Email Katie directly">Book a Call</a>
+    <a href="#inquiryForm" class="v4-nav__cta-mobile" aria-label="Go to the inquiry form">Book a Call</a>
     <button type="button" class="v4-nav__burger" id="v4NavBurger" aria-expanded="false" aria-controls="v4MobileDrawer" aria-label="Toggle navigation">☰ MENU</button>
   </div>
 </nav>
@@ -128,9 +126,9 @@
   <a href="/resources" class="v4-mobile-drawer__link">Resources</a>
   <span class="v4-mobile-drawer__link is-soon" aria-disabled="true">Templates (Soon)</span>
   <div class="v4-mobile-drawer__ctas">
-    <!-- Working contact method — direct email, until a booking system is selected -->
-    <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-ghost" style="text-align:center;">Free Audit</a>
-    <!-- Working contact method — direct email, until a booking system is selected -->
+    <!-- "Free Audit" points to the inquiry form, not email -->
+    <a href="#inquiryForm" class="v4-nav__cta-ghost" style="text-align:center;">Free Audit</a>
+    <!-- Working contact method — direct email, kept as the separate "Email Us" option -->
     <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-solid" style="text-align:center;">Email Us</a>
   </div>
 </div>
@@ -155,8 +153,8 @@
       If you're reading this, you probably already know something in your business isn't running the way it should. This page is for figuring out whether working together makes sense — and what that would actually look like.
     </p>
     <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-      <!-- Working contact method — direct email, until a booking system is selected -->
-      <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-solid">Start the Conversation</a>
+      <!-- Scrolls straight to the inquiry form below — no email client -->
+      <a href="#inquiryForm" class="v4-nav__cta-solid">Start the Conversation</a>
       <a href="#is-this-a-fit" class="v4-nav__cta-ghost">Is This a Fit?</a>
     </div>
     <div class="v4-tag-row" aria-label="Focus areas" style="justify-content:center; margin-top:28px;">
@@ -349,12 +347,12 @@
       You've seen how we think, what we help with, and how engagements start. If that sounds like what your business needs, let's talk.
     </p>
     <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:34px;">
-      <!-- Working contact method — direct email, until a booking system is selected -->
-      <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-solid">Reach Out</a>
-      <!-- Working contact method — direct email, until a booking system is selected -->
+      <!-- Scrolls straight to the inquiry form below — no email client -->
+      <a href="#inquiryForm" class="v4-nav__cta-solid">Send an Inquiry</a>
+      <!-- Working contact method — direct email, kept as the separate "Email Us" option -->
       <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-ghost">Email Us</a>
     </div>
-    <p style="margin-top:22px; font-size:13px; color:var(--muted); letter-spacing:.04em;">Free 30-minute call. No commitment required.</p>
+    <p style="margin-top:22px; font-size:13px; color:var(--muted); letter-spacing:.04em;">No-cost 30-minute strategy session. No commitment required.</p>
 
     <form name="work-with-me-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="v4-form" id="inquiryForm">
       <input type="hidden" name="form-name" value="work-with-me-inquiry">
