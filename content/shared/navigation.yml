@@ -3,6 +3,8 @@
 # mobile menu). Links/destinations are fixed in the page templates and
 # are not editable here, by design.
 
+brand_text: "Elevate Consulting & Concierge"
+
 services_dropdown:
   menu_label: "Services"
   item1_name: "Google Workspace Systems"
@@ -25,16 +27,14 @@ industries_dropdown:
   item3_name: "Service Businesses"
   item3_desc: "Operations and scaling systems"
   cta_name: "Not sure? Start here"
-  cta_desc: "Book a free discovery call"
+  cta_desc: "Let's start a conversation."
 
 top_level:
   about_label: "About"
   resources_label: "Resources"
-  templates_soon_label: "Templates (Soon)"
+  templates_label: "Templates"
 
 ctas:
-  free_audit_label: "Free Audit"
-  book_a_call_label: "Book a Call"
-  book_a_discovery_call_label: "Book a Discovery Call"
+  connect_label: "Let's Connect"
   menu_button_label: "☰ MENU"
   pause_motion_label: "Pause Motion"

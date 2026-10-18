@@ -41,7 +41,7 @@
 ═══════════════════════════════════════════════════════════ -->
 <nav class="v4-nav" role="navigation" aria-label="Main navigation">
   <div class="wrap">
-    <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">Elevate Consulting</a>
+    <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">Elevate Consulting &amp; Concierge</a>
 
     <ul class="v4-nav__links" role="list">
       <li class="v4-nav__item">
@@ -93,16 +93,15 @@
       </li>
       <li class="v4-nav__item"><a href="/about" class="v4-nav__link">About</a></li>
       <li class="v4-nav__item"><a href="/resources" class="v4-nav__link">Resources</a></li>
-      <li class="v4-nav__item"><span class="v4-nav__link is-soon" aria-disabled="true">Templates (Soon)</span></li>
+      <li class="v4-nav__item"><a href="/templates" class="v4-nav__link">Templates</a></li>
     </ul>
 
     <div class="v4-nav__ctas">
       <!-- On this page, "Free Audit" and "Book a Call" point to the inquiry form, not email -->
-      <a href="#inquiryForm" class="v4-nav__cta-ghost">Free Audit</a>
-      <a href="#inquiryForm" class="v4-nav__cta-solid">Book a Call</a>
+      <a href="#inquiry" class="v4-nav__cta-solid">Let's Connect</a>
     </div>
 
-    <a href="#inquiryForm" class="v4-nav__cta-mobile" aria-label="Go to the inquiry form">Book a Call</a>
+    <a href="#inquiry" class="v4-nav__cta-mobile">Let's Connect</a>
     <button type="button" class="v4-nav__burger" id="v4NavBurger" aria-expanded="false" aria-controls="v4MobileDrawer" aria-label="Toggle navigation">☰ MENU</button>
   </div>
 </nav>
@@ -124,12 +123,11 @@
   </div>
   <a href="/about" class="v4-mobile-drawer__link">About</a>
   <a href="/resources" class="v4-mobile-drawer__link">Resources</a>
-  <span class="v4-mobile-drawer__link is-soon" aria-disabled="true">Templates (Soon)</span>
+  <a href="/templates" class="v4-mobile-drawer__link">Templates</a>
   <div class="v4-mobile-drawer__ctas">
-    <!-- "Free Audit" points to the inquiry form, not email -->
-    <a href="#inquiryForm" class="v4-nav__cta-ghost" style="text-align:center;">Free Audit</a>
+    <a href="#inquiry" class="v4-nav__cta-solid" style="text-align:center;">Let's Connect</a>
     <!-- Working contact method — direct email, kept as the separate "Email Us" option -->
-    <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-solid" style="text-align:center;">Email Us</a>
+    <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-ghost" style="text-align:center;">Email Us</a>
   </div>
 </div>
 
@@ -154,7 +152,7 @@
     </p>
     <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
       <!-- Scrolls straight to the inquiry form below — no email client -->
-      <a href="#inquiryForm" class="v4-nav__cta-solid">Start the Conversation</a>
+      <a href="#inquiry" class="v4-nav__cta-solid">Start the Conversation</a>
       <a href="#is-this-a-fit" class="v4-nav__cta-ghost">Is This a Fit?</a>
     </div>
     <div class="v4-tag-row" aria-label="Focus areas" style="justify-content:center; margin-top:28px;">
@@ -348,13 +346,13 @@
     </p>
     <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:34px;">
       <!-- Scrolls straight to the inquiry form below — no email client -->
-      <a href="#inquiryForm" class="v4-nav__cta-solid">Send an Inquiry</a>
+      <a href="#inquiry" class="v4-nav__cta-solid">Send an Inquiry</a>
       <!-- Working contact method — direct email, kept as the separate "Email Us" option -->
       <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-ghost">Email Us</a>
     </div>
-    <p style="margin-top:22px; font-size:13px; color:var(--muted); letter-spacing:.04em;">No-cost 30-minute strategy session. No commitment required.</p>
+    <p style="margin-top:22px; font-size:13px; color:var(--muted); letter-spacing:.04em;">Every great working relationship starts with a conversation.</p>
 
-    <form name="work-with-me-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="v4-form" id="inquiryForm">
+    <form name="work-with-me-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="v4-form" id="inquiry">
       <input type="hidden" name="form-name" value="work-with-me-inquiry">
       <input type="hidden" name="subject" value="New Work With Me inquiry — everyoneneedsakatiewest.com">
       <p class="v4-form__honeypot" aria-hidden="true">
@@ -376,8 +374,8 @@
         <input type="text" name="business" autocomplete="organization" required>
       </label>
       <label class="v4-form__field">
-        <span>What do you need help with?</span>
-        <textarea name="message" required></textarea>
+        <span>Tell Me What's On Your Mind.</span>
+        <textarea name="message" required placeholder="Brain dump here. The messy version is welcome. Tell me what's happening, what's frustrating you, or what you've been trying to figure out. You don't need to have it all organized. We'll talk it through." rows="6"></textarea>
       </label>
       <button type="submit" class="v4-nav__cta-solid" data-label="Send Inquiry" data-label-sending="Sending…">Send Inquiry</button>
       <p class="v4-form__status" id="inquiryFormStatus" role="status" aria-live="polite"></p>
@@ -401,7 +399,7 @@
 
       <!-- Brand column -->
       <div>
-        <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">Elevate Consulting</a>
+        <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">Elevate Consulting &amp; Concierge</a>
         <p class="v4-foot__tagline">
           Operational clarity for service-based businesses — through systems, processes, and the infrastructure to scale with confidence.
         </p>
@@ -430,7 +428,7 @@
           <a href="/about">About</a>
           <a href="/industries">Industries</a>
           <a href="/work-with-me">Work With Me</a>
-          <span class="is-soon" aria-disabled="true">Templates — Coming Soon</span>
+          <a href="/templates">Templates</a>
           <!-- Working contact method — direct email, until a booking system is selected -->
           <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="is-cta">Contact Katie <svg class="v4-arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>

@@ -7,8 +7,6 @@ seo:
   og_description: Meet Katie West, the visionary and problem-solver behind Elevate
     Consulting & Concierge. Turning complex business challenges into clarity,
     strategy, and growth.
-site:
-  brand_text: Elevate Consulting & Concierge
 hero:
   eyebrow: MEET KATIE WEST
   headline_line1: THE VISIONARY. THE STRATEGIST.
@@ -134,5 +132,5 @@ finale:
     your business needs right now, the next step is a conversation — not a sales
     pitch.
   cta_primary: Book a Discovery Call
-  cta_secondary: Get the Free Audit
-  note: No-cost 30-minute strategy session. No commitment required.
+  cta_secondary: Let's Connect
+  note: Every great working relationship starts with a conversation.

@@ -11,6 +11,9 @@ content:
   path: content/shared/navigation.yml
   format: yaml
   fields:
+  - name: brand_text
+    label: Brand Text
+    type: string
   - name: services_dropdown
     label: Services Dropdown
     type: object
@@ -89,21 +92,15 @@ content:
     - name: resources_label
       label: Resources Label
       type: string
-    - name: templates_soon_label
-      label: Templates Soon Label
+    - name: templates_label
+      label: Templates Label
       type: string
   - name: ctas
     label: CTAs
     type: object
     fields:
-    - name: free_audit_label
-      label: Free Audit Label
-      type: string
-    - name: book_a_call_label
-      label: Book A Call Label
-      type: string
-    - name: book_a_discovery_call_label
-      label: Book A Discovery Call Label
+    - name: connect_label
+      label: Connect Label
       type: string
     - name: menu_button_label
       label: Menu Button Label
@@ -156,8 +153,8 @@ content:
   - name: company_item3
     label: Company Item 3
     type: string
-  - name: company_item4_soon
-    label: Company Item 4 Soon
+  - name: company_item4
+    label: Company Item 4
     type: string
   - name: company_cta
     label: Company CTA
@@ -223,13 +220,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -463,13 +453,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -721,13 +704,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -1040,13 +1016,6 @@ content:
     - name: og_title
       label: OG Title
       type: string
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -1100,13 +1069,6 @@ content:
     - name: og_title
       label: OG Title
       type: string
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -1157,13 +1119,6 @@ content:
     - name: og_title
       label: OG Title
       type: string
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -1210,13 +1165,6 @@ content:
       type: text
     - name: og_title
       label: OG Title
-      type: string
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
       type: string
   - name: hero
     label: Hero
@@ -1268,13 +1216,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -1567,13 +1508,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -1854,13 +1788,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -2141,13 +2068,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: hero
     label: Hero
     type: object
@@ -2428,13 +2348,6 @@ content:
     - name: og_description
       label: OG Description
       type: text
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
-      type: string
   - name: nav_override
     label: Nav Override
     type: object
@@ -2774,6 +2687,9 @@ content:
     - name: message_label
       label: Message Label
       type: string
+    - name: message_placeholder
+      label: Message Placeholder
+      type: text
     - name: submit_label
       label: Submit Label
       type: string
@@ -2804,13 +2720,6 @@ content:
       type: text
     - name: og_title
       label: OG Title
-      type: string
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
       type: string
   - name: hero
     label: Hero
@@ -2843,6 +2752,50 @@ content:
     - name: cta3
       label: CTA 3
       type: string
+- name: page_templates
+  label: Templates (holding page)
+  type: file
+  path: content/pages/templates.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: SEO
+    type: object
+    fields:
+    - name: title
+      label: Title
+      type: string
+    - name: description
+      label: Description
+      type: text
+    - name: og_title
+      label: OG Title
+      type: string
+  - name: hero
+    label: Hero
+    type: object
+    fields:
+    - name: eyebrow
+      label: Eyebrow
+      type: string
+    - name: headline_line1
+      label: Headline Line 1
+      type: string
+    - name: headline_italic
+      label: Headline Italic
+      type: string
+    - name: subhead
+      label: Subhead
+      type: string
+    - name: paragraph
+      label: Paragraph
+      type: text
+    - name: closing
+      label: Closing
+      type: text
+    - name: cta_label
+      label: CTA Label
+      type: string
 - name: page_privacy-policy
   label: Privacy Policy
   type: file
@@ -2861,13 +2814,6 @@ content:
       type: text
     - name: og_title
       label: OG Title
-      type: string
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
       type: string
   - name: hero
     label: Hero
@@ -2930,6 +2876,9 @@ content:
       type: string
     - name: p1
       label: P 1
+      type: text
+    - name: p2
+      label: P 2
       type: text
   - name: s5
     label: S 5
@@ -3022,13 +2971,6 @@ content:
       type: text
     - name: og_title
       label: OG Title
-      type: string
-  - name: site
-    label: Site
-    type: object
-    fields:
-    - name: brand_text
-      label: Brand Text
       type: string
   - name: hero
     label: Hero

@@ -4,9 +4,6 @@ seo:
   og_title: "Work With Me | Elevate Consulting"
   og_description: "How working with Katie West starts, what she helps with, and whether it's the right fit for your business."
 
-site:
-  brand_text: "Elevate Consulting"
-
 # This page's nav/footer text differs slightly from the sitewide values in
 # content/shared/ (it avoids linking to itself and uses direct-email CTA
 # wording instead) — these page-specific overrides preserve that exact,
@@ -123,14 +120,15 @@ finale:
   paragraph: "You've seen how we think, what we help with, and how engagements start. If that sounds like what your business needs, let's talk."
   cta_primary: "Send an Inquiry"
   cta_secondary: "Email Us"
-  note: "No-cost 30-minute strategy session. No commitment required."
+  note: "Every great working relationship starts with a conversation."
 
 form:
   heading: "Or Send a Quick Inquiry"
   name_label: "Name"
   email_label: "Email"
   business_label: "Business / Company Name"
-  message_label: "What do you need help with?"
+  message_label: "Tell Me What's On Your Mind."
+  message_placeholder: "Brain dump here. The messy version is welcome. Tell me what's happening, what's frustrating you, or what you've been trying to figure out. You don't need to have it all organized. We'll talk it through."
   submit_label: "Send Inquiry"
   submit_label_sending: "Sending…"
   confirmation_title: "Thank you — your message is on its way."

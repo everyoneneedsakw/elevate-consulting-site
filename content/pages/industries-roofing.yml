@@ -4,9 +4,6 @@ seo:
   og_title: "Roofing Companies | Elevate Consulting"
   og_description: "Operational systems built for how roofing companies actually run — from estimate to production to completion."
 
-site:
-  brand_text: "Elevate Consulting"
-
 hero:
   eyebrow: "Roofing Companies"
   headline_line1: "Roofing Operations,"
@@ -96,5 +93,5 @@ finale:
   headline_line2: "Operations Organized?"
   paragraph: "You've seen where the friction usually lives and how we help fix it. If that sounds like your business, the next step is a conversation."
   cta_primary: "Book a Discovery Call"
-  cta_secondary: "Get the Free Audit"
-  note: "No-cost 30-minute strategy session. No commitment required."
+  cta_secondary: "Let's Connect"
+  note: "Every great working relationship starts with a conversation."

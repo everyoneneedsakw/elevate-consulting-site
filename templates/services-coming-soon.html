@@ -47,7 +47,7 @@
 ═══════════════════════════════════════════════════════════ -->
 <nav class="v4-nav" role="navigation" aria-label="Main navigation">
   <div class="wrap">
-    <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">{{site.brand_text}}</a>
+    <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">{{nav.brand_text}}</a>
 
     <ul class="v4-nav__links" role="list">
       <li class="v4-nav__item">
@@ -91,7 +91,7 @@
             <div class="v4-nav__drop-desc">{{nav.industries_dropdown.item3_desc}}</div>
           </a>
           <!-- FINAL CONVERSION DESTINATION NEEDED — temporary working contact path -->
-          <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__drop-item v4-nav__drop-item--cta" role="menuitem">
+          <a href="/work-with-me#inquiry" class="v4-nav__drop-item v4-nav__drop-item--cta" role="menuitem">
             <div class="v4-nav__drop-name">{{nav.industries_dropdown.cta_name}} <svg class="v4-arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="v4-nav__drop-desc">{{nav.industries_dropdown.cta_desc}}</div>
           </a>
@@ -99,16 +99,15 @@
       </li>
       <li class="v4-nav__item"><a href="/about" class="v4-nav__link">{{nav.top_level.about_label}}</a></li>
       <li class="v4-nav__item"><a href="/resources" class="v4-nav__link">{{nav.top_level.resources_label}}</a></li>
-      <li class="v4-nav__item"><span class="v4-nav__link is-soon" aria-disabled="true">{{nav.top_level.templates_soon_label}}</span></li>
+      <li class="v4-nav__item"><a href="/templates" class="v4-nav__link">{{nav.top_level.templates_label}}</a></li>
     </ul>
 
     <div class="v4-nav__ctas">
       <!-- FINAL CONVERSION DESTINATION NEEDED -->
-      <a href="/work-with-me" class="v4-nav__cta-ghost">{{nav.ctas.free_audit_label}}</a>
-      <a href="/work-with-me" class="v4-nav__cta-solid">{{nav.ctas.book_a_call_label}}</a>
+      <a href="/work-with-me#inquiry" class="v4-nav__cta-solid">{{nav.ctas.connect_label}}</a>
     </div>
 
-    <a href="/work-with-me" class="v4-nav__cta-mobile">{{nav.ctas.book_a_call_label}}</a>
+    <a href="/work-with-me#inquiry" class="v4-nav__cta-mobile">{{nav.ctas.connect_label}}</a>
     <button type="button" class="v4-nav__burger" id="v4NavBurger" aria-expanded="false" aria-controls="v4MobileDrawer" aria-label="Toggle navigation">{{nav.ctas.menu_button_label}}</button>
   </div>
 </nav>
@@ -130,10 +129,9 @@
   </div>
   <a href="/about" class="v4-mobile-drawer__link">{{nav.top_level.about_label}}</a>
   <a href="/resources" class="v4-mobile-drawer__link">{{nav.top_level.resources_label}}</a>
-  <span class="v4-mobile-drawer__link is-soon" aria-disabled="true">{{nav.top_level.templates_soon_label}}</span>
+  <a href="/templates" class="v4-mobile-drawer__link">{{nav.top_level.templates_label}}</a>
   <div class="v4-mobile-drawer__ctas">
-    <a href="/work-with-me" class="v4-nav__cta-ghost" style="text-align:center;">{{nav.ctas.free_audit_label}}</a>
-    <a href="/work-with-me" class="v4-nav__cta-solid" style="text-align:center;">{{nav.ctas.book_a_discovery_call_label}}</a>
+    <a href="/work-with-me#inquiry" class="v4-nav__cta-solid" style="text-align:center;">{{nav.ctas.connect_label}}</a>
   </div>
 </div>
 
@@ -174,7 +172,7 @@
 
       <!-- Brand column -->
       <div>
-        <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">{{site.brand_text}}</a>
+        <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">{{nav.brand_text}}</a>
         <p class="v4-foot__tagline">
           {{footer.tagline}}
         </p>
@@ -203,9 +201,9 @@
           <a href="/about">{{footer.company_item1}}</a>
           <a href="/industries">{{footer.company_item2}}</a>
           <a href="/work-with-me">{{footer.company_item3}}</a>
-          <span class="is-soon" aria-disabled="true">{{footer.company_item4_soon}}</span>
+          <a href="/templates">{{footer.company_item4}}</a>
           <!-- FINAL CONVERSION DESTINATION NEEDED -->
-          <a href="/work-with-me" class="is-cta">{{footer.company_cta}} <svg class="v4-arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/work-with-me#inquiry" class="is-cta">{{footer.company_cta}} <svg class="v4-arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </nav>
 

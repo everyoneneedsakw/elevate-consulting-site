@@ -18,7 +18,7 @@
   --ff-sans:  "DM Sans", sans-serif;
   --ff-serif: "DM Serif Display", serif;
 
-  --nav-h: 76px;
+  --nav-h: 84px;
 }
 
 /* ── 2. Reset & base ──────────────────────────────────────── */
@@ -47,17 +47,17 @@ body.v4 {
   position: fixed;
   top: 0; left: 0; width: 100%;
   z-index: 100;
-  padding: 17px 0;
+  padding: 20px 0;
   background: rgba(21,18,24,.82);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid #ffffff1a;
 }
 .v4-nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.v4-nav__brand { font-size: 13px; letter-spacing: .2em; font-weight: 900; white-space: nowrap; }
-.v4-nav__brand span { font-weight: 400; opacity: .75; }
+.v4-nav__brand { font-size: 16px; letter-spacing: .04em; font-weight: 700; white-space: nowrap; }
+.v4-nav__brand span { font-weight: 400; opacity: .72; letter-spacing: .02em; }
 
-.v4-nav__links { display: flex; align-items: center; gap: 26px; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.v4-nav__links { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 700; letter-spacing: .04em; }
 .v4-nav__item { position: relative; }
 .v4-nav__link { display: inline-flex; align-items: center; gap: 5px; padding: 8px 0; cursor: pointer; }
 .v4-nav__link:hover, .v4-nav__link[aria-current="page"] { color: var(--mauve); }
@@ -93,15 +93,15 @@ body.v4 {
 
 .v4-nav__ctas { display: flex; align-items: center; gap: 12px; }
 .v4-nav__cta-ghost {
-  border: 1px solid #ffffff55; border-radius: 50px; padding: 11px 19px;
-  font-size: 11px; font-weight: 800; letter-spacing: .1em;
+  border: 1px solid #ffffff55; border-radius: 50px; padding: 12px 21px;
+  font-size: 13px; font-weight: 700; letter-spacing: .04em;
   transition: border-color .2s, color .2s;
 }
 .v4-nav__cta-ghost:hover { border-color: var(--mauve); color: var(--mauve); }
 .v4-nav__cta-solid {
   border: 1px solid var(--mauve); background: var(--mauve); color: var(--night);
-  border-radius: 50px; padding: 11px 20px;
-  font-size: 11px; font-weight: 800; letter-spacing: .1em;
+  border-radius: 50px; padding: 12px 22px;
+  font-size: 13px; font-weight: 700; letter-spacing: .04em;
   transition: background .2s, border-color .2s;
 }
 .v4-nav__cta-solid:hover { background: #c69e9e; border-color: #c69e9e; }
@@ -137,14 +137,17 @@ body.v4 {
 .v4-mobile-drawer__sub a { display: block; padding: 9px 0; font-size: 14px; color: var(--muted); font-weight: 600; }
 .v4-mobile-drawer__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 26px; }
 
-@media (max-width: 880px) {
+@media (max-width: 960px) {
+  /* Raised from 880px: the full brand name ("Elevate Consulting &
+     Concierge") overflows the desktop nav row below ~960px — measured
+     empirically, not guessed. */
   .v4-nav__links, .v4-nav__ctas { display: none; }
   .v4-nav__burger { display: inline-flex; align-items: center; gap: 8px; }
   .v4-nav__cta-mobile {
     display: inline-flex; align-items: center;
     border: 1px solid var(--mauve); background: var(--mauve); color: var(--night);
-    border-radius: 50px; padding: 9px 16px; margin-right: 8px;
-    font-size: 10.5px; font-weight: 800; letter-spacing: .08em; white-space: nowrap;
+    border-radius: 50px; padding: 10px 18px; margin-right: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: .04em; white-space: nowrap;
   }
 }
 
@@ -300,7 +303,7 @@ body.v4 {
 /* Lead inquiry form (Netlify Forms) — same editorial language as the
    rest of the page: cream labels, mauve focus state, no new visual
    system introduced. */
-.v4-form { max-width: 560px; margin-top: 40px; }
+.v4-form { max-width: 560px; margin-top: 40px; scroll-margin-top: calc(var(--nav-h) + 32px); }
 .v4-form__heading { font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--bronze); margin: 0 0 20px; }
 .v4-form__honeypot { position: absolute; left: -9999px; }
 .v4-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -456,8 +459,20 @@ body.v4 {
   .v4-steps { grid-template-columns: 1fr; }
   .v4-hero { min-height: 720px; }
   .v4-hero h1 { font-size: 15vw; }
-  .v4-nav__brand { font-size: 11px; letter-spacing: .08em; }
+  .v4-nav__brand { font-size: 13px; letter-spacing: .03em; }
   .v4-pause-motion span.label { display: none; }
+}
+@media (max-width: 340px) {
+  /* Smallest common phone width (iPhone SE class) — brand + hamburger
+     alone still overflow at 13px; drop one more size. */
+  .v4-nav__brand { font-size: 11.5px; letter-spacing: .02em; }
+}
+@media (max-width: 579px) {
+  /* Full brand name + persistent CTA + hamburger don't fit together this
+     narrow — drop the redundant top-bar CTA (the drawer has the same
+     "Let's Connect" button one tap away) rather than shrink the brand
+     past legibility. Measured empirically: overflow starts above 579px. */
+  .v4-nav__cta-mobile { display: none; }
 }
 
 /* ── 11. Arrow icons (replaces emoji-style → ↗ glyphs) ─────

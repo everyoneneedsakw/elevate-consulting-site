@@ -168,7 +168,7 @@
      body to "/" and Netlify's build-time form detection handles the
      rest. Submitting via fetch instead of a full page load lets us
      swap in an inline confirmation without a separate thank-you page. */
-  var inquiryForm = document.getElementById('inquiryForm');
+  var inquiryForm = document.getElementById('inquiry');
   if (inquiryForm) {
     inquiryForm.addEventListener('submit', function (e) {
       e.preventDefault();

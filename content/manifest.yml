@@ -80,6 +80,19 @@ pages:
     content: content/pages/resources.yml
     output: resources/index.html
     footer: full
+  - key: templates
+    # Output lives in templates-page/, NOT templates/index.html — the
+    # templates/ directory is reserved for page-template sources
+    # (*.html files full of unrendered {{tokens}}) and is already
+    # publicly servable at that path; writing an index.html there would
+    # sit the real page in the same directory as raw build sources.
+    # A root _redirects rewrite maps the public /templates URL to this
+    # output directory instead.
+    label: "Templates (holding page)"
+    template: templates/templates.html
+    content: content/pages/templates.yml
+    output: templates-page/index.html
+    footer: full
   - key: privacy-policy
     label: "Privacy Policy"
     template: templates/privacy-policy.html

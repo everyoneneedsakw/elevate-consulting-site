@@ -1,0 +1,10 @@
+# Netlify rewrite rules — not a redirect to a new URL, a rewrite that
+# serves different content while keeping the URL the visitor sees.
+#
+# /templates renders content built to templates-page/index.html rather
+# than templates/index.html, because templates/ is reserved for the
+# site's page-template sources (raw files containing {{tokens}}, not
+# meant to be a real page) and already sits at the repo root alongside
+# every other output directory.
+/templates              /templates-page/index.html   200
+/templates/              /templates-page/index.html   200

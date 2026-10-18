@@ -4,9 +4,6 @@ seo:
   og_title: "Business Operations Services | Elevate Consulting"
   og_description: "Google Workspace systems, SOPs & playbooks, CRM & automation, and operations consulting — diagnosed first, then actually built."
 
-site:
-  brand_text: "Elevate Consulting"
-
 hero:
   eyebrow: "What We Help You Build"
   headline_line1: "Systems That Actually Get Built"
@@ -106,5 +103,5 @@ finale:
   headline_italic: "Systems?"
   paragraph: "You've seen what we build. If your business is ready for the operational foundation that lets you actually grow, the next step is a conversation."
   cta_primary: "Book a Discovery Call"
-  cta_secondary: "Get the Free Audit"
-  note: "No-cost 30-minute strategy session. No commitment required."
+  cta_secondary: "Let's Connect"
+  note: "Every great working relationship starts with a conversation."
