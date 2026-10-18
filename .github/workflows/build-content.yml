@@ -1,12 +1,14 @@
 name: Rebuild site from CMS content
 
 # Runs whenever Pages CMS (or anyone) commits a content/template change to
-# this branch, and regenerates the live HTML pages from content/*.yml +
-# templates/*.html. Only touches content/, templates/, scripts/ as triggers
+# elevate-cinematic-v4-review (today's review branch) or main (production,
+# once migrated), and regenerates that branch's HTML from content/*.yml +
+# templates/*.html — checked out and pushed back to whichever branch
+# triggered it. Only touches content/, templates/, scripts/ as triggers
 # — never the built HTML pages themselves — so this cannot loop.
 on:
   push:
-    branches: [elevate-cinematic-v4-review]
+    branches: [elevate-cinematic-v4-review, main]
     paths:
       - "content/**"
       - "templates/**"
@@ -20,8 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: elevate-cinematic-v4-review
 
       - uses: actions/setup-python@v5
         with:
