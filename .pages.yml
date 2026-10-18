@@ -651,6 +651,15 @@ content:
     - name: paragraph2
       label: Paragraph 2
       type: text
+    - name: paragraph3
+      label: Paragraph 3
+      type: text
+    - name: paragraph4
+      label: Paragraph 4
+      type: text
+    - name: paragraph5
+      label: Paragraph 5
+      type: text
   - name: finale
     label: Finale
     type: object
