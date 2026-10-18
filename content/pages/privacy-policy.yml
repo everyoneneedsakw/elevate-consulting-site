@@ -29,6 +29,7 @@ s3:
 s4:
   heading: "4. How We Use Your Information"
   p1: "We use the information submitted through the inquiry form to respond to your inquiry, evaluate whether working together is a fit, and follow up about our services. We do not sell, rent, or trade your information to third parties, and we do not use it for advertising."
+  p2: "When you submit the form, we also receive an automated email notification containing your submission so we can respond promptly — this is an internal step in handling your inquiry, not an additional disclosure to a third party."
 
 s5:
   heading: "5. Who We Share Information With"
@@ -44,16 +45,16 @@ s7:
 
 s8:
   heading: "8. Your Choices and Rights"
-  p1: "You can ask us at any time to tell you what information we have about you, correct it, or delete it, by emailing katie@everyoneneedsakatiewest.com. We will respond and honor reasonable requests within a reasonable timeframe."
-  p2: "We do not sell personal information, as that term is defined under California and other state privacy laws, and we do not need to maintain a formal opt-out process for a sale that doesn't happen. If you are a California resident and have questions about your rights under the CCPA, you're welcome to reach out using the contact information above."
+  p1: "You can ask us at any time to see, correct, or delete the information we have about you — just email katie@everyoneneedsakatiewest.com, and we'll respond within a reasonable timeframe."
+  p2: "We do not sell personal information, as defined under California and other state privacy laws. If you're a California resident with questions about your rights under the CCPA, reach out using the contact information above."
 
 s9:
   heading: "9. Children's Privacy"
-  p1: "This website and our services are directed at businesses and business owners, not children. We do not knowingly collect information from anyone under 16 years of age."
+  p1: "This website is not directed to children, and we do not knowingly collect personal information from anyone under the age of 13. If we learn that we've inadvertently collected such information, we will delete it."
 
 s10:
   heading: "10. Changes to This Policy"
-  p1: "We may update this Privacy Policy as our website or practices change. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of the site after a change means you accept the updated policy."
+  p1: "We may update this Privacy Policy as our website or practices change. Check the \"Last updated\" date above for the most recent revision — continued use of the site after a change means you accept the updated policy."
 
 s11:
   heading: "11. Contact Us"
