@@ -20,152 +20,140 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
-  <!-- Favicon placeholder (file not yet supplied — see Phase 1A) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/v4.css">
 </head>
-<body>
+<body class="v4 v4-industry--emerald">
 
 <!-- ═══════════════════════════════════════════════════════════
-     NAVIGATION (identical to homepage/About/Services/Work With Me/Industries —
-     Industries marked active)
+     NAVIGATION (identical to homepage/About — Industries marked active)
 ═══════════════════════════════════════════════════════════ -->
-<nav id="site-nav" class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav__inner">
+<nav class="v4-nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap">
+    <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">Elevate Consulting</a>
 
-    <!-- Logo -->
-    <a href="/" class="nav__logo" aria-label="Elevate Consulting home">
-      Elevate <span>Consulting</span>
-    </a>
-
-    <!-- Desktop links -->
-    <ul class="nav__links" role="list">
-
-      <!-- Services dropdown -->
-      <li class="nav__item">
-        <a href="/services" class="nav__link" aria-haspopup="true">Services</a>
-        <div class="nav__dropdown" role="menu">
-          <a href="/services/google-workspace-systems" class="nav__drop-item" role="menuitem">
-            <div class="nav__drop-name">Google Workspace Systems</div>
-            <div class="nav__drop-desc">Folder systems, SOP libraries, dashboards, CRM trackers</div>
+    <ul class="v4-nav__links" role="list">
+      <li class="v4-nav__item">
+        <a href="/services" class="v4-nav__link" aria-haspopup="true">Services <span class="caret">▾</span></a>
+        <div class="v4-nav__drop" role="menu">
+          <a href="/services/google-workspace-systems" class="v4-nav__drop-item" role="menuitem">
+            <div class="v4-nav__drop-name">Google Workspace Systems</div>
+            <div class="v4-nav__drop-desc">Folder systems, SOP libraries, dashboards, CRM trackers</div>
           </a>
-          <a href="/services/sops-playbooks" class="nav__drop-item" role="menuitem">
-            <div class="nav__drop-name">SOPs &amp; Playbooks</div>
-            <div class="nav__drop-desc">Documented processes your whole team can follow</div>
+          <a href="/services/sops-playbooks" class="v4-nav__drop-item" role="menuitem">
+            <div class="v4-nav__drop-name">SOPs &amp; Playbooks</div>
+            <div class="v4-nav__drop-desc">Documented processes your whole team can follow</div>
           </a>
-          <a href="/services/crm-automation" class="nav__drop-item" role="menuitem">
-            <div class="nav__drop-name">CRM &amp; Automation</div>
-            <div class="nav__drop-desc">Lead tracking and follow-up systems</div>
+          <a href="/services/crm-automation" class="v4-nav__drop-item" role="menuitem">
+            <div class="v4-nav__drop-name">CRM &amp; Automation</div>
+            <div class="v4-nav__drop-desc">Lead tracking and follow-up systems</div>
           </a>
-          <a href="/services/operations-consulting" class="nav__drop-item" role="menuitem">
-            <div class="nav__drop-name">Operations Consulting</div>
-            <div class="nav__drop-desc">Scaling, structure, and process improvement</div>
+          <a href="/services/operations-consulting" class="v4-nav__drop-item" role="menuitem">
+            <div class="v4-nav__drop-name">Operations Consulting</div>
+            <div class="v4-nav__drop-desc">Scaling, structure, and process improvement</div>
           </a>
-          <a href="/work-with-me" class="nav__drop-item nav__drop-item--cta" role="menuitem">
-            <div class="nav__drop-name">Work With Me →</div>
-            <div class="nav__drop-desc">See how engagements work</div>
+          <a href="/work-with-me" class="v4-nav__drop-item v4-nav__drop-item--cta" role="menuitem">
+            <div class="v4-nav__drop-name">Work With Me <svg class="v4-arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="v4-nav__drop-desc">See how engagements work</div>
           </a>
         </div>
       </li>
-
-      <!-- Industries dropdown -->
-      <li class="nav__item">
-        <a href="/industries" class="nav__link active" aria-haspopup="true" aria-current="page">Industries</a>
-        <div class="nav__dropdown" role="menu">
-          <a href="/industries/roofing" class="nav__drop-item" role="menuitem">
-            <div class="nav__drop-name">Roofing Companies</div>
-            <div class="nav__drop-desc">Operations, estimating, crew systems</div>
+      <li class="v4-nav__item">
+        <a href="/industries" class="v4-nav__link" aria-haspopup="true" aria-current="page">Industries <span class="caret">▾</span></a>
+        <div class="v4-nav__drop" role="menu">
+          <a href="/industries/roofing" class="v4-nav__drop-item" role="menuitem">
+            <div class="v4-nav__drop-name">Roofing Companies</div>
+            <div class="v4-nav__drop-desc">Operations, estimating, crew systems</div>
           </a>
-          <a href="/industries/real-estate" class="nav__drop-item" role="menuitem">
-            <div class="nav__drop-name">Real Estate Professionals</div>
-            <div class="nav__drop-desc">Agent systems, CRM, transaction workflows</div>
+          <a href="/industries/real-estate" class="v4-nav__drop-item" role="menuitem">
+            <div class="v4-nav__drop-name">Real Estate Professionals</div>
+            <div class="v4-nav__drop-desc">Agent systems, CRM, transaction workflows</div>
           </a>
-          <a href="/industries/service-businesses" class="nav__drop-item" role="menuitem">
-            <div class="nav__drop-name">Service Businesses</div>
-            <div class="nav__drop-desc">Operations and scaling systems</div>
+          <a href="/industries/service-businesses" class="v4-nav__drop-item" role="menuitem">
+            <div class="v4-nav__drop-name">Service Businesses</div>
+            <div class="v4-nav__drop-desc">Operations and scaling systems</div>
           </a>
           <!-- FINAL CONVERSION DESTINATION NEEDED -->
-          <a href="/work-with-me" class="nav__drop-item nav__drop-item--cta" role="menuitem">
-            <div class="nav__drop-name">Not sure? Start here →</div>
-            <div class="nav__drop-desc">Book a free discovery call</div>
+          <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__drop-item v4-nav__drop-item--cta" role="menuitem">
+            <div class="v4-nav__drop-name">Not sure? Start here <svg class="v4-arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="v4-nav__drop-desc">Book a free discovery call</div>
           </a>
         </div>
       </li>
-
-      <li><a href="/about" class="nav__link">About</a></li>
-      <li><a href="/resources" class="nav__link">Resources</a></li>
-      <li><span class="nav__link is-coming-soon" aria-disabled="true">Templates (Soon)</span></li>
+      <li class="v4-nav__item"><a href="/about" class="v4-nav__link">About</a></li>
+      <li class="v4-nav__item"><a href="/resources" class="v4-nav__link">Resources</a></li>
+      <li class="v4-nav__item"><span class="v4-nav__link is-soon" aria-disabled="true">Templates (Soon)</span></li>
     </ul>
 
-    <!-- Desktop CTAs -->
-    <div class="nav__ctas">
+    <div class="v4-nav__ctas">
       <!-- FINAL CONVERSION DESTINATION NEEDED -->
-      <a href="/work-with-me"
-         class="nav__cta-audit">Free Audit</a>
-      <!-- FINAL CONVERSION DESTINATION NEEDED -->
-      <a href="/work-with-me"
-         class="nav__cta-book">Book a Call</a>
+      <a href="/work-with-me" class="v4-nav__cta-ghost">Free Audit</a>
+      <a href="/work-with-me" class="v4-nav__cta-solid">Book a Call</a>
     </div>
 
-    <!-- Mobile: always-visible book button + hamburger -->
-    <!-- FINAL CONVERSION DESTINATION NEEDED -->
-    <a href="/work-with-me"
-       class="nav__cta-book-mobile"
-       aria-label="Book a discovery call">Book a Call</a>
-    <button id="nav-hamburger" class="nav__hamburger"
-            aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-mobile">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="/work-with-me" class="v4-nav__cta-mobile">Book a Call</a>
+    <button type="button" class="v4-nav__burger" id="v4NavBurger" aria-expanded="false" aria-controls="v4MobileDrawer" aria-label="Toggle navigation">☰ MENU</button>
   </div>
 </nav>
 
-<!-- Mobile drawer -->
-<div id="nav-mobile" class="nav__mobile" role="dialog" aria-label="Mobile navigation">
-  <a href="/services" class="nav__mobile-link">Services</a>
-  <a href="/industries" class="nav__mobile-link" aria-current="page">Industries</a>
-  <a href="/about" class="nav__mobile-link">About</a>
-  <a href="/resources" class="nav__mobile-link">Resources</a>
-  <span class="nav__mobile-link is-coming-soon" aria-disabled="true">Templates (Soon)</span>
-  <div class="nav__mobile-ctas">
-    <!-- FINAL CONVERSION DESTINATION NEEDED -->
-    <a href="/work-with-me"
-       class="btn btn--ghost-light" style="width:100%;justify-content:center;">Free Audit</a>
-    <!-- FINAL CONVERSION DESTINATION NEEDED -->
-    <a href="/work-with-me"
-       class="btn btn--primary-dark" style="width:100%;justify-content:center;">Book a Discovery Call</a>
+<!-- Mobile drawer — same destinations as desktop, nothing hidden -->
+<div id="v4MobileDrawer" class="v4-mobile-drawer" role="dialog" aria-label="Mobile navigation">
+  <a href="/services" class="v4-mobile-drawer__link">Services</a>
+  <div class="v4-mobile-drawer__sub">
+    <a href="/services/google-workspace-systems">Google Workspace Systems</a>
+    <a href="/services/sops-playbooks">SOPs &amp; Playbooks</a>
+    <a href="/services/crm-automation">CRM &amp; Automation</a>
+    <a href="/services/operations-consulting">Operations Consulting</a>
+  </div>
+  <a href="/industries" class="v4-mobile-drawer__link" aria-current="page">Industries</a>
+  <div class="v4-mobile-drawer__sub">
+    <a href="/industries/roofing">Roofing Companies</a>
+    <a href="/industries/real-estate">Real Estate Professionals</a>
+    <a href="/industries/service-businesses">Service Businesses</a>
+  </div>
+  <a href="/about" class="v4-mobile-drawer__link">About</a>
+  <a href="/resources" class="v4-mobile-drawer__link">Resources</a>
+  <span class="v4-mobile-drawer__link is-soon" aria-disabled="true">Templates (Soon)</span>
+  <div class="v4-mobile-drawer__ctas">
+    <a href="/work-with-me" class="v4-nav__cta-ghost" style="text-align:center;">Free Audit</a>
+    <a href="/work-with-me" class="v4-nav__cta-solid" style="text-align:center;">Book a Discovery Call</a>
   </div>
 </div>
 
-<div class="nav-spacer"></div>
+<!-- Calmer orb presence: idle float + pointer parallax only — this is a
+     reading page, not the homepage, so no scroll-driven waypoint sweep. -->
+<div class="orb-scroll orb-static" aria-hidden="true">
+  <div class="orb-pointer" id="orbPointer">
+    <div class="orb-idle"><div class="orb"></div></div>
+  </div>
+</div>
 
-<main id="main-content">
+<main>
 
 <!-- ═══════════════════════════════════════════════════════════
      ID01 · HERO
 ═══════════════════════════════════════════════════════════ -->
-<section class="section section--charcoal" aria-label="Roofing Companies Hero">
-  <div class="container">
-    <div class="problem__inner">
-      <span class="eyebrow">Roofing Companies</span>
-      <h1 class="h1">Roofing Operations,<br>Actually <em>Organized.</em></h1>
-      <p class="body-copy body-copy--dark problem__body">
-        Roofing companies run on handoffs — estimate to production, office to field, one crew to the next. When those handoffs aren't systemized, nothing catastrophic happens all at once. Things just quietly slip: a follow-up that doesn't happen, a job status nobody can find, a process three different people run three different ways.
-      </p>
-      <div class="btn-pair" style="justify-content:center;">
-        <!-- FINAL CONVERSION DESTINATION NEEDED -->
-        <a href="/work-with-me"
-           class="btn btn--primary">Book a Discovery Call</a>
-        <a href="#how-i-help" class="btn btn--ghost-dark">See How We Help</a>
-      </div>
-      <div class="hero__chips" aria-label="Focus areas" style="justify-content:center;">
-        <span class="hero__chip">Estimating · Production · Office · Field</span>
-        <span class="hero__chip">Built From Inside Roofing Operations</span>
-        <span class="hero__chip">People + Process + Technology</span>
-      </div>
+<section class="v4-hero v4-about-hero" aria-label="Roofing Companies Hero">
+  <div class="wrap">
+    <p class="v4-eyebrow">Roofing Companies</p>
+    <h1 class="v4-display" style="font-size:clamp(46px,7.2vw,96px);">Roofing Operations,<br>Actually <em>Organized.</em></h1>
+    <p class="v4-copy" style="max-width:640px;">
+      Roofing companies run on handoffs — estimate to production, office to field, one crew to the next. When those handoffs aren't systemized, nothing catastrophic happens all at once. Things just quietly slip: a follow-up that doesn't happen, a job status nobody can find, a process three different people run three different ways.
+    </p>
+    <div style="display:flex; gap:30px; align-items:center; flex-wrap:wrap; margin-top:10px;">
+      <!-- FINAL CONVERSION DESTINATION NEEDED -->
+      <a href="/work-with-me" class="v4-nav__cta-solid">Book a Discovery Call</a>
+      <a class="v4-link" href="#how-i-help">See How We Help <svg class="v4-arrow v4-arrow--up" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="v4-tag-row" aria-label="Focus areas">
+      <span class="v4-tag">Estimating · Production · Office · Field</span>
+      <span class="v4-tag">Built From Inside Roofing Operations</span>
+      <span class="v4-tag">People + Process + Technology</span>
     </div>
   </div>
 </section>
@@ -173,28 +161,26 @@
 <!-- ═══════════════════════════════════════════════════════════
      ID02 · THE FRICTION
 ═══════════════════════════════════════════════════════════ -->
-<section id="the-friction" class="section section--ivory" aria-labelledby="friction-heading">
-  <div class="container">
-    <div class="problem__inner">
-      <span class="eyebrow">The Friction</span>
-      <h2 class="h2" id="friction-heading">Where Roofing Operations<br>Commonly Break Down.</h2>
-      <p class="body-copy problem__body">
-        Every roofing company is a little different, but the breakdowns tend to cluster in the same few places.
-      </p>
+<section class="v4-chapter cream" id="the-friction">
+  <div class="wrap v4-reveal">
+    <p class="v4-eyebrow">The Friction</p>
+    <h2 class="v4-display" style="font-size:clamp(40px,5.5vw,76px);">Where Roofing Operations<br>Commonly Break Down.</h2>
+    <p class="v4-copy">
+      Every roofing company is a little different, but the breakdowns tend to cluster in the same few places.
+    </p>
 
-      <div class="pain-cards" role="list">
-        <div class="pain-card" role="listitem">
-          <h3 class="pain-card__title">Lead-to-Estimate</h3>
-          <p class="pain-card__body">Leads come in fast and from everywhere — referrals, ads, insurance calls. Without a consistent intake and follow-up process, estimates go out inconsistently and follow-up depends on who remembers to do it.</p>
-        </div>
-        <div class="pain-card" role="listitem">
-          <h3 class="pain-card__title">Sales-to-Production Handoff</h3>
-          <p class="pain-card__body">The information that closes a sale doesn't always make it to the crew that has to execute it. Job details, customer preferences, and site notes get lost somewhere between the estimate and the first day on the roof.</p>
-        </div>
-        <div class="pain-card" role="listitem">
-          <h3 class="pain-card__title">Office-to-Field Communication</h3>
-          <p class="pain-card__body">Scheduling changes, material issues, and customer questions all have to travel between the field and the office in real time — and when that channel isn't systemized, everyone ends up playing phone tag.</p>
-        </div>
+    <div class="v4-card-row">
+      <div class="v4-card">
+        <h3>Lead-to-Estimate</h3>
+        <p>Leads come in fast and from everywhere — referrals, ads, insurance calls. Without a consistent intake and follow-up process, estimates go out inconsistently and follow-up depends on who remembers to do it.</p>
+      </div>
+      <div class="v4-card">
+        <h3>Sales-to-Production Handoff</h3>
+        <p>The information that closes a sale doesn't always make it to the crew that has to execute it. Job details, customer preferences, and site notes get lost somewhere between the estimate and the first day on the roof.</p>
+      </div>
+      <div class="v4-card">
+        <h3>Office-to-Field Communication</h3>
+        <p>Scheduling changes, material issues, and customer questions all have to travel between the field and the office in real time — and when that channel isn't systemized, everyone ends up playing phone tag.</p>
       </div>
     </div>
   </div>
@@ -203,28 +189,28 @@
 <!-- ═══════════════════════════════════════════════════════════
      ID03 · HOW WE HELP
 ═══════════════════════════════════════════════════════════ -->
-<section id="how-i-help" class="section section--ivory-deep" aria-labelledby="help-heading">
-  <div class="container">
-    <div class="grid-2">
-      <div class="about__text">
-        <span class="eyebrow eyebrow--olive">How We Help</span>
-        <h2 class="h2" id="help-heading">Systems Built Around<br>How Roofing Actually Runs.</h2>
-        <div class="about__body body-copy">
+<section class="v4-chapter" id="how-i-help">
+  <div class="wrap v4-reveal">
+    <div class="v4-grid-2">
+      <div>
+        <p class="v4-eyebrow">How We Help</p>
+        <h2 class="v4-display" style="font-size:clamp(40px,5.5vw,76px);">Systems Built Around<br>How Roofing Actually Runs.</h2>
+        <div class="v4-copy">
           <p>We don't start by recommending software. We start by mapping how a job actually moves through your business today — from the first phone call to the final walkthrough — and figure out where it's actually breaking down versus where it just feels chaotic.</p>
-          <p>From there, the work usually involves cleaning up CRM adoption, documenting the handoff between sales and production, and building the project documentation and scheduling systems your team will actually use.</p>
+          <p style="margin-top:20px;">From there, the work usually involves cleaning up CRM adoption, documenting the handoff between sales and production, and building the project documentation and scheduling systems your team will actually use.</p>
         </div>
-        <p class="body-copy" style="margin-top:6px;">
-          <a href="/work-with-me" class="service-card__link">See how engagements start</a>
+        <p class="v4-copy" style="margin-top:6px;">
+          <a class="v4-link" href="/work-with-me">See how engagements start <svg class="v4-arrow v4-arrow--up" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </p>
       </div>
 
-      <div class="about-list" aria-label="How we typically help">
-        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Build a consistent process for tracking leads and estimates and following up on them, so it doesn't depend on memory</span></div>
-        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Document the handoff between sales and production</span></div>
-        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Build a project documentation system, so job details don't live in someone's truck — or someone's head</span></div>
-        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Build scheduling and communication systems the office and field both use</span></div>
-        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Get more consistent use out of the CRM you already have</span></div>
-        <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Reduce how many decisions have to run through you personally</span></div>
+      <div class="v4-check-list" aria-label="How we typically help">
+        <div class="v4-check-item">Build a consistent process for tracking leads and estimates and following up on them, so it doesn't depend on memory</div>
+        <div class="v4-check-item">Document the handoff between sales and production</div>
+        <div class="v4-check-item">Build a project documentation system, so job details don't live in someone's truck — or someone's head</div>
+        <div class="v4-check-item">Build scheduling and communication systems the office and field both use</div>
+        <div class="v4-check-item">Get more consistent use out of the CRM you already have</div>
+        <div class="v4-check-item">Reduce how many decisions have to run through you personally</div>
       </div>
     </div>
   </div>
@@ -233,25 +219,23 @@
 <!-- ═══════════════════════════════════════════════════════════
      ID04 · PEOPLE + PROCESS + TECHNOLOGY
 ═══════════════════════════════════════════════════════════ -->
-<section id="approach" class="section section--ivory" aria-labelledby="approach-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow eyebrow--mauve">The Approach</span>
-      <h2 class="h2" id="approach-heading">People + Process + Technology<br>in Roofing Companies.</h2>
-    </div>
+<section class="v4-chapter cream" id="approach">
+  <div class="wrap v4-reveal">
+    <p class="v4-eyebrow">The Approach</p>
+    <h2 class="v4-display" style="font-size:clamp(38px,5vw,64px);">People + Process + Technology<br>in Roofing Companies.</h2>
 
-    <div class="pain-cards" role="list">
-      <div class="pain-card" role="listitem">
-        <h3 class="pain-card__title">People</h3>
-        <p class="pain-card__body">Roofing operations run on people first — sales reps, production managers, crew leads, the office staff holding it all together. Any system we build starts with understanding how they actually work day to day, not how an org chart says they should.</p>
+    <div class="v4-card-row" style="margin-top:60px;">
+      <div class="v4-card">
+        <h3>People</h3>
+        <p>Roofing operations run on people first — sales reps, production managers, crew leads, the office staff holding it all together. Any system we build starts with understanding how they actually work day to day, not how an org chart says they should.</p>
       </div>
-      <div class="pain-card" role="listitem">
-        <h3 class="pain-card__title">Process</h3>
-        <p class="pain-card__body">Before we touch a tool, we map the actual path a job takes — lead to estimate to contract to production to completion — and find where that path breaks down or depends on one person remembering something.</p>
+      <div class="v4-card">
+        <h3>Process</h3>
+        <p>Before we touch a tool, we map the actual path a job takes — lead to estimate to contract to production to completion — and find where that path breaks down or depends on one person remembering something.</p>
       </div>
-      <div class="pain-card" role="listitem">
-        <h3 class="pain-card__title">Technology</h3>
-        <p class="pain-card__body">Whatever CRM, scheduling tool, or project management system you're already using, we look at whether it's actually being used the way it was meant to be — and fix that before recommending something new.</p>
+      <div class="v4-card">
+        <h3>Technology</h3>
+        <p>Whatever CRM, scheduling tool, or project management system you're already using, we look at whether it's actually being used the way it was meant to be — and fix that before recommending something new.</p>
       </div>
     </div>
   </div>
@@ -260,22 +244,20 @@
 <!-- ═══════════════════════════════════════════════════════════
      ID05 · AREAS THAT MAY BE IMPROVED
 ═══════════════════════════════════════════════════════════ -->
-<section id="areas-to-improve" class="section section--ivory-deep" aria-labelledby="areas-heading">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow eyebrow--olive">Where to Start</span>
-      <h2 class="h2" id="areas-heading">Areas That May Be Worth Improving.</h2>
-      <p class="body-copy">Every business is different — but these are the areas that come up most often.</p>
-    </div>
+<section class="v4-chapter" id="areas-to-improve">
+  <div class="wrap v4-reveal">
+    <p class="v4-eyebrow">Where to Start</p>
+    <h2 class="v4-display" style="font-size:clamp(34px,4.4vw,56px);">Areas That May Be Worth Improving.</h2>
+    <p class="v4-copy">Every business is different — but these are the areas that come up most often.</p>
 
-    <div class="about-list" style="max-width:640px; margin-inline:auto;" aria-label="Common areas for improvement">
-      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Every lead gets followed up on, even during the busy weeks when it's easy for one to slip through</span></div>
-      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">The details from the sale actually make it to the crew, instead of getting lost between sales and production</span></div>
-      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">The CRM gets used the way it's supposed to — by everyone, not just whoever remembers to log in</span></div>
-      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Anyone on the team can check where a job stands without having to track someone down</span></div>
-      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">The office and the field are working off the same information, so schedules don't fall apart over a miscommunication</span></div>
-      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Every crew follows the same core standards, without the process changing depending on who's running the job</span></div>
-      <div class="about-list__item"><div class="about-list__icon" aria-hidden="true"></div><span class="about-list__text">Customers hear from you at the right moments during a job, instead of only when something's gone wrong</span></div>
+    <div class="v4-check-list" style="max-width:700px; margin-top:40px;" aria-label="Common areas for improvement">
+      <div class="v4-check-item">Every lead gets followed up on, even during the busy weeks when it's easy for one to slip through</div>
+      <div class="v4-check-item">The details from the sale actually make it to the crew, instead of getting lost between sales and production</div>
+      <div class="v4-check-item">The CRM gets used the way it's supposed to — by everyone, not just whoever remembers to log in</div>
+      <div class="v4-check-item">Anyone on the team can check where a job stands without having to track someone down</div>
+      <div class="v4-check-item">The office and the field are working off the same information, so schedules don't fall apart over a miscommunication</div>
+      <div class="v4-check-item">Every crew follows the same core standards, without the process changing depending on who's running the job</div>
+      <div class="v4-check-item">Customers hear from you at the right moments during a job, instead of only when something's gone wrong</div>
     </div>
   </div>
 </section>
@@ -283,59 +265,51 @@
 <!-- ═══════════════════════════════════════════════════════════
      ID06 · RELEVANT SERVICES
 ═══════════════════════════════════════════════════════════ -->
-<section id="relevant-services" class="section section--ivory" aria-labelledby="services-heading">
-  <div class="container">
-    <div class="problem__inner">
-      <span class="eyebrow eyebrow--olive">Relevant Services</span>
-      <h2 class="h2" id="services-heading">Where This Usually Starts.</h2>
-      <p class="body-copy problem__body">
-        For most roofing companies, the work touches some combination of these:
-      </p>
-      <div class="industry-tile__tags" style="justify-content:center;" aria-label="Relevant services">
-        <span class="industry-tag">Google Workspace Systems</span>
-        <span class="industry-tag">SOPs &amp; Playbooks</span>
-        <span class="industry-tag">CRM &amp; Automation</span>
-        <span class="industry-tag">Operations Consulting</span>
-      </div>
-      <p class="body-copy problem__body" style="margin-top:24px; margin-bottom:0;">
-        <a href="/services" class="btn btn--ghost-light">See the Full Services Breakdown</a>
-      </p>
+<section class="v4-chapter cream" id="relevant-services">
+  <div class="wrap v4-reveal">
+    <p class="v4-eyebrow">Relevant Services</p>
+    <h2 class="v4-display" style="font-size:clamp(34px,4.4vw,56px);">Where This Usually Starts.</h2>
+    <p class="v4-copy">
+      For most roofing companies, the work touches some combination of these:
+    </p>
+    <div class="v4-tag-row" aria-label="Relevant services">
+      <span class="v4-tag">Google Workspace Systems</span>
+      <span class="v4-tag">SOPs &amp; Playbooks</span>
+      <span class="v4-tag">CRM &amp; Automation</span>
+      <span class="v4-tag">Operations Consulting</span>
     </div>
+    <p class="v4-copy" style="margin-top:24px;">
+      <a class="v4-link" href="/services">See the Full Services Breakdown <svg class="v4-arrow v4-arrow--up" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </p>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
      ID07 · WHAT IT FEELS LIKE
 ═══════════════════════════════════════════════════════════ -->
-<section id="what-it-feels-like" class="section section--ivory-deep" aria-labelledby="feels-heading">
-  <div class="container">
-    <div class="problem__inner">
-      <span class="eyebrow">What It Feels Like</span>
-      <h2 class="h2" id="feels-heading">A Business That Runs<br>Without Everything Going Through You.</h2>
-      <p class="body-copy problem__body">
-        When the systems are working, estimates go out consistently, the crew shows up with the right information, and you're not the one fielding every scheduling question. It doesn't mean the business runs itself — it means it runs without depending entirely on you being everywhere at once.
-      </p>
-    </div>
+<section class="v4-chapter" id="what-it-feels-like">
+  <div class="wrap v4-reveal">
+    <p class="v4-eyebrow">What It Feels Like</p>
+    <h2 class="v4-display" style="font-size:clamp(38px,5vw,64px);">A Business That Runs<br>Without Everything Going Through You.</h2>
+    <p class="v4-copy">
+      When the systems are working, estimates go out consistently, the crew shows up with the right information, and you're not the one fielding every scheduling question. It doesn't mean the business runs itself — it means it runs without depending entirely on you being everywhere at once.
+    </p>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
      ID08 · HOW TO START
 ═══════════════════════════════════════════════════════════ -->
-<section id="how-to-start" class="section section--ivory" aria-labelledby="start-heading">
-  <div class="container">
-    <div class="process__header">
-      <span class="eyebrow">How to Start</span>
-      <h2 class="h2" id="start-heading">Start With a Conversation.</h2>
-      <p class="body-copy" style="max-width:560px; margin:12px auto 0;">
-        The fastest way to find out what your business actually needs is a discovery call — thirty minutes, no pressure, no pitch.
-      </p>
-    </div>
-
-    <div class="process__cta">
+<section class="v4-chapter cream" id="how-to-start" style="text-align:center;">
+  <div class="wrap v4-reveal">
+    <p class="v4-eyebrow">How to Start</p>
+    <h2 class="v4-display" style="font-size:clamp(34px,4.4vw,56px);">Start With a Conversation.</h2>
+    <p class="v4-copy" style="max-width:560px; margin:20px auto 0;">
+      The fastest way to find out what your business actually needs is a discovery call — thirty minutes, no pressure, no pitch.
+    </p>
+    <div style="display:flex; justify-content:center; margin-top:34px;">
       <!-- FINAL CONVERSION DESTINATION NEEDED -->
-      <a href="/work-with-me"
-         class="btn btn--primary">Book Your Discovery Call</a>
+      <a href="/work-with-me" class="v4-nav__cta-solid">Book Your Discovery Call</a>
     </div>
   </div>
 </section>
@@ -343,92 +317,79 @@
 <!-- ═══════════════════════════════════════════════════════════
      ID09 · CONVERSION
 ═══════════════════════════════════════════════════════════ -->
-<section id="lets-talk" class="section section--gold" aria-labelledby="industry-cta-heading">
-  <div class="container">
-    <div class="cta-gold">
-      <p class="cta-gold__eyebrow">Let's Work Together</p>
-      <h2 class="h2 h2--white" id="industry-cta-heading">Ready to Get Your Roofing<br>Operations Organized?</h2>
-      <p class="cta-gold__body">
-        You've seen where the friction usually lives and how we help fix it. If that sounds like your business, the next step is a conversation.
-      </p>
-      <div class="btn-pair" style="justify-content:center;">
-        <!-- FINAL CONVERSION DESTINATION NEEDED -->
-        <a href="/work-with-me"
-           class="btn btn--primary-gold">Book a Discovery Call</a>
-        <!-- FINAL CONVERSION DESTINATION NEEDED -->
-        <a href="/work-with-me"
-           class="btn btn--ghost-gold">Get the Free Audit</a>
-      </div>
-      <p class="cta-gold__micro">Free 30-minute call. No commitment required.</p>
+<section class="v4-chapter v4-finale" id="lets-talk">
+  <div class="wrap v4-reveal">
+    <p class="v4-eyebrow">Let's Work Together</p>
+    <h2 class="v4-display">Ready to Get Your Roofing<br>Operations Organized?</h2>
+    <p class="v4-copy">
+      You've seen where the friction usually lives and how we help fix it. If that sounds like your business, the next step is a conversation.
+    </p>
+    <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:34px;">
+      <!-- FINAL CONVERSION DESTINATION NEEDED -->
+      <a href="/work-with-me" class="v4-nav__cta-solid">Book a Discovery Call</a>
+      <!-- FINAL CONVERSION DESTINATION NEEDED -->
+      <a href="/work-with-me" class="v4-nav__cta-ghost">Get the Free Audit</a>
     </div>
+    <p style="margin-top:22px; font-size:13px; color:var(--muted); letter-spacing:.04em;">Free 30-minute call. No commitment required.</p>
   </div>
 </section>
 
 </main>
 
-<!-- ═══════════════════════════════════════════════════════════
-     FOOTER (identical to homepage/About/Services/Work With Me/Industries)
-═══════════════════════════════════════════════════════════ -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__grid">
+<footer class="v4-foot v4-foot--full" role="contentinfo">
+  <div class="wrap">
+    <div class="v4-foot__grid">
 
       <!-- Brand column -->
       <div>
-        <a href="/" class="footer__logo" aria-label="Elevate Consulting home">
-          Elevate <span>Consulting</span>
-        </a>
-        <p class="footer__tagline">
+        <a href="/" class="v4-nav__brand" aria-label="Elevate Consulting home">Elevate Consulting</a>
+        <p class="v4-foot__tagline">
           Operational clarity for service-based businesses — through systems, processes, and the infrastructure to scale with confidence.
         </p>
-        <div class="footer__socials" aria-label="Social media">
-          <a href="https://linkedin.com/in/katiewest" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="LinkedIn">in</a>
-          <a href="https://instagram.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Instagram">ig</a>
-          <a href="https://facebook.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Facebook">fb</a>
+        <div class="v4-foot__socials" aria-label="Social media">
+          <a href="https://linkedin.com/in/katiewest" target="_blank" rel="noopener noreferrer" class="v4-foot__social" aria-label="LinkedIn">in</a>
+          <a href="https://instagram.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="v4-foot__social" aria-label="Instagram">ig</a>
+          <a href="https://facebook.com/elevateconsulting" target="_blank" rel="noopener noreferrer" class="v4-foot__social" aria-label="Facebook">fb</a>
         </div>
       </div>
 
       <!-- Services column -->
       <nav aria-label="Services navigation">
-        <div class="footer__col-head">Services</div>
-        <ul class="footer__links" role="list">
-          <li><a href="/services/google-workspace-systems" class="footer__link">Google Workspace Systems</a></li>
-          <li><a href="/services/sops-playbooks" class="footer__link">SOPs &amp; Playbooks</a></li>
-          <li><a href="/services/crm-automation" class="footer__link">CRM &amp; Automation</a></li>
-          <li><a href="/services/operations-consulting" class="footer__link">Operations Consulting</a></li>
-        </ul>
+        <div class="v4-foot__col-head">Services</div>
+        <div class="v4-foot__links">
+          <a href="/services/google-workspace-systems">Google Workspace Systems</a>
+          <a href="/services/sops-playbooks">SOPs &amp; Playbooks</a>
+          <a href="/services/crm-automation">CRM &amp; Automation</a>
+          <a href="/services/operations-consulting">Operations Consulting</a>
+        </div>
       </nav>
 
       <!-- Company column -->
       <nav aria-label="Company navigation">
-        <div class="footer__col-head">Company</div>
-        <ul class="footer__links" role="list">
-          <li><a href="/about" class="footer__link">About</a></li>
-          <li><a href="/industries" class="footer__link">Industries</a></li>
-          <li><a href="/work-with-me" class="footer__link">Work With Me</a></li>
-          <li><span class="footer__link is-coming-soon" aria-disabled="true">Templates — Coming Soon</span></li>
-          <li>
-            <!-- FINAL CONVERSION DESTINATION NEEDED -->
-            <a href="/work-with-me"
-               class="footer__link footer__link--cta">Book a Discovery Call →</a>
-          </li>
-        </ul>
+        <div class="v4-foot__col-head">Company</div>
+        <div class="v4-foot__links">
+          <a href="/about">About</a>
+          <a href="/industries">Industries</a>
+          <a href="/work-with-me">Work With Me</a>
+          <span class="is-soon" aria-disabled="true">Templates — Coming Soon</span>
+          <!-- FINAL CONVERSION DESTINATION NEEDED -->
+          <a href="/work-with-me" class="is-cta">Book a Discovery Call <svg class="v4-arrow" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11.5M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </nav>
 
       <!-- Contact column -->
       <div>
-        <div class="footer__col-head">Contact</div>
-        <ul class="footer__links" role="list">
-          <li><a href="mailto:katie@everyoneneedsakatiewest.com" class="footer__link">katie@everyoneneedsakatiewest.com</a></li>
-          <li><span class="footer__link">Texas · Remote-Capable</span></li>
-        </ul>
+        <div class="v4-foot__col-head">Contact</div>
+        <div class="v4-foot__links">
+          <a href="mailto:katie@everyoneneedsakatiewest.com">katie@everyoneneedsakatiewest.com</a>
+          <span>Texas · Remote-Capable</span>
+        </div>
       </div>
     </div>
 
-    <!-- Bottom bar -->
-    <div class="footer__bottom">
-      <p class="footer__copy">&copy; <span id="year"></span> Elevate Consulting. All rights reserved.</p>
-      <nav class="footer__legal" aria-label="Legal">
+    <div class="v4-foot__bottom">
+      <span>&copy; <span id="year">2026</span> Elevate Consulting. All rights reserved.</span>
+      <nav aria-label="Legal">
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms">Terms of Service</a>
       </nav>
@@ -436,23 +397,11 @@
   </div>
 </footer>
 
-<!-- Scripts -->
-<script src="/assets/js/script.js" defer></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<button type="button" class="v4-pause-motion" id="v4PauseMotion" aria-pressed="false">
+  <span class="v4-pause-motion__dot" aria-hidden="true"></span>
+  <span class="label">Pause Motion</span>
+</button>
 
-<!-- Scroll-reveal CSS (inline — zero additional request; not currently used on this page, kept for parity) -->
-<style>
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease var(--reveal-delay, 0s),
-              transform 0.5s ease var(--reveal-delay, 0s);
-}
-[data-reveal].revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
-
+<script src="/assets/js/v4.js" defer></script>
 </body>
 </html>
