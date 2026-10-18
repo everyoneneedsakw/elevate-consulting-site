@@ -9,7 +9,7 @@ hero:
   headline_line1: "Different Business."
   headline_italic: "Same Underlying Breakdowns."
   paragraph: "No two businesses operate the same way day to day — but underneath the surface, the operational breakdowns tend to look strikingly similar: inconsistent processes, poor information flow, tools that exist but aren't really used, and a leadership team still approving things that shouldn't need them anymore. Roofing, real estate, and service businesses are where we've seen this most closely — but the pattern isn't industry-specific."
-  cta_primary: "Book a Discovery Call"
+  cta_primary: "Let's Connect"
   cta_secondary: "See the Industries"
   tag1: "Roofing · Real Estate · Service Businesses"
   tag2: "Same Method, Different Environment"
@@ -88,7 +88,7 @@ start:
   headline_line1: "Start With a Conversation,"
   headline_line2: "Not an Assumption."
   paragraph: "Whatever industry your business is in, the fastest way to find out what's actually going on is a discovery call — thirty minutes, no pressure, no pitch."
-  cta_label: "Book Your Discovery Call"
+  cta_label: "Let's Connect"
 
 finale:
   eyebrow: "Let's Work Together"
@@ -96,6 +96,5 @@ finale:
   headline_prefix: "Applies to "
   headline_italic: "Your Business?"
   paragraph: "Whatever industry you're in, if the friction sounds familiar, the next step is the same: a conversation."
-  cta_primary: "Book a Discovery Call"
-  cta_secondary: "Let's Connect"
+  cta_primary: "Let's Connect"
   note: "Every great working relationship starts with a conversation."

@@ -676,9 +676,6 @@ content:
     - name: cta_primary
       label: CTA Primary
       type: string
-    - name: cta_secondary
-      label: CTA Secondary
-      type: string
     - name: note
       label: Note
       type: string
@@ -987,9 +984,6 @@ content:
       type: text
     - name: cta_primary
       label: CTA Primary
-      type: string
-    - name: cta_secondary
-      label: CTA Secondary
       type: string
     - name: note
       label: Note
@@ -1480,9 +1474,6 @@ content:
     - name: cta_primary
       label: CTA Primary
       type: string
-    - name: cta_secondary
-      label: CTA Secondary
-      type: string
     - name: note
       label: Note
       type: string
@@ -1759,9 +1750,6 @@ content:
       type: text
     - name: cta_primary
       label: CTA Primary
-      type: string
-    - name: cta_secondary
-      label: CTA Secondary
       type: string
     - name: note
       label: Note
@@ -2040,9 +2028,6 @@ content:
     - name: cta_primary
       label: CTA Primary
       type: string
-    - name: cta_secondary
-      label: CTA Secondary
-      type: string
     - name: note
       label: Note
       type: string
@@ -2319,9 +2304,6 @@ content:
       type: text
     - name: cta_primary
       label: CTA Primary
-      type: string
-    - name: cta_secondary
-      label: CTA Secondary
       type: string
     - name: note
       label: Note

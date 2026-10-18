@@ -10,7 +10,7 @@ hero:
   headline_prefix: "— Not Just "
   headline_italic: "Recommended."
   paragraph: "We help service-based businesses fix the operational stuff that's quietly costing them time, money, and sanity — disorganized files, undocumented processes, a CRM nobody trusts, and the general feeling that growth just means more chaos. We don't just tell you what's wrong. We build the systems that fix it."
-  cta_primary: "Book a Discovery Call"
+  cta_primary: "Let's Connect"
   cta_secondary: "See the Services"
   tag1: "Google Workspace · SOPs · CRM · Operations"
   tag2: "Diagnose First, Build Second"
@@ -94,7 +94,7 @@ start:
   headline_line1: "Start With a Conversation,"
   headline_italic: "Not a Commitment."
   paragraph: "The easiest way to figure out what your business actually needs is a discovery call — thirty minutes, no pressure, no pitch. If it makes sense to work together, we'll talk about what that looks like. If it doesn't, you'll still walk away with more clarity than you had before."
-  cta_label: "Book Your Discovery Call"
+  cta_label: "Let's Connect"
 
 finale:
   eyebrow: "Let's Work Together"
@@ -102,6 +102,5 @@ finale:
   headline_prefix: "and Start Running "
   headline_italic: "Systems?"
   paragraph: "You've seen what we build. If your business is ready for the operational foundation that lets you actually grow, the next step is a conversation."
-  cta_primary: "Book a Discovery Call"
-  cta_secondary: "Let's Connect"
+  cta_primary: "Let's Connect"
   note: "Every great working relationship starts with a conversation."
