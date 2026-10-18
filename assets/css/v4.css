@@ -87,8 +87,8 @@ body.v4 {
 }
 .v4-nav__drop-item { display: block; padding: 12px 14px; border-radius: 9px; }
 .v4-nav__drop-item:hover, .v4-nav__drop-item:focus-visible { background: #ffffff0d; }
-.v4-nav__drop-name { font-size: 12.5px; font-weight: 800; letter-spacing: .02em; color: var(--cream); }
-.v4-nav__drop-desc { font-size: 11px; color: var(--muted); margin-top: 3px; letter-spacing: .01em; }
+.v4-nav__drop-name { font-size: 13.5px; font-weight: 800; letter-spacing: .02em; color: var(--cream); }
+.v4-nav__drop-desc { font-size: 12.5px; color: var(--muted); margin-top: 4px; letter-spacing: .01em; line-height: 1.4; }
 .v4-nav__drop-item--cta .v4-nav__drop-name { color: var(--mauve); }
 
 .v4-nav__ctas { display: flex; align-items: center; gap: 12px; }
@@ -151,7 +151,6 @@ body.v4 {
   width: min(64vw, 800px); aspect-ratio: 1;
   pointer-events: none;
   transform: translate3d(calc(var(--orb-x, 0) * 1px), calc(var(--orb-y, 0) * 1px), 0) scale(var(--orb-scale, 1));
-  transition: transform .2s linear;
   will-change: transform;
 }
 .orb-scroll.is-front { z-index: 15; }
@@ -204,8 +203,10 @@ body.v4 {
 .v4-pause-motion__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--mauve); }
 .v4-pause-motion[aria-pressed="true"] .v4-pause-motion__dot { background: var(--muted); }
 
-/* When motion is paused (manually or via reduced-motion), freeze everything */
-.v4.is-motion-paused .orb-scroll,
+/* When motion is paused (manually or via reduced-motion), freeze everything.
+   The scroll-choreography layer is driven entirely by JS (continuous rAF
+   lerp, no CSS transition) so pausing it is handled in JS by halting the
+   lerp loop; this rule covers the remaining CSS-driven layers. */
 .v4.is-motion-paused .orb-pointer { transition: none !important; }
 .v4.is-motion-paused .orb-idle { animation-play-state: paused !important; }
 
@@ -224,7 +225,7 @@ body.v4 {
   display: flex; align-items: center; overflow: hidden;
 }
 .v4-hero .wrap { padding-top: 65px; }
-.v4-eyebrow { font-size: 11px; letter-spacing: .26em; font-weight: 800; color: var(--bronze); margin: 0 0 25px; text-transform: uppercase; }
+.v4-eyebrow { font-size: 12.5px; letter-spacing: .24em; font-weight: 800; color: var(--bronze); margin: 0 0 25px; text-transform: uppercase; }
 .v4-hero h1, .v4-display {
   font-size: clamp(65px, 11vw, 172px); font-weight: 900; letter-spacing: -.095em;
   line-height: .87; margin: 0; text-transform: uppercase;
@@ -265,7 +266,7 @@ body.v4 {
   transition: padding .2s, color .2s;
 }
 .v4-service-list a:hover { padding-left: 12px; color: var(--mauve); }
-.v4-service-list small { font-size: 12px; letter-spacing: .1em; color: var(--bronze); font-weight: 800; }
+.v4-service-list small { font-size: 13px; letter-spacing: .1em; color: var(--bronze); font-weight: 800; }
 .v4-service-list .arrow { font-size: 26px; font-weight: 400; }
 .v4-industries-line { margin-top: 36px; color: var(--muted); font-size: 13px; letter-spacing: .06em; }
 .v4-industries-line a { text-decoration: underline; text-underline-offset: 5px; }
@@ -275,9 +276,9 @@ body.v4 {
 .v4-magic .v4-copy { max-width: 760px; color: #e0d6d9; }
 .v4-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin-top: 95px; }
 .v4-step { border-top: 1px solid var(--bronze); padding-top: 20px; }
-.v4-step strong { font-size: 12px; color: var(--bronze); letter-spacing: .13em; }
-.v4-step h3 { font-size: clamp(20px, 2.3vw, 32px); letter-spacing: -.05em; margin: 18px 0 10px; }
-.v4-step p { font-size: 15px; line-height: 1.6; color: #d2c7cb; margin: 0; }
+.v4-step strong { font-size: 13px; color: var(--bronze); letter-spacing: .12em; }
+.v4-step h3 { font-size: clamp(21px, 2.4vw, 33px); letter-spacing: -.05em; margin: 18px 0 11px; }
+.v4-step p { font-size: 17px; line-height: 1.65; color: #d2c7cb; margin: 0; }
 
 .v4-shop { background: #241e26; }
 .v4-shop .v4-display { font-size: clamp(60px, 9vw, 128px); }
@@ -292,7 +293,7 @@ body.v4 {
 .v4-finale .v4-copy { color: #e7dcde; }
 
 /* ── 7. Footer ────────────────────────────────────────────── */
-.v4-foot { border-top: 1px solid #ffffff2e; padding: 40px 0; color: #b9b0b5; font-size: 12px; position: relative; z-index: 2; background: var(--night); }
+.v4-foot { border-top: 1px solid #ffffff2e; padding: 40px 0; color: #b9b0b5; font-size: 13px; position: relative; z-index: 2; background: var(--night); }
 .v4-foot .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 .v4-foot a { margin-left: 16px; }
 .v4-foot a:hover { color: var(--mauve); }
@@ -315,11 +316,11 @@ body.v4 {
   font-size: 11px; font-weight: 800; text-transform: uppercase;
 }
 .v4-foot__social:hover { border-color: var(--mauve); color: var(--mauve); }
-.v4-foot__col-head { font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--bronze); margin-bottom: 18px; }
-.v4-foot__links { display: flex; flex-direction: column; gap: 12px; }
-.v4-foot__links a { margin-left: 0; font-size: 13.5px; color: var(--muted); }
+.v4-foot__col-head { font-size: 11.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--bronze); margin-bottom: 18px; }
+.v4-foot__links { display: flex; flex-direction: column; gap: 13px; }
+.v4-foot__links a { margin-left: 0; font-size: 14.5px; color: var(--muted); }
 .v4-foot__links a:hover { color: var(--mauve); }
-.v4-foot__links .is-soon { margin-left: 0; font-size: 13.5px; color: #675f63; }
+.v4-foot__links .is-soon { margin-left: 0; font-size: 14.5px; color: #675f63; }
 .v4-foot__links a.is-cta { color: var(--mauve); font-weight: 700; }
 .v4-foot--full .v4-foot__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding-top: 26px; font-size: 11.5px; }
 .v4-foot--full .v4-foot__bottom a { margin-left: 18px; }
@@ -339,7 +340,7 @@ body.v4 {
 .v4-about-hero .v4-display { font-size: clamp(46px, 7.2vw, 96px); }
 .v4-stat-row { display: flex; gap: 60px; margin-top: 56px; flex-wrap: wrap; }
 .v4-stat-num { font-family: var(--ff-serif); font-style: italic; font-size: clamp(44px, 5vw, 72px); color: var(--mauve); line-height: 1; }
-.v4-stat-label { font-size: 11px; letter-spacing: .12em; color: var(--bronze); font-weight: 800; margin-top: 10px; text-transform: uppercase; }
+.v4-stat-label { font-size: 12.5px; letter-spacing: .11em; color: var(--bronze); font-weight: 800; margin-top: 10px; text-transform: uppercase; }
 
 .v4-card-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 70px; }
 .v4-card {
@@ -349,15 +350,15 @@ body.v4 {
   padding: 34px 30px;
 }
 .v4-chapter:not(.cream) .v4-card { background: #ffffff08; border-color: #ffffff1c; }
-.v4-card h3 { font-size: 19px; letter-spacing: -.01em; margin: 0 0 12px; }
-.v4-card p { font-size: 15px; line-height: 1.6; margin: 0; color: #6b6468; }
+.v4-card h3 { font-size: 20px; letter-spacing: -.01em; margin: 0 0 13px; }
+.v4-card p { font-size: 16.5px; line-height: 1.6; margin: 0; color: #6b6468; }
 .v4-chapter:not(.cream) .v4-card p { color: #c9bfc3; }
 
 .v4-grid-2 { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: start; }
 @media (max-width: 760px) { .v4-grid-2 { grid-template-columns: 1fr; gap: 40px; } }
 
 .v4-check-list { margin-top: 36px; display: flex; flex-direction: column; gap: 18px; }
-.v4-check-item { display: flex; gap: 14px; align-items: flex-start; font-size: 15.5px; line-height: 1.5; }
+.v4-check-item { display: flex; gap: 14px; align-items: flex-start; font-size: 17px; line-height: 1.55; }
 .v4-check-item::before { content: "—"; color: var(--mauve); font-weight: 800; flex-shrink: 0; }
 
 .v4-tag-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
@@ -397,7 +398,47 @@ body.v4 {
   .v4-pause-motion span.label { display: none; }
 }
 
-/* ── 11. Reduced motion ───────────────────────────────────── */
+/* ── 11. Arrow icons (replaces emoji-style → ↗ glyphs) ─────
+   Thin, currentColor SVG icons — not emoji, not oversized symbols.
+   .v4-arrow = forward/CTA (→); .v4-arrow--up = explore/external (↗).
+   Nest inside a link/button; the parent's :hover drives a subtle
+   4px nudge, never a bounce. */
+.v4-arrow {
+  display: inline-block;
+  width: .85em; height: .85em;
+  margin-left: 9px;
+  vertical-align: -.08em;
+  flex-shrink: 0;
+  transition: transform .25s cubic-bezier(.4,0,.2,1);
+}
+a:hover > .v4-arrow,
+a:hover .v4-nav__drop-name > .v4-arrow,
+.v4-service-list a:hover .v4-arrow,
+button:hover > .v4-arrow {
+  transform: translateX(3px);
+}
+.v4-arrow--up { transform: rotate(-45deg); }
+.v4-arrow--down { transform: rotate(90deg); }
+a:hover > .v4-arrow--up,
+a:hover .v4-nav__drop-name > .v4-arrow--up,
+.v4-service-list a:hover .v4-arrow--up,
+button:hover > .v4-arrow--up {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+.v4-nav__drop-name { display: flex; align-items: center; }
+.v4-service-list .arrow { display: inline-flex; }
+
+/* Roofing gets a restrained emerald accent instead of mauve, per brand. */
+.v4-industry--emerald .v4-eyebrow,
+.v4-industry--emerald .v4-step strong,
+.v4-industry--emerald .v4-stat-label { color: var(--emerald); }
+.v4-industry--emerald .v4-hero h1 em,
+.v4-industry--emerald .v4-display em { color: #2f8066; }
+.v4-industry--emerald .v4-link { border-bottom-color: #2f8066; }
+.v4-industry--emerald .v4-link:hover,
+.v4-industry--emerald .v4-service-list a:hover { color: #2f8066; }
+
+/* ── 12. Reduced motion ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .v4 *, .v4 *::before, .v4 *::after {
     animation-duration: .001ms !important;

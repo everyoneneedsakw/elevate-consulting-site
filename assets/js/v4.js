@@ -120,26 +120,32 @@
       return { x: last.x, y: last.y, scale: last.scale };
     }
 
-    var ticking = false;
-    function updateOrb() {
-      ticking = false;
+    // Continuous rAF lerp, not a CSS transition: a fixed-duration CSS
+    // transition re-starts on every scroll event, so fast or uneven
+    // scrolling produces visible stutter as it keeps interrupting itself.
+    // Instead we read the target position every frame and ease the
+    // orb's *current* position toward it by a constant fraction — this
+    // tracks scroll speed smoothly whether the page glides or jumps.
+    var current = null; // null until first frame, so there's no snap-in from (0,0)
+    var EASE = 0.08;
+
+    function frame() {
+      requestAnimationFrame(frame);
       if (motionPaused || reducedMotionMQ.matches) return;
       var doc = document.documentElement;
       var scrollable = doc.scrollHeight - window.innerHeight;
       var p = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
-      var v = interpolate(p);
-      orbStage.style.setProperty('--orb-x', v.x.toFixed(1));
-      orbStage.style.setProperty('--orb-y', v.y.toFixed(1));
-      orbStage.style.setProperty('--orb-scale', v.scale.toFixed(3));
+      var target = interpolate(p);
+      if (!current) current = { x: target.x, y: target.y, scale: target.scale };
+      current.x += (target.x - current.x) * EASE;
+      current.y += (target.y - current.y) * EASE;
+      current.scale += (target.scale - current.scale) * EASE;
+      orbStage.style.setProperty('--orb-x', current.x.toFixed(2));
+      orbStage.style.setProperty('--orb-y', current.y.toFixed(2));
+      orbStage.style.setProperty('--orb-scale', current.scale.toFixed(3));
       orbStage.classList.toggle('is-front', inFrontZone(p));
     }
-    window.addEventListener('scroll', function () {
-      if (!ticking) { ticking = true; requestAnimationFrame(updateOrb); }
-    }, { passive: true });
-    window.addEventListener('resize', function () {
-      if (!ticking) { ticking = true; requestAnimationFrame(updateOrb); }
-    }, { passive: true });
-    updateOrb();
+    requestAnimationFrame(frame);
   }
 
   /* Pointer parallax (desktop only, subtle, respects pause/reduced-motion).
