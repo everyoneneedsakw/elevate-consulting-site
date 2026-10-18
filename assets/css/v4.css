@@ -297,6 +297,37 @@ body.v4 {
 .v4-finale { min-height: 750px; display: flex; align-items: center; background: radial-gradient(circle at 84% 55%, #986f8159, transparent 36%); }
 .v4-finale .v4-copy { color: #e7dcde; }
 
+/* Lead inquiry form (Netlify Forms) — same editorial language as the
+   rest of the page: cream labels, mauve focus state, no new visual
+   system introduced. */
+.v4-form { max-width: 560px; margin-top: 40px; }
+.v4-form__heading { font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--bronze); margin: 0 0 20px; }
+.v4-form__honeypot { position: absolute; left: -9999px; }
+.v4-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.v4-form__field { display: block; margin-top: 18px; }
+.v4-form__field span { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.v4-form__field input, .v4-form__field textarea {
+  width: 100%; background: #ffffff0d; border: 1px solid #ffffff2e; border-radius: 10px;
+  padding: 13px 15px; font: inherit; font-size: 15px; color: var(--cream);
+  transition: border-color .2s, background .2s;
+}
+.v4-form__field input::placeholder, .v4-form__field textarea::placeholder { color: #87808370; }
+.v4-form__field input:focus, .v4-form__field textarea:focus {
+  outline: none; border-color: var(--mauve); background: #ffffff14;
+}
+.v4-form__field textarea { resize: vertical; min-height: 110px; }
+.v4-form button[type="submit"] { margin-top: 26px; border: none; cursor: pointer; }
+.v4-form button[type="submit"]:disabled { opacity: .6; cursor: default; }
+.v4-form__status { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.v4-form__status.is-error { color: #e2a0a0; }
+.v4-form__confirmation { max-width: 560px; margin-top: 40px; }
+.v4-form__confirmation-title { font-family: var(--ff-serif); font-style: italic; font-size: 26px; color: var(--mauve); margin: 0 0 12px; }
+.v4-form__confirmation p.v4-copy { margin: 0; }
+.v4-form__confirmation a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 560px) {
+  .v4-form__row { grid-template-columns: 1fr; gap: 0; }
+}
+
 /* Small founder "signature" portrait beside the closing CTA — a personal
    sign-off, not a second hero image. Fixed small size, never stretches. */
 .v4-finale__row { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }

@@ -355,6 +355,40 @@
       <a href="mailto:katie@everyoneneedsakatiewest.com?subject=Discovery%20Call%20Inquiry%20%7C%20Everyone%20Needs%20a%20Katie%20West&amp;body=Hi%20Katie%2C%0D%0AI%27m%20interested%20in%20learning%20more%20about%20working%20with%20Elevate%20Consulting%20%26%20Concierge.%0D%0A%0D%0AName%3A%0D%0ABusiness%3A%0D%0AWebsite%3A%0D%0AWhat%20I%20need%20help%20with%3A%0D%0A%0D%0AThank%20you%21" class="v4-nav__cta-ghost">{{finale.cta_secondary}}</a>
     </div>
     <p style="margin-top:22px; font-size:13px; color:var(--muted); letter-spacing:.04em;">{{finale.note}}</p>
+
+    <form name="work-with-me-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="v4-form" id="inquiryForm">
+      <input type="hidden" name="form-name" value="work-with-me-inquiry">
+      <input type="hidden" name="subject" value="New Work With Me inquiry — everyoneneedsakatiewest.com">
+      <p class="v4-form__honeypot" aria-hidden="true">
+        <label>Leave this field blank: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      </p>
+      <p class="v4-form__heading">{{form.heading}}</p>
+      <div class="v4-form__row">
+        <label class="v4-form__field">
+          <span>{{form.name_label}}</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label class="v4-form__field">
+          <span>{{form.email_label}}</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+      </div>
+      <label class="v4-form__field">
+        <span>{{form.business_label}}</span>
+        <input type="text" name="business" autocomplete="organization" required>
+      </label>
+      <label class="v4-form__field">
+        <span>{{form.message_label}}</span>
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit" class="v4-nav__cta-solid" data-label="{{form.submit_label}}" data-label-sending="{{form.submit_label_sending}}">{{form.submit_label}}</button>
+      <p class="v4-form__status" id="inquiryFormStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="v4-form__confirmation" id="inquiryFormConfirmation" hidden>
+      <p class="v4-form__confirmation-title">{{form.confirmation_title}}</p>
+      <p class="v4-copy">{{form.confirmation_body}} <a href="mailto:katie@everyoneneedsakatiewest.com">katie@everyoneneedsakatiewest.com</a>.</p>
+    </div>
   </div>
 </section>
 

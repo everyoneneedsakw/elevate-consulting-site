@@ -162,4 +162,43 @@
       orbPointer.style.setProperty('--ptr-y', y.toFixed(1));
     }, { passive: true });
   }
+
+  /* ── Work With Me inquiry form (Netlify Forms, AJAX) ─────────
+     Static-site Netlify Forms needs no backend: POST the encoded
+     body to "/" and Netlify's build-time form detection handles the
+     rest. Submitting via fetch instead of a full page load lets us
+     swap in an inline confirmation without a separate thank-you page. */
+  var inquiryForm = document.getElementById('inquiryForm');
+  if (inquiryForm) {
+    inquiryForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var submitBtn = inquiryForm.querySelector('button[type="submit"]');
+      var status = document.getElementById('inquiryFormStatus');
+      var confirmation = document.getElementById('inquiryFormConfirmation');
+      var formData = new FormData(inquiryForm);
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = submitBtn.getAttribute('data-label-sending') || 'Sending…';
+      if (status) { status.textContent = ''; status.classList.remove('is-error'); }
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(function (resp) {
+          if (!resp.ok) throw new Error('Submission failed: ' + resp.status);
+          inquiryForm.hidden = true;
+          if (confirmation) confirmation.hidden = false;
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitBtn.getAttribute('data-label') || 'Send Inquiry';
+          if (status) {
+            status.textContent = 'Something went wrong — please try again, or email katie@everyoneneedsakatiewest.com directly.';
+            status.classList.add('is-error');
+          }
+        });
+    });
+  }
 })();

@@ -459,7 +459,7 @@ content:
       type: text
     - name: og_title
       label: OG Title
-      type: string
+      type: text
     - name: og_description
       label: OG Description
       type: text
@@ -2755,6 +2755,37 @@ content:
     - name: note
       label: Note
       type: string
+  - name: form
+    label: Form
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: name_label
+      label: Name Label
+      type: string
+    - name: email_label
+      label: Email Label
+      type: string
+    - name: business_label
+      label: Business Label
+      type: string
+    - name: message_label
+      label: Message Label
+      type: string
+    - name: submit_label
+      label: Submit Label
+      type: string
+    - name: submit_label_sending
+      label: Submit Label Sending
+      type: string
+    - name: confirmation_title
+      label: Confirmation Title
+      type: string
+    - name: confirmation_body
+      label: Confirmation Body
+      type: text
 - name: page_resources
   label: Resources
   type: file

@@ -124,3 +124,14 @@ finale:
   cta_primary: "Reach Out"
   cta_secondary: "Email Us"
   note: "Free 30-minute call. No commitment required."
+
+form:
+  heading: "Or Send a Quick Inquiry"
+  name_label: "Name"
+  email_label: "Email"
+  business_label: "Business / Company Name"
+  message_label: "What do you need help with?"
+  submit_label: "Send Inquiry"
+  submit_label_sending: "Sending…"
+  confirmation_title: "Thank you — your message is on its way."
+  confirmation_body: "I'll be in touch soon. If it's urgent, feel free to email me directly at"
