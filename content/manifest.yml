@@ -92,3 +92,4 @@ pages:
     content: content/pages/terms.yml
     output: terms/index.html
     footer: full
+# verified by auto-rebuild pipeline check
