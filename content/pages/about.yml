@@ -1,0 +1,89 @@
+seo:
+  title: "About Katie West, Operations Consultant | Elevate Consulting"
+  description: "Meet Katie West, founder of Elevate Consulting. Learn how she learns your business fast, listens to the people doing the work, and builds operational systems your team will actually use."
+  og_title: "About Katie West | Elevate Consulting"
+  og_description: "Meet Katie West, founder of Elevate Consulting — an operations consultant who learns your business fast, simplifies what isn't working, and builds systems your team will actually use."
+
+site:
+  brand_text: "Elevate Consulting"
+
+hero:
+  eyebrow: "About Katie West"
+  headline_line1: "I Don't Just Study Operations."
+  headline_italic: "I've Lived Inside Them."
+  paragraph: "I'm the founder of Elevate Consulting — and before I built systems for other people's businesses, I was inside them: learning the software, sitting with the team, watching where the real friction was. That's still how I work today. I walk into whatever you're already using, figure out how your people actually operate, and build the systems that make the work easier instead of heavier."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "See How We Work"
+  tag1: "Operations · Systems · People"
+  tag2: "Texas-Based · Remote-Capable"
+  tag3: "Roofing · Real Estate · Service Businesses"
+  photo_name: "Katie West"
+  photo_title1: "Operations Expert"
+  photo_title2: "Texas-Based"
+
+problem:
+  eyebrow: "The Real Problem"
+  headline_line1: "You Don't Need More Tools."
+  headline_prefix: "You Need Someone Who Can See "
+  headline_italic: "the Whole Business."
+  paragraph: "Most of the businesses we work with haven't failed at effort. They've hired good people, tried the software, built the spreadsheets. What's usually missing isn't another platform — it's someone who can step back, see how the pieces are actually supposed to connect, and build the structure underneath everything else. That's the work we do. Not adding complexity. Removing it."
+
+approach:
+  eyebrow: "How We Think & Work"
+  headline_line1: "Systems Only Work When"
+  headline_prefix: "They're Built "
+  headline_italic: "Around People."
+  paragraph: "Every engagement comes down to the same combination: understanding people, mapping process, and choosing the right technology to support both — in that order. Technology is never the starting point. It's the last piece, once we know how your team actually works and what's getting in their way."
+  card1_title: "People First"
+  card1_desc: "Before we touch a single tool, we talk to the people actually doing the work — not just leadership. The gap between what leadership thinks is happening and what's really happening is usually where the friction lives."
+  card2_title: "Process Before Platform"
+  card2_desc: "We map how work actually moves through your business before we recommend anything. A system built on an undocumented process just automates the chaos faster."
+  card3_title: "Technology That Gets Adopted"
+  card3_desc: "The best system in the world is worthless if your team won't use it. We build things simple enough to actually stick — and we teach it back in a way people can run without us."
+
+different:
+  eyebrow: "Why It's Different"
+  headline_line1: "We Learn Your Business Fast"
+  headline_prefix: "— Then We "
+  headline_italic: "Simplify It."
+  paragraph1: "One of the things clients notice quickly is how fast we can walk into an unfamiliar business, an unfamiliar tool, or an unfamiliar process and understand not just how it's supposed to work, but how people are actually using it day to day. We're not attached to a single software stack or a one-size-fits-all framework. We look at what you already have, figure out what's creating friction, and personalize the system to how your business actually runs — instead of asking you to change how you work to fit a template."
+  paragraph2: "We also spend as much time listening as we do building. A lot of operational breakdowns aren't really technology problems — they're communication gaps between leadership, the team doing the work, and the customer on the other end. Part of what we do is sit in that gap and translate: turning what leadership needs, what the team can realistically execute, and what the customer experiences into one system everyone can actually follow."
+  check1: "Learns new software and workflows quickly — no long ramp-up required"
+  check2: "Talks to the people actually doing the work, not just leadership"
+  check3: "Simplifies before automating, instead of automating the chaos"
+  check4: "Builds systems documented and simple enough for your team to run without you"
+  check5: "Bridges the gap between leadership, employees, systems, and customers"
+
+experience:
+  eyebrow: "Experience"
+  headline_line1: "A Track Record Built"
+  headline_prefix: "Inside "
+  headline_italic: "Real Operations."
+  stat1_num: "10+"
+  stat1_label: "Years Experience"
+  stat2_num: "50+"
+  stat2_label: "Businesses Served"
+  stat3_num: "3"
+  stat3_label: "Core Industries"
+  industries_lead: "Industries I've worked inside:"
+  industry1: "Roofing Companies"
+  industry2: "Real Estate Professionals"
+  industry3: "Service Businesses"
+
+personal:
+  eyebrow: "Beyond the Systems"
+  headline_prefix: "The Person Behind "
+  headline_italic: "Elevate Consulting."
+  paragraph1: "I'm based in Texas and work with clients remotely across the country. What drew me to this work in the first place wasn't operations for its own sake — it was watching a team go from overwhelmed and disorganized to confident, almost overnight, once the right system finally clicked into place."
+  paragraph2: "I like the puzzle of a messy operation. I like sitting with the person who's been quietly holding a business together with sticky notes and group texts, and building them something that finally works the way their business actually runs. If that sounds like where your business is right now, I'd like to hear about it."
+
+finale:
+  eyebrow: "Let's Work Together"
+  headline_line1: "Ready to Build a Business"
+  headline_prefix: "That Runs "
+  headline_italic: "Without You"
+  headline_line2: "in Every Decision?"
+  paragraph: "You've read how we think and how we work. If that sounds like what your business needs right now, the next step is a conversation — not a sales pitch."
+  cta_primary: "Book a Discovery Call"
+  cta_secondary: "Get the Free Audit"
+  note: "Free 30-minute call. No commitment required."

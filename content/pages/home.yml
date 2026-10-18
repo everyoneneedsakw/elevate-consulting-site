@@ -1,0 +1,83 @@
+seo:
+  title: "Elevate Consulting | Where Strategy Meets Magic"
+  description: "Elevate Consulting builds practical systems, SOPs, Google Workspace workflows, CRM automations and operations strategies for independent professionals and growing teams."
+  og_title: "Elevate Consulting | Where Strategy Meets Magic"
+  og_description: "Big ideas. Better systems. Consulting, workflows and automation built around the way you work."
+
+site:
+  brand_text: "ELEVATE CONSULTING."
+
+hero:
+  eyebrow: "THE STRATEGY BEHIND THE SUCCESS"
+  headline_line1: "BIG IDEAS."
+  headline_italic: "Better"
+  headline_line2: "SYSTEMS."
+  paragraph: "Custom systems, smarter workflows, and practical support for independent professionals, growing teams, and established companies."
+  cta_label: "EXPLORE WHAT WE DO"
+  scroll_cue: "SCROLL TO EXPLORE"
+
+shift:
+  eyebrow: "01 | THE SHIFT"
+  headline_line1: "LESS CHAOS."
+  headline_prefix: "MORE "
+  headline_italic: "CONTROL."
+  paragraph: "Less time managing the moving pieces. More clarity, consistency, and confidence in how everything runs."
+
+ticker:
+  word1: "STRATEGY"
+  word2: "SYSTEMS"
+  word3: "SOPs"
+  word4: "AUTOMATION"
+  word5: "CLARITY"
+  word6: "GROWTH"
+
+build:
+  eyebrow: "02 | WHAT WE BUILD"
+  headline_line1: "BUILT FOR"
+  headline_italic: "HOW YOU WORK."
+  paragraph: "No one-size-fits-all systems. We connect the people, processes, and tools that keep work moving."
+  service1_label: "GOOGLE WORKSPACE SYSTEMS"
+  service2_label: "SOPs & PLAYBOOKS"
+  service3_label: "CRM & AUTOMATION"
+  service4_label: "OPERATIONS & GROWTH"
+  industries_prefix: "WORKING ACROSS"
+  industry1: "ROOFING"
+  industry2: "REAL ESTATE"
+  industry3: "SERVICE BUSINESSES"
+  industries_suffix: "AND BEYOND"
+
+method:
+  eyebrow: "03 | OUR APPROACH"
+  headline_line1: "WHERE"
+  headline_line2: "STRATEGY"
+  headline_prefix: "MEETS "
+  headline_italic: "MAGIC."
+  paragraph: "We start by understanding what is happening behind the scenes. Then we design the right solution, build it around the way you work, and help make it stick."
+  step1_label: "01 | DISCOVER"
+  step1_title: "Understand"
+  step1_desc: "Tell us what you're building, what's working, and where things get complicated."
+  step2_label: "02 | STRATEGIZE"
+  step2_title: "Find the fit"
+  step2_desc: "Choose a clearly scoped project or a deeper paid assessment when needed."
+  step3_label: "03 | IMPLEMENT"
+  step3_title: "Make it real"
+  step3_desc: "Build practical workflows, systems, and documentation around your needs."
+  step4_label: "04 | ELEVATE"
+  step4_title: "Keep moving"
+  step4_desc: "Train, hand off, and optimize so the improvements last."
+  cta_label: "START WITH A CONVERSATION"
+
+shop:
+  badge: "COMING SOON"
+  eyebrow: "04 | THE ELEVATE SYSTEMS SHOP"
+  headline_line1: "GOOD SYSTEMS."
+  headline_italic: "BIG POSSIBILITIES."
+  paragraph: "Practical templates, playbooks, and ready-to-use tools are on the way. Until then, explore our resources or talk with us about a custom solution."
+  cta_label: "EXPLORE RESOURCES"
+
+finale:
+  eyebrow: "05 | YOUR NEXT CHAPTER"
+  headline_line1: "READY TO"
+  headline_italic: "ELEVATE?"
+  paragraph: "You've got the vision. Let's make some magic."
+  cta_label: "LET'S GET STARTED"

@@ -1,0 +1,7 @@
+# Homepage-only footer (single line). All other pages use footer-full.yml.
+copyright_text: "ELEVATE CONSULTING | TEXAS & BEYOND"
+link_services: "SERVICES"
+link_resources: "RESOURCES"
+link_privacy: "PRIVACY"
+link_terms: "TERMS"
+link_email: "EMAIL"

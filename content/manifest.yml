@@ -1,0 +1,16 @@
+# Maps each page's template + content file to the real HTML file it builds.
+# scripts/build.py reads this. Add an entry here whenever a new page is
+# brought onto the CMS. footer: full | minimal (homepage uses minimal).
+pages:
+  - key: home
+    label: "Homepage"
+    template: templates/home.html
+    content: content/pages/home.yml
+    output: index.html
+    footer: minimal
+  - key: about
+    label: "About"
+    template: templates/about.html
+    content: content/pages/about.yml
+    output: about/index.html
+    footer: full

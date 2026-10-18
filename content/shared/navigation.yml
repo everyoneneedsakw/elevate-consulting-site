@@ -1,0 +1,40 @@
+# Site-wide navigation text — identical on every page.
+# Editing a field here updates it everywhere at once (nav, dropdowns,
+# mobile menu). Links/destinations are fixed in the page templates and
+# are not editable here, by design.
+
+services_dropdown:
+  menu_label: "Services"
+  item1_name: "Google Workspace Systems"
+  item1_desc: "Folder systems, SOP libraries, dashboards, CRM trackers"
+  item2_name: "SOPs & Playbooks"
+  item2_desc: "Documented processes your whole team can follow"
+  item3_name: "CRM & Automation"
+  item3_desc: "Lead tracking and follow-up systems"
+  item4_name: "Operations Consulting"
+  item4_desc: "Scaling, structure, and process improvement"
+  cta_name: "Work With Me"
+  cta_desc: "See how engagements work"
+
+industries_dropdown:
+  menu_label: "Industries"
+  item1_name: "Roofing Companies"
+  item1_desc: "Operations, estimating, crew systems"
+  item2_name: "Real Estate Professionals"
+  item2_desc: "Agent systems, CRM, transaction workflows"
+  item3_name: "Service Businesses"
+  item3_desc: "Operations and scaling systems"
+  cta_name: "Not sure? Start here"
+  cta_desc: "Book a free discovery call"
+
+top_level:
+  about_label: "About"
+  resources_label: "Resources"
+  templates_soon_label: "Templates (Soon)"
+
+ctas:
+  free_audit_label: "Free Audit"
+  book_a_call_label: "Book a Call"
+  book_a_discovery_call_label: "Book a Discovery Call"
+  menu_button_label: "☰ MENU"
+  pause_motion_label: "Pause Motion"

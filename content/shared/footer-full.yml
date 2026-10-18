@@ -1,0 +1,27 @@
+# Full 4-column footer used on every page except the homepage
+# (homepage uses the shorter footer-minimal.yml instead).
+tagline: "Operational clarity for service-based businesses — through systems, processes, and the infrastructure to scale with confidence."
+
+social_linkedin_label: "in"
+social_instagram_label: "ig"
+social_facebook_label: "fb"
+
+services_heading: "Services"
+services_item1: "Google Workspace Systems"
+services_item2: "SOPs & Playbooks"
+services_item3: "CRM & Automation"
+services_item4: "Operations Consulting"
+
+company_heading: "Company"
+company_item1: "About"
+company_item2: "Industries"
+company_item3: "Work With Me"
+company_item4_soon: "Templates — Coming Soon"
+company_cta: "Book a Discovery Call"
+
+contact_heading: "Contact"
+contact_location: "Texas · Remote-Capable"
+
+copyright_suffix: "Elevate Consulting. All rights reserved."
+privacy_label: "Privacy Policy"
+terms_label: "Terms of Service"
