@@ -91,9 +91,39 @@
     // balanced on mobile instead of spending most of the scroll off-screen.
     // body already has overflow-x:hidden, so this is about visual balance,
     // not preventing horizontal scroll (that's already structurally safe).
-    function ampScale() {
-      return Math.max(0.42, Math.min(1, window.innerWidth / 1440));
+    function ampScale(viewportWidth) {
+      return Math.max(0.42, Math.min(1, viewportWidth / 1440));
     }
+
+    // Cached layout reads, recomputed on resize/load — not on every rAF
+    // frame. Traced this loop under a real scroll (Chrome's
+    // UpdateLayoutTree / IntersectionObserverController::computeIntersections
+    // events) and found a style-and-layout pass firing TWICE per animation
+    // frame, not once: reading scrollHeight/innerHeight here every frame
+    // means that whenever anything else in the same frame (the reveal
+    // IntersectionObserver's own rendering-step check) leaves layout
+    // dirty, this read forces a second, redundant layout pass — pure
+    // wasted frame-budget on every single frame of scroll, which is
+    // exactly the kind of cost that shows up as stutter under real load.
+    // Caching removes that read from the hot path entirely. It also
+    // closes a second, real issue specific to phones: window.innerHeight
+    // tracks the VISUAL viewport, which shrinks and grows as the
+    // browser's URL bar collapses mid-scroll — recomputing the scroll
+    // fraction's denominator every frame against a moving target
+    // produces exactly the kind of snap/jump she's describing. A cached
+    // value, refreshed only on resize/orientation change, stays stable
+    // for the duration of a scroll gesture.
+    var cachedScrollable = 0;
+    var cachedAmp = 1;
+    function recomputeLayoutCache() {
+      var doc = document.documentElement;
+      cachedScrollable = doc.scrollHeight - window.innerHeight;
+      cachedAmp = ampScale(window.innerWidth);
+    }
+    recomputeLayoutCache();
+    window.addEventListener('resize', recomputeLayoutCache);
+    window.addEventListener('orientationchange', recomputeLayoutCache);
+    window.addEventListener('load', recomputeLayoutCache);
     function xAt(p, amp) {
       return amp * (340 * Math.sin(2 * Math.PI * 0.68 * p) + 65 * Math.sin(2 * Math.PI * 1.8 * p));
     }
@@ -136,7 +166,14 @@
     //    not just a cheap compositor-only transform update. Writing
     //    el.style.transform directly only touches this element.
     var current = null; // null until first frame, so there's no snap-in from (0,0)
-    var HALF_LIFE = 0.3; // seconds to close half the remaining distance — a touch heavier than the last pass for a more suspended, carried-by-a-current feel, without crossing into the "disconnected" lag she warned against
+    // Brought back down from 0.3s: that half-life made the orb keep
+    // drifting for over a second after scrolling stopped, which read as
+    // a prolonged catch-up rather than a graceful settle. 0.16s still
+    // smooths out per-frame scroll jitter (no 1:1 scroll-locked snap)
+    // but resolves to target quickly enough that stopping reads as a
+    // stop, not a lingering drift — and it retraces identically on the
+    // way back up, since position is a pure function of scroll fraction.
+    var HALF_LIFE = 0.16;
     var lastTime = null;
     var idleClock = 0;
 
@@ -146,11 +183,8 @@
       if (lastTime === null) lastTime = now; // avoids a huge dt on resume/first frame
       var dt = Math.min((now - lastTime) / 1000, 0.1); // clamp: tab switches, long tasks
       lastTime = now;
-      var doc = document.documentElement;
-      var scrollable = doc.scrollHeight - window.innerHeight;
-      var p = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
-      var amp = ampScale();
-      var target = { x: xAt(p, amp), y: yAt(p, amp), scale: scaleAt(p) };
+      var p = cachedScrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / cachedScrollable)) : 0;
+      var target = { x: xAt(p, cachedAmp), y: yAt(p, cachedAmp), scale: scaleAt(p) };
       if (!current) current = { x: target.x, y: target.y, scale: target.scale };
       var k = 1 - Math.pow(0.5, dt / HALF_LIFE);
       current.x += (target.x - current.x) * k;

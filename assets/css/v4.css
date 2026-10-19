@@ -381,11 +381,24 @@ body.v4 {
   .v4-form__row { grid-template-columns: 1fr; gap: 0; }
 }
 
-/* Small founder "signature" portrait beside the closing CTA — a personal
-   sign-off, not a second hero image. Fixed small size, never stretches. */
-.v4-finale__row { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
-.v4-finale__content { flex: 1 1 420px; min-width: 280px; }
-.v4-finale__photo { width: 200px; flex-shrink: 0; }
+/* Founder "signature" portrait beside the closing CTA — a real two-column
+   pairing with the headline (not a small afterthought at the far edge).
+   Grid, not flex, because the headline and the CTA text/button need to
+   stack in one column while the photo spans both rows beside them —
+   and because the same markup needs a different visual ORDER on mobile
+   (headline, then photo, then supporting text/button) without touching
+   the DOM, which plain flex-wrap can't do on its own. */
+.v4-finale__row {
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 420px);
+  grid-template-areas: "headline photo" "cta photo";
+  align-items: center;
+  column-gap: 56px;
+  row-gap: 22px;
+}
+.v4-finale__headline { grid-area: headline; }
+.v4-finale__cta { grid-area: cta; }
+.v4-finale__photo { grid-area: photo; }
 .v4-finale__photo img {
   display: block;
   width: 100%;
@@ -502,8 +515,12 @@ body.v4 {
   .v4-foot .wrap { flex-direction: column; gap: 14px; }
   .v4-foot a { margin: 0 14px 0 0; }
   .v4-ticker span { font-size: 15px; }
-  .v4-finale__row { gap: 32px; justify-content: center; }
-  .v4-finale__photo { width: 150px; }
+  .v4-finale__row {
+    grid-template-columns: 1fr;
+    grid-template-areas: "headline" "photo" "cta";
+    row-gap: 28px;
+  }
+  .v4-finale__photo { width: min(280px, 72vw); justify-self: center; }
 }
 @media (max-width: 460px) {
   .v4-steps { grid-template-columns: 1fr; }
