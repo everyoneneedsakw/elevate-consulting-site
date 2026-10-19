@@ -171,6 +171,12 @@ body.v4 {
   position: absolute; inset: 0;
   animation: orb-float 9s ease-in-out infinite;
 }
+/* On the homepage, idle drift is computed inside the same rAF loop that
+   drives scroll motion (see v4.js) and folded into --orb-x/--orb-y, so it
+   never runs out of sync with the scroll sweep. The independent CSS
+   keyframe above is for pages with no scroll choreography (About, Work
+   With Me, etc.) and must stay off here to avoid two competing motions. */
+#orbStage .orb-idle { animation: none; }
 
 /* Calmer variant for content-heavy pages (e.g. About): idle float +
    pointer parallax only, no scroll-driven waypoint sweep, lower

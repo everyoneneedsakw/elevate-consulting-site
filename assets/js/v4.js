@@ -69,55 +69,45 @@
   syncMotionState();
 
   /* ── Orb choreography ────────────────────────────────────
-     Waypoints are fractions of total scrollable distance (0–1).
-     Position/scale are interpolated between the two nearest
-     waypoints; "front" zones define when the orb passes in
-     front of the headline text instead of staying behind it.
-     Clustering waypoints tightly = a "still" moment; spacing
-     them apart = a "cinematic" movement beat — this is what
-     produces the motion/stillness rhythm without extra state.
+     A single continuous path through the page, parameterized by
+     scroll fraction p (0–1) — not discrete waypoints. Each of
+     x(p), y(p), scale(p) is a smooth function (sine blends for
+     position, a smoothstep dip-then-rise for scale), so there are
+     no segment boundaries for direction to kink at and nothing to
+     "restart" between sections. x sweeps once, generously, from
+     one side to the other (verified: a single direction reversal,
+     not a zigzag); y carries a smaller, differently-phased sweep
+     so the combined path curves instead of traveling in a straight
+     diagonal; scale dips mid-page and grows toward the finale,
+     preserving the original composition's dramatic arc.
   ──────────────────────────────────────────────────────────── */
   var orbStage = document.getElementById('orbStage');
   if (orbStage) {
-    var waypoints = [
-      { p: 0.00, x: 0,    y: 0,   scale: 1.00 },  // hero — original composition, behind headline
-      { p: 0.06, x: 0,    y: 0,   scale: 1.00 },  // still: let the hero breathe before it moves
-      { p: 0.14, x: -60,  y: -140, scale: 0.72 }, // cinematic: sweeps up and left, crosses in FRONT
-      { p: 0.22, x: -340, y: -40,  scale: 0.55 }, // still: settles beside "LESS CHAOS. MORE CONTROL."
-      { p: 0.33, x: -340, y: -40,  scale: 0.55 }, // still (hold)
-      { p: 0.46, x: 260,  y: 60,   scale: 0.85 }, // cinematic: drifts right through services
-      { p: 0.55, x: 260,  y: 60,   scale: 0.85 }, // still (hold)
-      { p: 0.66, x: -200, y: 120,  scale: 0.95 }, // cinematic: crosses back left, crosses in FRONT
-      { p: 0.74, x: -200, y: 120,  scale: 0.95 }, // still: beside the method steps
-      { p: 0.88, x: 40,   y: 40,   scale: 1.25 }, // cinematic: grows toward the finale
-      { p: 1.00, x: 40,   y: 80,   scale: 1.30 }, // still: settles behind "READY TO ELEVATE?"
-    ];
-    var frontZones = [[0.10, 0.18], [0.62, 0.70]];
-
-    function inFrontZone(p) {
-      for (var i = 0; i < frontZones.length; i++) {
-        if (p >= frontZones[i][0] && p <= frontZones[i][1]) return true;
-      }
-      return false;
+    function smoothstep(a, b, p) {
+      var t = Math.max(0, Math.min(1, (p - a) / (b - a)));
+      return t * t * (3 - 2 * t);
     }
-
-    function interpolate(p) {
-      for (var i = 0; i < waypoints.length - 1; i++) {
-        var a = waypoints[i], b = waypoints[i + 1];
-        if (p >= a.p && p <= b.p) {
-          var span = b.p - a.p;
-          var t = span === 0 ? 0 : (p - a.p) / span;
-          // ease-in-out for a more cinematic, less mechanical sweep
-          t = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-          return {
-            x: a.x + (b.x - a.x) * t,
-            y: a.y + (b.y - a.y) * t,
-            scale: a.scale + (b.scale - a.scale) * t,
-          };
-        }
-      }
-      var last = waypoints[waypoints.length - 1];
-      return { x: last.x, y: last.y, scale: last.scale };
+    // Scales sweep amplitude down on narrow viewports so the drift stays
+    // balanced on mobile instead of spending most of the scroll off-screen.
+    // body already has overflow-x:hidden, so this is about visual balance,
+    // not preventing horizontal scroll (that's already structurally safe).
+    function ampScale() {
+      return Math.max(0.42, Math.min(1, window.innerWidth / 1440));
+    }
+    function xAt(p, amp) {
+      return amp * (340 * Math.sin(2 * Math.PI * 0.68 * p) + 65 * Math.sin(2 * Math.PI * 1.8 * p));
+    }
+    function yAt(p, amp) {
+      return amp * (-110 * Math.sin(2 * Math.PI * 0.52 * p) + 45 * Math.sin(2 * Math.PI * 1.35 * p));
+    }
+    function scaleAt(p) {
+      if (p <= 0.42) return 1.0 - 0.42 * smoothstep(0, 0.42, p);
+      return 0.58 + 0.72 * smoothstep(0.42, 1, p);
+    }
+    // The one place in the new curve where x crosses back near center —
+    // the only point it'd visually cross over centered headline text.
+    function inFrontZone(p) {
+      return p >= 0.68 && p <= 0.84;
     }
 
     // Continuous rAF lerp, not a CSS transition: a fixed-duration CSS
@@ -127,21 +117,36 @@
     // orb's *current* position toward it by a constant fraction — this
     // tracks scroll speed smoothly whether the page glides or jumps.
     var current = null; // null until first frame, so there's no snap-in from (0,0)
-    var EASE = 0.08;
+    var EASE = 0.065;
+    var startTime = null;
 
-    function frame() {
+    function frame(now) {
       requestAnimationFrame(frame);
       if (motionPaused || reducedMotionMQ.matches) return;
+      if (startTime === null) startTime = now;
       var doc = document.documentElement;
       var scrollable = doc.scrollHeight - window.innerHeight;
       var p = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
-      var target = interpolate(p);
+      var amp = ampScale();
+      var target = { x: xAt(p, amp), y: yAt(p, amp), scale: scaleAt(p) };
       if (!current) current = { x: target.x, y: target.y, scale: target.scale };
       current.x += (target.x - current.x) * EASE;
       current.y += (target.y - current.y) * EASE;
       current.scale += (target.scale - current.scale) * EASE;
-      orbStage.style.setProperty('--orb-x', current.x.toFixed(2));
-      orbStage.style.setProperty('--orb-y', current.y.toFixed(2));
+
+      // Idle drift: a small, slow wobble layered on top of the settled
+      // scroll position — same rAF loop and same output properties as
+      // the scroll motion, so it's always in sync with it instead of
+      // being a separate CSS keyframe running on its own clock. Driven
+      // by elapsed time, not scroll, so it continues while the page is
+      // still; secondary in amplitude to the main sweep (~10px vs. a
+      // sweep spanning hundreds of px).
+      var t = (now - startTime) / 1000;
+      var idleX = 9 * Math.sin(t * 0.52);
+      var idleY = 6 * Math.sin(t * 0.37 + 1.1);
+
+      orbStage.style.setProperty('--orb-x', (current.x + idleX).toFixed(2));
+      orbStage.style.setProperty('--orb-y', (current.y + idleY).toFixed(2));
       orbStage.style.setProperty('--orb-scale', current.scale.toFixed(3));
       orbStage.classList.toggle('is-front', inFrontZone(p));
     }
