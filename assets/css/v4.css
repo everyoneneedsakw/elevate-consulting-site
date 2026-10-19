@@ -194,35 +194,55 @@ body.v4 {
 .orb {
   position: absolute; inset: 0; border-radius: 50%;
   transform: translate(-15%, -35%);
-  /* Redesigned against Katie's approved reference: same mauve/cream
-     family as before (#f1d4bf, #c28c9b, and --mauve itself), but the
-     outer stops now resolve to a light rose instead of the previous
-     near-black (#251d28) — that dark outer ring was the main reason
-     the sphere read as dense and solid rather than luminous. Two
-     gradient layers: a tight, bright off-center highlight (sharper
-     falloff than the first pass, so it reads as a concentrated hot
-     spot rather than a soft wash) plus a second, offset radial that
-     catches the opposite edge — a lit rim arc, like the reference's
-     illuminated edge — and a lighter, more translucent lower half. */
+  /* Sphere-shaded per Katie's note that uniform brightening reads as
+     flat: three layers instead of one smooth wash, each doing one
+     job. (1) A small, tight cream highlight pinned near the
+     upper-left edge — the light source. (2) A thin luminous rim
+     crescent tracing that same edge, fading out as it wraps toward
+     the dark side, giving the silhouette an illuminated boundary
+     rather than a soft blur-off. (3) The body itself goes *deeper*
+     mauve through the center and lower-right — real core shadow, not
+     just lower opacity — so the highlight and rim have something
+     dark to contrast against and the sphere reads as volume, not a
+     tinted disc. Same mauve/bronze/cream tokens throughout, just
+     organized the way light actually falls on a sphere. */
   background:
-    radial-gradient(circle at 22% 78%, transparent 36%, #fcf3e988 48%, #f1d4bf5c 56%, transparent 66%),
-    radial-gradient(circle at 32% 26%, #fffbf5 0%, #f8ece0 7%, #f1d4bf 18%, #ddabb4 36%, #b58a8a 58%, #d9b3bc 82%, transparent 94%);
+    radial-gradient(circle at 26% 22%, #fffdf8 0%, #f8ece0 10%, transparent 23%),
+    radial-gradient(circle at 48% 44%, #a8767e 0%, #8a5a65 28%, #6b4650 52%, #4a2f38 76%, #32202a 100%);
   filter: blur(.5px);
-  opacity: .86;
+  opacity: .94;
   box-shadow:
-    inset -14px -18px 38px #58394524,
-    inset 22px 18px 48px #f8ece038,
-    0 0 30px 3px #f1d4bf55,
-    0 0 150px #b58a8a55;
+    inset -12px -14px 32px -2px #2a192088,
+    0 0 24px 2px #f1d4bf4d,
+    0 0 120px #b58a8a40;
+}
+.orb::before {
+  content: "";
+  position: absolute; inset: 0; border-radius: 50%;
+  /* The rim crescent: a thin bright ring traced exactly on the
+     sphere's true boundary (a centered radial-gradient hugs it
+     perfectly, unlike an offset gradient trying to approximate an
+     edge), then masked by angle with a conic-gradient so it only
+     shows on the upper-left arc — the same side as the highlight —
+     and fades out as it wraps toward the shadowed lower-right,
+     instead of glowing as a full ring or a band across the face. */
+  /* circle closest-side (not the circle default of farthest-corner) so
+     the gradient's own percentage stops are relative to the visible
+     circle's actual radius — otherwise the "ring" lands outside the
+     border-radius clip and never paints at all. */
+  background: radial-gradient(circle closest-side at 50% 50%, transparent 86%, #fdf6ecf0 92%, #f1d4bfb3 96%, transparent 100%);
+  -webkit-mask-image: conic-gradient(transparent 0deg, transparent 245deg, #000 288deg, #000 340deg, transparent 360deg);
+  mask-image: conic-gradient(transparent 0deg, transparent 245deg, #000 288deg, #000 340deg, transparent 360deg);
 }
 .orb::after {
   content: "";
   position: absolute; inset: -30%;
   border-radius: 50%;
-  /* The soft halo behind the orb — sized and strengthened to be clearly
-     visible (per the reference) rather than a faint tint, still the
-     same mauve/bronze tokens as the rest of the file. */
-  background: radial-gradient(circle, #b58a8a55 0%, #c28c9b38 38%, #b7906320 62%, transparent 75%);
+  /* The halo now reads where the sphere is lit, not as a uniform ring:
+     strongest near the same upper-left edge as the highlight/rim,
+     tapering off toward the shadowed lower-right rather than glowing
+     evenly all the way around. */
+  background: radial-gradient(circle at 34% 30%, #f1d4bfaa 0%, #c28c9b70 28%, #b7906340 50%, transparent 72%);
   filter: blur(50px);
 }
 @keyframes orb-float { 50% { transform: translate(-12%, -39%) scale(1.04); } }
