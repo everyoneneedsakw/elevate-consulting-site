@@ -13,6 +13,17 @@
 # page-template source — {{tokens}} unresolved, never meant to be public.
 # It was reachable because Netlify's pretty-URL resolution matches
 # /templates/home straight to the literal file templates/home.html, which
-# sits in the published root like every other file. Block it explicitly;
-# the two exact-path rules above still take priority for the real page.
-/templates/*             /index.html                  404
+# sits in the published root like every other file.
+#
+# The first attempt at this rule (no trailing !) did not work — verified
+# against real edge-request logs from the deployed review site, not just
+# a local render: /templates/home kept returning 200 with raw {{tokens}}
+# after that fix shipped. Root cause: by default, when a redirect rule's
+# path matches an existing static file, Netlify serves that file directly
+# and skips the redirect entirely — the rule only "wins" over a real file
+# with the explicit force flag (!) after the status code. templates/home.html
+# is a real file sitting in the published root, so the unforced rule was
+# always a no-op. The two exact-match rules above still take priority for
+# the real Templates shop page (templates-page/index.html, a different
+# directory, not a raw source).
+/templates/*             /index.html                  404!

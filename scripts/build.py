@@ -12,6 +12,7 @@ Usage: python3 scripts/build.py
 Exits non-zero (and writes nothing) if a template references a content field
 that doesn't exist, or if any {{...}} token is left unresolved.
 """
+import hashlib
 import re
 import sys
 from pathlib import Path
@@ -71,8 +72,23 @@ def render(template_text, context, source_label):
     return out
 
 
+def asset_version():
+    """Short hash of the shared CSS+JS, appended as a cache-busting query
+    string on every page's stylesheet/script tag. Without this, a CSS/JS-only
+    fix (no content/template changes) can look "unfixed" on a reviewer's end
+    for no code reason at all — same URL, same path, so the browser's own
+    cache (and Netlify's edge cache, validated against that same unchanged
+    URL) can keep serving the pre-fix bytes after a deploy that genuinely
+    shipped the fix. Changing the URL on every asset change forces a real
+    fetch instead of relying on a hard refresh to notice."""
+    css = (ROOT / "assets" / "css" / "v4.css").read_bytes()
+    js = (ROOT / "assets" / "js" / "v4.js").read_bytes()
+    return hashlib.sha256(css + js).hexdigest()[:10]
+
+
 def main():
     manifest = load_yaml(ROOT / "content" / "manifest.yml")
+    version = asset_version()
 
     nav = flatten(load_yaml(ROOT / "content" / "shared" / "navigation.yml"), "nav.")
     footer_minimal = flatten(
@@ -95,6 +111,11 @@ def main():
 
         template_text = template_path.read_text(encoding="utf-8")
         rendered = render(template_text, context, key)
+        rendered = rendered.replace(
+            'href="/assets/css/v4.css"', f'href="/assets/css/v4.css?v={version}"'
+        ).replace(
+            'src="/assets/js/v4.js"', f'src="/assets/js/v4.js?v={version}"'
+        )
 
         old = output_path.read_text(encoding="utf-8") if output_path.exists() else None
         if rendered != old:

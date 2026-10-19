@@ -1,0 +1,13 @@
+# Netlify-only: excludes these paths from the deployed/uploaded bundle
+# without touching git. The GitHub Action (build-content.yml) regenerates
+# and commits the real pages BEFORE Netlify ever runs, and Netlify has no
+# separate build command for this site — it just uploads the publish
+# directory (the repo root) as-is. templates/ holds the raw page-template
+# sources ({{tokens}}, not meant to be public) that scripts/build.py reads
+# from; keeping them in git is required (that's the whole CMS pipeline),
+# but there's no reason for them to ever reach the CDN. Belt-and-suspenders
+# with the forced _redirects rule below: this keeps the files off the
+# deploy entirely, so there's nothing left for a redirect rule to have to
+# out-rank. templates-page/ (the real Templates shop page's own output
+# directory) is a different, unrelated name and is not touched by this.
+templates/
