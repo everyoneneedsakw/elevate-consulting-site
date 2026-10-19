@@ -194,26 +194,36 @@ body.v4 {
 .orb {
   position: absolute; inset: 0; border-radius: 50%;
   transform: translate(-15%, -35%);
-  /* Base gradient — exact colors unchanged. The two new inset/outer
-     shadow layers below add a rim light and soft internal roundness
-     without touching a single one of these stops. */
-  background: radial-gradient(circle at 32% 29%, #f1d4bf 0%, #c28c9b 17%, #825768 39%, #583c48 56%, #251d28 73%, transparent 76%);
-  filter: blur(1px);
-  opacity: .85;
+  /* Redesigned against Katie's approved reference: same mauve/cream
+     family as before (#f1d4bf, #c28c9b, and --mauve itself), but the
+     outer stops now resolve to a light rose instead of the previous
+     near-black (#251d28) — that dark outer ring was the main reason
+     the sphere read as dense and solid rather than luminous. Two
+     gradient layers: a tight, bright off-center highlight (sharper
+     falloff than the first pass, so it reads as a concentrated hot
+     spot rather than a soft wash) plus a second, offset radial that
+     catches the opposite edge — a lit rim arc, like the reference's
+     illuminated edge — and a lighter, more translucent lower half. */
+  background:
+    radial-gradient(circle at 22% 78%, transparent 36%, #fcf3e988 48%, #f1d4bf5c 56%, transparent 66%),
+    radial-gradient(circle at 32% 26%, #fffbf5 0%, #f8ece0 7%, #f1d4bf 18%, #ddabb4 36%, #b58a8a 58%, #d9b3bc 82%, transparent 94%);
+  filter: blur(.5px);
+  opacity: .86;
   box-shadow:
-    inset -50px -55px 95px var(--night-deep),
-    inset 22px 18px 48px #f1d4bf20,
-    0 0 26px 2px #f1d4bf45,
-    0 0 130px #a875793b;
+    inset -14px -18px 38px #58394524,
+    inset 22px 18px 48px #f8ece038,
+    0 0 30px 3px #f1d4bf55,
+    0 0 150px #b58a8a55;
 }
 .orb::after {
   content: "";
-  position: absolute; inset: -20%;
+  position: absolute; inset: -30%;
   border-radius: 50%;
-  /* Wider, warmer, more visible diffused backlight — same two palette
-     tokens (mauve, bronze) as the rest of the file, just more present. */
-  background: radial-gradient(circle, #b58a8a3d 0%, #b790632a 40%, transparent 70%);
-  filter: blur(46px);
+  /* The soft halo behind the orb — sized and strengthened to be clearly
+     visible (per the reference) rather than a faint tint, still the
+     same mauve/bronze tokens as the rest of the file. */
+  background: radial-gradient(circle, #b58a8a55 0%, #c28c9b38 38%, #b7906320 62%, transparent 75%);
+  filter: blur(50px);
 }
 @keyframes orb-float { 50% { transform: translate(-12%, -39%) scale(1.04); } }
 

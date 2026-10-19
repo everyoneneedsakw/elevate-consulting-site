@@ -136,7 +136,7 @@
     //    not just a cheap compositor-only transform update. Writing
     //    el.style.transform directly only touches this element.
     var current = null; // null until first frame, so there's no snap-in from (0,0)
-    var HALF_LIFE = 0.24; // seconds to close half the remaining distance
+    var HALF_LIFE = 0.3; // seconds to close half the remaining distance — a touch heavier than the last pass for a more suspended, carried-by-a-current feel, without crossing into the "disconnected" lag she warned against
     var lastTime = null;
     var idleClock = 0;
 
