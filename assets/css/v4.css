@@ -158,13 +158,18 @@ body.v4 {
   left: 53%; top: 18%;
   width: min(64vw, 800px); aspect-ratio: 1;
   pointer-events: none;
-  transform: translate3d(calc(var(--orb-x, 0) * 1px), calc(var(--orb-y, 0) * 1px), 0) scale(var(--orb-scale, 1));
+  /* Position/scale are written directly to this element's transform by
+     v4.js every frame (not via CSS custom properties — custom properties
+     inherit, so updating one here would force a style recalc on every
+     descendant below: orb-pointer, orb-idle, orb, orb::after). */
   will-change: transform;
 }
 .orb-scroll.is-front { z-index: 15; }
 .orb-pointer {
   position: absolute; inset: 0;
-  transform: translate3d(calc(var(--ptr-x, 0) * 1px), calc(var(--ptr-y, 0) * 1px), 0);
+  /* transform written directly by v4.js on pointermove, same reason as
+     above; the easing stays here since this is a CSS transition, not a
+     per-frame loop. */
   transition: transform .4s ease-out;
 }
 .orb-idle {
@@ -189,17 +194,26 @@ body.v4 {
 .orb {
   position: absolute; inset: 0; border-radius: 50%;
   transform: translate(-15%, -35%);
+  /* Base gradient — exact colors unchanged. The two new inset/outer
+     shadow layers below add a rim light and soft internal roundness
+     without touching a single one of these stops. */
   background: radial-gradient(circle at 32% 29%, #f1d4bf 0%, #c28c9b 17%, #825768 39%, #583c48 56%, #251d28 73%, transparent 76%);
   filter: blur(1px);
   opacity: .85;
-  box-shadow: inset -50px -55px 95px var(--night-deep), 0 0 130px #a875793b;
+  box-shadow:
+    inset -50px -55px 95px var(--night-deep),
+    inset 22px 18px 48px #f1d4bf20,
+    0 0 26px 2px #f1d4bf45,
+    0 0 130px #a875793b;
 }
 .orb::after {
   content: "";
-  position: absolute; inset: -12%;
+  position: absolute; inset: -20%;
   border-radius: 50%;
-  background: radial-gradient(circle, #b58a8a25, transparent 67%);
-  filter: blur(42px);
+  /* Wider, warmer, more visible diffused backlight — same two palette
+     tokens (mauve, bronze) as the rest of the file, just more present. */
+  background: radial-gradient(circle, #b58a8a3d 0%, #b790632a 40%, transparent 70%);
+  filter: blur(46px);
 }
 @keyframes orb-float { 50% { transform: translate(-12%, -39%) scale(1.04); } }
 

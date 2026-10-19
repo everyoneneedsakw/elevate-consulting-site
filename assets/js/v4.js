@@ -114,40 +114,62 @@
     // transition re-starts on every scroll event, so fast or uneven
     // scrolling produces visible stutter as it keeps interrupting itself.
     // Instead we read the target position every frame and ease the
-    // orb's *current* position toward it by a constant fraction — this
-    // tracks scroll speed smoothly whether the page glides or jumps.
+    // orb's *current* position toward it.
+    //
+    // Two fixes from the first pass, both found by inspecting this loop
+    // rather than by adding easing:
+    //
+    // 1. The catch-up used a fixed fraction *per frame* (current +=
+    //    (target-current)*EASE). That's frame-rate dependent: the same
+    //    constant converges roughly twice as fast on a 120Hz phone as on
+    //    a 60Hz one, and if the browser drops frames under load (the
+    //    scroll-reveal IntersectionObserver firing, a section painting),
+    //    the catch-up visibly speeds and slows with the frame rate
+    //    instead of gliding at a constant real-world pace. Replaced with
+    //    exponential smoothing on a real half-life in seconds
+    //    (1 - 0.5^(dt/HALF_LIFE)), which converges at the same rate
+    //    regardless of refresh rate or dropped frames.
+    // 2. The position was written to --orb-x/--orb-y/--orb-scale, CSS
+    //    custom properties. Custom properties inherit, so updating them
+    //    forces a style recalculation on every descendant of orbStage
+    //    (orb-pointer, orb-idle, orb, orb::after) every single frame —
+    //    not just a cheap compositor-only transform update. Writing
+    //    el.style.transform directly only touches this element.
     var current = null; // null until first frame, so there's no snap-in from (0,0)
-    var EASE = 0.065;
-    var startTime = null;
+    var HALF_LIFE = 0.24; // seconds to close half the remaining distance
+    var lastTime = null;
+    var idleClock = 0;
 
     function frame(now) {
       requestAnimationFrame(frame);
-      if (motionPaused || reducedMotionMQ.matches) return;
-      if (startTime === null) startTime = now;
+      if (motionPaused || reducedMotionMQ.matches) { lastTime = null; return; }
+      if (lastTime === null) lastTime = now; // avoids a huge dt on resume/first frame
+      var dt = Math.min((now - lastTime) / 1000, 0.1); // clamp: tab switches, long tasks
+      lastTime = now;
       var doc = document.documentElement;
       var scrollable = doc.scrollHeight - window.innerHeight;
       var p = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
       var amp = ampScale();
       var target = { x: xAt(p, amp), y: yAt(p, amp), scale: scaleAt(p) };
       if (!current) current = { x: target.x, y: target.y, scale: target.scale };
-      current.x += (target.x - current.x) * EASE;
-      current.y += (target.y - current.y) * EASE;
-      current.scale += (target.scale - current.scale) * EASE;
+      var k = 1 - Math.pow(0.5, dt / HALF_LIFE);
+      current.x += (target.x - current.x) * k;
+      current.y += (target.y - current.y) * k;
+      current.scale += (target.scale - current.scale) * k;
 
       // Idle drift: a small, slow wobble layered on top of the settled
-      // scroll position — same rAF loop and same output properties as
-      // the scroll motion, so it's always in sync with it instead of
-      // being a separate CSS keyframe running on its own clock. Driven
-      // by elapsed time, not scroll, so it continues while the page is
-      // still; secondary in amplitude to the main sweep (~10px vs. a
-      // sweep spanning hundreds of px).
-      var t = (now - startTime) / 1000;
-      var idleX = 9 * Math.sin(t * 0.52);
-      var idleY = 6 * Math.sin(t * 0.37 + 1.1);
+      // scroll position — same loop, same output, so it's always in sync
+      // with the scroll motion instead of being a separate CSS keyframe
+      // running on its own clock. Driven by elapsed time, not scroll, so
+      // it continues while the page is still; secondary in amplitude to
+      // the main sweep (~10px vs. a sweep spanning hundreds of px).
+      idleClock += dt;
+      var idleX = 9 * Math.sin(idleClock * 0.52);
+      var idleY = 6 * Math.sin(idleClock * 0.37 + 1.1);
 
-      orbStage.style.setProperty('--orb-x', (current.x + idleX).toFixed(2));
-      orbStage.style.setProperty('--orb-y', (current.y + idleY).toFixed(2));
-      orbStage.style.setProperty('--orb-scale', current.scale.toFixed(3));
+      orbStage.style.transform =
+        'translate3d(' + (current.x + idleX).toFixed(2) + 'px,' +
+        (current.y + idleY).toFixed(2) + 'px,0) scale(' + current.scale.toFixed(3) + ')';
       orbStage.classList.toggle('is-front', inFrontZone(p));
     }
     requestAnimationFrame(frame);
@@ -156,15 +178,20 @@
   /* Pointer parallax (desktop only, subtle, respects pause/reduced-motion).
      Independent of the scroll choreography above so pages that want a
      calmer, non-scroll-driven orb (e.g. About) can still get the subtle
-     mouse response without opting into the full homepage waypoint sweep. */
+     mouse response without opting into the full homepage waypoint sweep.
+     Writes transform directly (not a custom property) for the same
+     reason as the scroll loop above — this element has its own
+     descendants (orb-idle, orb) that would otherwise recalc on every
+     pointermove. The easing itself stays in CSS (.orb-pointer's existing
+     transition), since this is a sparse event handler, not a per-frame
+     loop — no frame-rate-dependence concern here. */
   var orbPointer = document.getElementById('orbPointer');
   if (orbPointer && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     window.addEventListener('pointermove', function (e) {
       if (motionPaused || reducedMotionMQ.matches) return;
       var x = (e.clientX / window.innerWidth - 0.5) * 70;
       var y = (e.clientY / window.innerHeight - 0.5) * 55;
-      orbPointer.style.setProperty('--ptr-x', x.toFixed(1));
-      orbPointer.style.setProperty('--ptr-y', y.toFixed(1));
+      orbPointer.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0)';
     }, { passive: true });
   }
 
