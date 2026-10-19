@@ -8,3 +8,11 @@
 # every other output directory.
 /templates              /templates-page/index.html   200
 /templates/              /templates-page/index.html   200
+
+# Everything else under /templates/* (templates/home.html, etc.) is a raw
+# page-template source — {{tokens}} unresolved, never meant to be public.
+# It was reachable because Netlify's pretty-URL resolution matches
+# /templates/home straight to the literal file templates/home.html, which
+# sits in the published root like every other file. Block it explicitly;
+# the two exact-path rules above still take priority for the real page.
+/templates/*             /index.html                  404

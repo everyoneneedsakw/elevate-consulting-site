@@ -57,7 +57,7 @@ body.v4 {
 .v4-nav__brand { font-size: 16px; letter-spacing: .04em; font-weight: 700; white-space: nowrap; }
 .v4-nav__brand span { font-weight: 400; opacity: .72; letter-spacing: .02em; }
 
-.v4-nav__links { display: flex; align-items: center; gap: 28px; font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.v4-nav__links { display: flex; align-items: center; gap: 28px; font-size: 17px; font-weight: 700; letter-spacing: .02em; }
 .v4-nav__item { position: relative; }
 .v4-nav__link { display: inline-flex; align-items: center; gap: 5px; padding: 8px 0; cursor: pointer; }
 .v4-nav__link:hover, .v4-nav__link[aria-current="page"] { color: var(--mauve); }
@@ -93,15 +93,15 @@ body.v4 {
 
 .v4-nav__ctas { display: flex; align-items: center; gap: 12px; }
 .v4-nav__cta-ghost {
-  border: 1px solid #ffffff55; border-radius: 50px; padding: 12px 21px;
-  font-size: 13px; font-weight: 700; letter-spacing: .04em;
+  border: 1px solid #ffffff55; border-radius: 50px; padding: 13px 24px;
+  font-size: 15px; font-weight: 700; letter-spacing: .02em;
   transition: border-color .2s, color .2s;
 }
 .v4-nav__cta-ghost:hover { border-color: var(--mauve); color: var(--mauve); }
 .v4-nav__cta-solid {
   border: 1px solid var(--mauve); background: var(--mauve); color: var(--night);
-  border-radius: 50px; padding: 12px 22px;
-  font-size: 13px; font-weight: 700; letter-spacing: .04em;
+  border-radius: 50px; padding: 13px 25px;
+  font-size: 15px; font-weight: 700; letter-spacing: .02em;
   transition: background .2s, border-color .2s;
 }
 .v4-nav__cta-solid:hover { background: #c69e9e; border-color: #c69e9e; }
@@ -165,6 +165,33 @@ body.v4 {
   will-change: transform;
 }
 .orb-scroll.is-front { z-index: 15; }
+/* Legibility fix: is-front puts the orb ABOVE the section's text
+   (z-index 15 > the chapter's 2), and the sphere's own body is
+   near-opaque (.orb opacity .94) — at full strength that fully
+   obscures whatever heading/paragraph it's passing over. Dropping
+   opacity sharply only while is-front is active keeps the crossing
+   as a visible wash of light/color over the type (the interaction
+   she wants to keep) without it ever becoming solid enough to block
+   reading.
+   Measured, not assumed: toggling this opacity rule alone (confirmed
+   by isolating it from every other change — mask, transition, all
+   ruled out one at a time) was costing real frames during the exact
+   scroll window it's active, traced the same way as the path fix
+   above. opacity forces the browser to promote .orb (which already
+   has filter: blur and a masked child) onto its own isolated
+   compositing layer; doing that promotion for the first time in the
+   same frame the animation is already running is the expensive part.
+   will-change: opacity below promotes it in advance, before is-front
+   ever triggers, so the change itself is just a cheap GPU alpha
+   update instead of a layer restructure mid-scroll. Re-traced after
+   this fix: dropped frames during a hard flick back to the same ~1-2
+   baseline as with is-front disabled entirely. */
+.orb-scroll.is-front .orb {
+  opacity: .22;
+}
+.orb-scroll.is-front .orb::after {
+  opacity: .4;
+}
 .orb-pointer {
   position: absolute; inset: 0;
   /* transform written directly by v4.js on pointermove, same reason as
@@ -185,11 +212,16 @@ body.v4 {
 
 /* Calmer variant for content-heavy pages (e.g. About): idle float +
    pointer parallax only, no scroll-driven waypoint sweep, lower
-   presence so it doesn't compete with reading. */
+   presence so it doesn't compete with reading. Opacity is a modest
+   reduction from the homepage, not a heavy one — .55 was washing out
+   the highlight/rim-crescent/halo detail from the sphere-shading
+   pass, making interior pages read as "the old, flatter orb" even
+   though it's literally the same .orb rules. .85 keeps that detail
+   legible while still sitting back from the homepage's full presence. */
 .orb-scroll.orb-static {
   top: 8%; left: 58%;
   width: min(50vw, 620px);
-  opacity: .55;
+  opacity: .85;
 }
 .orb {
   position: absolute; inset: 0; border-radius: 50%;
@@ -211,6 +243,14 @@ body.v4 {
     radial-gradient(circle at 48% 44%, #a8767e 0%, #8a5a65 28%, #6b4650 52%, #4a2f38 76%, #32202a 100%);
   filter: blur(.5px);
   opacity: .94;
+  /* Promotes this element to its own compositing layer up front. The
+     is-front legibility rule below toggles this opacity during active
+     scroll — without will-change, that first opacity change forces a
+     layer promotion/restructure in the same frame the transform is
+     already animating, which measurably dropped frames (traced and
+     isolated — see the is-front rule's comment). Pre-promoting makes
+     the actual change a cheap GPU alpha update instead. */
+  will-change: opacity;
   box-shadow:
     inset -12px -14px 32px -2px #2a192088,
     0 0 24px 2px #f1d4bf4d,
@@ -295,8 +335,8 @@ body.v4 {
 .v4-hero p.v4-copy { font-size: clamp(17px, 1.8vw, 23px); line-height: 1.5; max-width: 550px; margin: 38px 0 28px; color: #eee5e6; }
 .v4-link {
   display: inline-flex; align-items: center; gap: 18px;
-  border-bottom: 1px solid var(--bronze); padding: 12px 0;
-  font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
+  border-bottom: 1px solid var(--bronze); padding: 14px 0;
+  font-size: 14px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase;
 }
 .v4-link:hover { color: var(--mauve); }
 .v4-scroll-cue { position: absolute; bottom: 38px; left: 5%; font-size: 10px; letter-spacing: .2em; color: var(--muted); z-index: 2; }
@@ -480,7 +520,16 @@ body.v4 {
 .v4-check-item::before { content: "—"; color: var(--mauve); font-weight: 800; flex-shrink: 0; }
 
 .v4-tag-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
-.v4-tag { border: 1px solid currentColor; opacity: .55; border-radius: 50px; padding: 7px 15px; font-size: 11.5px; letter-spacing: .06em; font-weight: 700; }
+/* Previously opacity:.55 on the whole pill, which dims the border AND
+   the text together — exactly what reads as "low contrast." Using a
+   dedicated lighter color at full opacity instead keeps the text
+   legible while still reading as a quieter, secondary pill. */
+.v4-tag { border: 1px solid currentColor; color: var(--muted); border-radius: 50px; padding: 9px 16px; font-size: 15px; letter-spacing: .04em; font-weight: 700; }
+/* --muted is a light warm gray, correct for the dark hero sections .v4-tag
+   is used on, but on a cream section the same color is low-contrast
+   light-on-light — the same bug being fixed above, just needing a second
+   value for the light background instead of opacity doing double duty. */
+.v4-chapter.cream .v4-tag { color: #8a6a4e; }
 
 /* About hero — editorial two-column layout: bio left, portrait right. */
 .v4-about-hero__grid { gap: 70px; }

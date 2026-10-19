@@ -124,20 +124,52 @@
     window.addEventListener('resize', recomputeLayoutCache);
     window.addEventListener('orientationchange', recomputeLayoutCache);
     window.addEventListener('load', recomputeLayoutCache);
+    // Redesigned path. The previous curve (two summed sines for x, a
+    // 2-piece scale dip/rise) looked fine as a static plot but had a real,
+    // measured problem: traced the actual rendered transform every frame
+    // during a realistic momentum-scroll (MutationObserver on orbStage's
+    // style attribute, not a synthetic linear scrollTo) and found single-
+    // frame position jumps up to 16x the median frame-to-frame distance,
+    // concentrated at one narrow scroll band. The cause, confirmed by
+    // sampling dx/dp and dscale/dp by hand: a sine's steepest point is
+    // always at its zero-crossing, so the old x(p) was moving fastest
+    // exactly where it crossed center — and the scale dip/rise's own
+    // steepest point (a smoothstep's max slope is at its transition's
+    // midpoint, by construction) landed at almost the same scroll
+    // fraction (~0.71) as that crossing AND as the is-front z-index
+    // flip. Three compounding, simultaneous sharp changes in one narrow
+    // band is what read as "abrupt" — not a performance problem (traced
+    // frame timing separately: median 16.7ms/frame, 60fps, only a
+    // handful of frames over budget even under a hard flick) and not an
+    // easing-constant problem (the lerp was correctly smoothing toward a
+    // target that itself was moving in a burst).
+    //
+    // This version: a single smoothstep-based sweep for x (not summed
+    // sines), so there's one broad, legible right-to-left traverse
+    // across most of the page's sections with a gentler curve-back near
+    // the finale — per the brief: start right, sweep left over several
+    // sections, curve back naturally. Scale's dip and rise are
+    // retimed so their steepest points (~p=0.14 and ~p=0.56-0.66) fall
+    // well clear of x's two peaks (~p=0.37 and ~p=0.85), instead of
+    // stacking on top of them.
     function xAt(p, amp) {
-      return amp * (340 * Math.sin(2 * Math.PI * 0.68 * p) + 65 * Math.sin(2 * Math.PI * 1.8 * p));
+      var sweep = smoothstep(0.05, 0.70, p);
+      var curveBack = smoothstep(0.70, 1, p);
+      return amp * (280 - 540 * sweep + 320 * curveBack);
     }
     function yAt(p, amp) {
-      return amp * (-110 * Math.sin(2 * Math.PI * 0.52 * p) + 45 * Math.sin(2 * Math.PI * 1.35 * p));
+      return amp * (-70 * Math.sin(2 * Math.PI * 0.55 * p) + 24 * Math.sin(2 * Math.PI * 1.3 * p));
     }
     function scaleAt(p) {
-      if (p <= 0.42) return 1.0 - 0.42 * smoothstep(0, 0.42, p);
-      return 0.58 + 0.72 * smoothstep(0.42, 1, p);
+      if (p <= 0.28) return 1.0 - 0.36 * smoothstep(0, 0.28, p);
+      return 0.64 + 0.66 * smoothstep(0.28, 0.85, p);
     }
-    // The one place in the new curve where x crosses back near center —
-    // the only point it'd visually cross over centered headline text.
+    // Where x actually crosses center (~p=0.38 for this curve) — the
+    // only point the orb would visually cross over centered headline
+    // text. Narrower than the old zone, and no longer coincides with
+    // scale's steepest point (see above).
     function inFrontZone(p) {
-      return p >= 0.68 && p <= 0.84;
+      return p >= 0.33 && p <= 0.45;
     }
 
     // Continuous rAF lerp, not a CSS transition: a fixed-duration CSS

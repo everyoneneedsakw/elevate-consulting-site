@@ -35,7 +35,15 @@
   <link rel="stylesheet" href="/assets/css/v4.css">
   <style>
     .v4-industries-hero { text-align: center; display: flex; flex-direction: column; align-items: center; }
-    .v4-industries-hero .v4-copy { max-width: 700px; margin: 28px auto; }
+    /* .v4-hero p.v4-copy (global, flush-left for the editorial About-style
+       hero layout) is more specific than a plain two-class selector here
+       (element+2 classes beats 2 classes), so it was silently winning and
+       overriding both the width and the auto centering below — the
+       paragraph rendered at the global 550px/margin:0 instead of this
+       page's own values, flush against the left edge of .wrap instead of
+       centered. Matching its specificity with .v4-hero.v4-industries-hero
+       fixes it regardless of stylesheet source order. */
+    .v4-hero.v4-industries-hero .v4-copy { max-width: 680px; margin: 28px auto; }
     .v4-industries-hero .v4-cta-row { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
     .v4-icon-badge {
       display: inline-flex; align-items: center; justify-content: center;
