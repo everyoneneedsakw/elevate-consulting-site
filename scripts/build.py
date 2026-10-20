@@ -25,6 +25,50 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 TOKEN_RE = re.compile(r"\{\{\s*([a-zA-Z0-9_.]+)\s*\}\}")
 
+GA4_MEASUREMENT_ID = "G-GQCMZ08WTJ"
+GA4_PRODUCTION_HOSTNAME = "everyoneneedsakatiewest.com"
+
+# Manifest keys that must never receive analytics, in any environment.
+# The discovery application collects real prospective-client answers.
+# Any future private/authenticated page (an "Elevate HQ" admin area, a
+# client portal) must be added here at the time it's added to the
+# manifest, by default — tracking on a private page is something to
+# opt into deliberately, not something a page inherits automatically
+# just by existing.
+ANALYTICS_EXCLUDED_KEYS = {"discovery"}
+
+
+def ga4_snippet():
+    """Google Analytics (GA4), injected once here rather than hand-pasted
+    into each template, so every current page — and every future page
+    added to content/manifest.yml — carries it automatically with no
+    risk of a template being missed.
+
+    Gated at runtime to the real production hostname: scripts/build.py
+    renders identical HTML regardless of which branch triggers it, so a
+    build-time check can't tell a review-branch deploy apart from
+    production. Netlify branch deploys are served from a different
+    hostname (<branch>--elevateconsultingconcierge.netlify.app), so this
+    check keeps review/testing traffic out of real analytics data without
+    needing two different builds.
+    """
+    return (
+        "<script>\n"
+        "(function () {\n"
+        f"  if (location.hostname !== '{GA4_PRODUCTION_HOSTNAME}') return;\n"
+        "  window.dataLayer = window.dataLayer || [];\n"
+        "  function gtag() { dataLayer.push(arguments); }\n"
+        "  window.gtag = gtag;\n"
+        "  gtag('js', new Date());\n"
+        f"  gtag('config', '{GA4_MEASUREMENT_ID}');\n"
+        "  var s = document.createElement('script');\n"
+        "  s.async = true;\n"
+        f"  s.src = 'https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}';\n"
+        "  document.head.appendChild(s);\n"
+        "})();\n"
+        "</script>\n"
+    )
+
 
 def load_yaml(path):
     with open(path, encoding="utf-8") as f:
@@ -124,6 +168,9 @@ def main():
             'src="/assets/js/discovery.js"',
             f'src="/assets/js/discovery.js?v={discovery_version}"'
         )
+
+        if key not in ANALYTICS_EXCLUDED_KEYS:
+            rendered = rendered.replace("</head>", ga4_snippet() + "</head>")
 
         old = output_path.read_text(encoding="utf-8") if output_path.exists() else None
         if rendered != old:
