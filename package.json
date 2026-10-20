@@ -1,0 +1,9 @@
+{
+  "name": "elevate-discovery-functions",
+  "private": true,
+  "type": "module",
+  "description": "Netlify Functions backing the /discovery/ application's submission, storage, and delivery. The rest of this site is pure static HTML/CSS/JS with no build framework -- this is the one place that needs a real dependency.",
+  "dependencies": {
+    "@netlify/blobs": "^8.2.0"
+  }
+}
