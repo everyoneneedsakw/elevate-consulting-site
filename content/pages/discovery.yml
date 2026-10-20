@@ -4,16 +4,17 @@ seo:
     & Concierge clients.
 welcome:
   title: "Let's Talk About Your Business"
-  intro1: "You've got ideas, goals, and probably a few things you're tired of
-    figuring out on your own. This is your space to share what's working,
-    what feels messy, and what you'd love to make happen."
-  intro2: "You don't need polished answers or a perfect plan. Tell me where
-    you are—even if that includes 'I have no idea.' We'll start there."
-  saving_note: "Your answers save automatically on this device as you go,
-    so you can step away and pick back up — just this browser, for now."
+  intro1: "Tell us about your business, the ideas you're excited about, and
+    where you could use some support. We want to understand what you're
+    working toward and what would make a difference for you."
+  intro2: "You don't need to have everything figured out. Share your thoughts
+    in your own words, whether you have a clear vision or are still exploring
+    what's next. This gives us a place to begin our conversation."
+  saving_note: "Your answers save automatically on this device as you go, so
+    you can step away and come back later on this same browser."
   start_button: "Let's Get Into It"
 confirmation:
-  title: "You're all set."
-  body: "Thank you for letting me in on what you're building and what could
-    use some support. I'll review your answers so we can make our next
-    conversation count."
+  title: "Thank you. We've received your application."
+  body: "We appreciate you sharing your ideas, goals, and where you could use
+    support. Our team will review your answers and follow up with you about
+    next steps."
