@@ -213,6 +213,12 @@
   font-size: 12px; color: #8a8186; min-height: 16px; margin-bottom: 8px;
 }
 .discovery-save-status--error { color: #9c3b3b; }
+.discovery-submit-error {
+  font-size: 14px; color: #9c3b3b; background: #9c3b3b14;
+  border: 1px solid #9c3b3b33; border-radius: 10px;
+  padding: 10px 14px; margin: 0 0 10px;
+}
+.discovery-submit-error[hidden] { display: none; }
 .discovery-progress {
   height: 5px; border-radius: 10px; background: #00000014; overflow: hidden; margin-bottom: 10px;
   max-width: 220px;
