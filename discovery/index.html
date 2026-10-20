@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Direct-link only application — never indexed, never crawled from
+       here, not in any nav/footer/sitemap. _redirects/.netlifyignore
+       intentionally do NOT hide this path the way templates/ is hidden:
+       it's meant to be opened by anyone holding the link. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Client Discovery Application | Elevate Consulting &amp; Concierge</title>
+  <meta name="description" content="A guided discovery application for prospective Elevate Consulting &amp; Concierge clients.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/images/icons/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png">
+
+  <!-- Stylesheets: v4.css for shared tokens/orb/pause-motion only — no
+       nav, no section/chapter styles are used on this page. -->
+  <link rel="stylesheet" href="/assets/css/v4.css?v=0c66764714">
+  <link rel="stylesheet" href="/assets/css/discovery.css?v=0bc11a4d06">
+</head>
+<body class="v4 discovery-body">
+
+<!-- Calmer orb presence, same as About/Work With Me — idle float +
+     pointer parallax only, dialed further back in discovery.css so it
+     never competes with the questions. -->
+<div class="orb-scroll orb-static discovery-orb" aria-hidden="true">
+  <div class="orb-pointer" id="orbPointer">
+    <div class="orb-idle"><div class="orb"></div></div>
+  </div>
+</div>
+
+<a class="discovery-skip" href="#discoveryMain">Skip to form</a>
+
+<header class="discovery-header">
+  <a href="/" class="discovery-header__brand" aria-label="Elevate Consulting home">Elevate Consulting &amp; Concierge</a>
+</header>
+
+<main id="discoveryMain" class="discovery-app" data-discovery-root>
+  <!-- Rendered entirely by assets/js/discovery.js. Keeping this element
+       present (rather than empty body markup) gives a stable mount
+       point and means a JS failure leaves a blank, clearly-broken
+       area instead of silently showing nothing at all. -->
+  <noscript>
+    <div class="discovery-noscript">
+      This application needs JavaScript enabled to run. Please enable
+      JavaScript, or email <a href="mailto:katie@everyoneneedsakatiewest.com">katie@everyoneneedsakatiewest.com</a> directly.
+    </div>
+  </noscript>
+</main>
+
+<!-- CMS-editable copy (welcome/confirmation screens) handed to
+     discovery.js as data, so it stays editable via content/pages/
+     discovery.yml instead of being hardcoded in the JS engine. The
+     22 questions themselves are structural (types, options, required-
+     ness) and live in discovery.js directly — see its own header
+     comment for why. -->
+<script type="application/json" id="discoveryCopy">
+{
+  "welcome": {
+    "title": "Let's Talk About Your Business",
+    "intro1": "You've got ideas, goals, and probably a few things you're tired of figuring out on your own. This is your space to share what's working, what feels messy, and what you'd love to make happen.",
+    "intro2": "You don't need polished answers or a perfect plan. Tell me where you are—even if that includes 'I have no idea.' We'll start there.",
+    "savingNote": "Your answers save automatically on this device as you go, so you can step away and pick back up — just this browser, for now.",
+    "startButton": "Let's Get Into It"
+  },
+  "confirmation": {
+    "title": "You're all set.",
+    "body": "Thank you for letting me in on what you're building and what could use some support. I'll review your answers so we can make our next conversation count."
+  }
+}
+</script>
+
+<button type="button" class="v4-pause-motion" id="v4PauseMotion" aria-pressed="false">
+  <span class="v4-pause-motion__dot" aria-hidden="true"></span>
+  <span class="label">Pause Motion</span>
+</button>
+
+<script src="/assets/js/v4.js?v=0c66764714" defer></script>
+<script src="/assets/js/discovery.js?v=0bc11a4d06" defer></script>
+</body>
+</html>

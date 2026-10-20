@@ -1,0 +1,19 @@
+seo:
+  title: Client Discovery Application | Elevate Consulting & Concierge
+  description: A guided discovery application for prospective Elevate Consulting
+    & Concierge clients.
+welcome:
+  title: "Let's Talk About Your Business"
+  intro1: "You've got ideas, goals, and probably a few things you're tired of
+    figuring out on your own. This is your space to share what's working,
+    what feels messy, and what you'd love to make happen."
+  intro2: "You don't need polished answers or a perfect plan. Tell me where
+    you are—even if that includes 'I have no idea.' We'll start there."
+  saving_note: "Your answers save automatically on this device as you go,
+    so you can step away and pick back up — just this browser, for now."
+  start_button: "Let's Get Into It"
+confirmation:
+  title: "You're all set."
+  body: "Thank you for letting me in on what you're building and what could
+    use some support. I'll review your answers so we can make our next
+    conversation count."

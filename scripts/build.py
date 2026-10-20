@@ -72,23 +72,25 @@ def render(template_text, context, source_label):
     return out
 
 
-def asset_version():
-    """Short hash of the shared CSS+JS, appended as a cache-busting query
-    string on every page's stylesheet/script tag. Without this, a CSS/JS-only
-    fix (no content/template changes) can look "unfixed" on a reviewer's end
-    for no code reason at all — same URL, same path, so the browser's own
-    cache (and Netlify's edge cache, validated against that same unchanged
-    URL) can keep serving the pre-fix bytes after a deploy that genuinely
-    shipped the fix. Changing the URL on every asset change forces a real
-    fetch instead of relying on a hard refresh to notice."""
-    css = (ROOT / "assets" / "css" / "v4.css").read_bytes()
-    js = (ROOT / "assets" / "js" / "v4.js").read_bytes()
-    return hashlib.sha256(css + js).hexdigest()[:10]
+def file_version(*paths):
+    """Short hash of the given files, appended as a cache-busting query
+    string on their tag(s). Without this, a CSS/JS-only fix (no content/
+    template changes) can look "unfixed" on a reviewer's end for no code
+    reason at all — same URL, same path, so the browser's own cache (and
+    Netlify's edge cache, validated against that same unchanged URL) can
+    keep serving the pre-fix bytes after a deploy that genuinely shipped
+    the fix. Changing the URL on every asset change forces a real fetch
+    instead of relying on a hard refresh to notice. Scoped per asset
+    group (shared v4.*, discovery-only) so changing one doesn't bust
+    caches for pages that don't use it."""
+    data = b"".join((ROOT / p).read_bytes() for p in paths if (ROOT / p).exists())
+    return hashlib.sha256(data).hexdigest()[:10]
 
 
 def main():
     manifest = load_yaml(ROOT / "content" / "manifest.yml")
-    version = asset_version()
+    v4_version = file_version("assets/css/v4.css", "assets/js/v4.js")
+    discovery_version = file_version("assets/css/discovery.css", "assets/js/discovery.js")
 
     nav = flatten(load_yaml(ROOT / "content" / "shared" / "navigation.yml"), "nav.")
     footer_minimal = flatten(
@@ -112,9 +114,15 @@ def main():
         template_text = template_path.read_text(encoding="utf-8")
         rendered = render(template_text, context, key)
         rendered = rendered.replace(
-            'href="/assets/css/v4.css"', f'href="/assets/css/v4.css?v={version}"'
+            'href="/assets/css/v4.css"', f'href="/assets/css/v4.css?v={v4_version}"'
         ).replace(
-            'src="/assets/js/v4.js"', f'src="/assets/js/v4.js?v={version}"'
+            'src="/assets/js/v4.js"', f'src="/assets/js/v4.js?v={v4_version}"'
+        ).replace(
+            'href="/assets/css/discovery.css"',
+            f'href="/assets/css/discovery.css?v={discovery_version}"'
+        ).replace(
+            'src="/assets/js/discovery.js"',
+            f'src="/assets/js/discovery.js?v={discovery_version}"'
         )
 
         old = output_path.read_text(encoding="utf-8") if output_path.exists() else None
