@@ -105,3 +105,11 @@ pages:
     content: content/pages/terms.yml
     output: terms/index.html
     footer: full
+  # Direct-link only — deliberately not in nav/footer/sitemap. See
+  # templates/discovery.html's <head> for noindex + robots.txt.
+  - key: discovery
+    label: "Client Discovery Application"
+    template: templates/discovery.html
+    content: content/pages/discovery.yml
+    output: discovery/index.html
+    footer: none
