@@ -4,8 +4,19 @@
    record from the handler -- nothing here knows Sheets or Gmail exist,
    so adding a new delivery channel later never touches this file. */
 
-import { getStore } from '@netlify/blobs';
 import { FIELDS, REQUIRED_FIELD_IDS, FIELD_BY_ID } from './discovery-schema.mjs';
+
+// Loaded dynamically, inside a function body, rather than as a static
+// top-level import. A static `import { getStore } from '@netlify/blobs'`
+// that fails to resolve on the platform (a bundling/dependency problem)
+// crashes the entire module before any of our own code runs -- including
+// the try/catch in the handler -- producing an opaque platform-level 502
+// with no diagnostic information. Deferring it to a dynamic import lets
+// us catch that specific failure and report it plainly instead.
+async function loadBlobsStore() {
+  var mod = await import('@netlify/blobs');
+  return mod.getStore;
+}
 
 const FORM_VERSION = '2.0.0';
 
@@ -90,7 +101,7 @@ function acceptedStore(context) {
   // Applications/Test Submissions tab split, applied to the durable
   // acceptance ledger itself.
   var env = (context.deploy && context.deploy.context === 'production') ? 'production' : 'test';
-  return getStore('discovery-accepted-' + env);
+  return env;
 }
 
 /**
@@ -100,14 +111,42 @@ function acceptedStore(context) {
  * is the first acceptance, stores and returns the new canonical record.
  * The `created` flag tells the caller whether delivery (Sheets, email)
  * should run -- it must not re-run on a replayed retry.
+ *
+ * Throws a plain Error with a specific, non-secret message on failure --
+ * never lets an unexpected exception reach the caller unlabeled. The
+ * handler is responsible for turning that into a clean JSON response.
  */
 export async function acceptOnce(canonicalRecord, context) {
-  var store = acceptedStore(context);
+  var getStore;
+  try {
+    getStore = await loadBlobsStore();
+  } catch (e) {
+    throw new Error('blobs_module_unavailable: ' + (e && e.message));
+  }
+
+  var store;
+  try {
+    store = getStore('discovery-accepted-' + acceptedStore(context));
+  } catch (e) {
+    throw new Error('blobs_store_init_failed: ' + (e && e.message));
+  }
+
   var key = canonicalRecord.applicationId;
-  var result = await store.setJSON(key, canonicalRecord, { onlyIfNew: true });
+  var result;
+  try {
+    result = await store.setJSON(key, canonicalRecord, { onlyIfNew: true });
+  } catch (e) {
+    throw new Error('blobs_write_failed: ' + (e && e.message));
+  }
+
   if (result.modified) {
     return { record: canonicalRecord, created: true };
   }
-  var existing = await store.get(key, { type: 'json' });
-  return { record: existing || canonicalRecord, created: false };
+
+  try {
+    var existing = await store.get(key, { type: 'json' });
+    return { record: existing || canonicalRecord, created: false };
+  } catch (e) {
+    throw new Error('blobs_read_failed: ' + (e && e.message));
+  }
 }
