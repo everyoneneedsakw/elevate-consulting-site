@@ -1017,13 +1017,25 @@
           return;
         }
         setSubmitButtonBusy(false);
-        showSubmitError("Something went wrong sending your application. Your answers are saved on this device — nothing is lost. Please try again.");
+        // The server only ever returns a short safe code + its own
+        // request ID here -- never raw error text, env var names, or
+        // anything else describing internal configuration. That's shown
+        // directly; there's nothing more detailed to keep out of view.
+        var code = (result.data && result.data.code) || 'E_RESPONSE';
+        var ref = (result.data && result.data.requestId) || null;
+        showSubmitError(submitErrorMessage(code, ref));
       })
       .catch(function () {
         state.submitting = false;
         setSubmitButtonBusy(false);
-        showSubmitError("Couldn't reach the server to send your application. Your answers are saved on this device — nothing is lost. Check your connection and try again.");
+        showSubmitError(submitErrorMessage('E_NETWORK', null));
       });
+  }
+
+  function submitErrorMessage(code, ref) {
+    var base = "Something went wrong sending your application. Your answers are saved on this device — nothing is lost. Please try again.";
+    var tag = ref ? ' (' + code + ', ref ' + ref + ')' : ' (' + code + ')';
+    return base + tag;
   }
 
   function showSubmitPreviewNotice() {
