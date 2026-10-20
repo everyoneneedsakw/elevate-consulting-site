@@ -37,7 +37,7 @@
    same-device localStorage draft saving, draft migration from the
    prior 22-question schema. Submission is a disabled preview — see
    handleSubmit() — until backend delivery is approved, connected,
-   and tested (BACKEND_CONNECTED stays false until then).
+   and tested end to end on a real deploy).
 ═══════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -45,7 +45,7 @@
   var FORM_VERSION = '2.0.0';
   var STORAGE_KEY = 'elevate_discovery_draft_v1';
   var AUTOSAVE_DEBOUNCE_MS = 600;
-  var BACKEND_CONNECTED = false; // flips true once real submission exists — see handleSubmit()
+  var BACKEND_CONNECTED = true; // wired to netlify/functions/discovery-submit.mjs — see handleSubmit()
 
   var reducedMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -374,7 +374,8 @@
     currentScreen: 0,
     furthestScreenReached: 0,
     cameFromReview: false,
-    migrationNotes: null
+    migrationNotes: null,
+    submitting: false
   };
 
   function uuid() {
@@ -745,6 +746,7 @@
 
     chrome.innerHTML =
       '<div class="discovery-chrome__status" id="discoverySaveStatus" role="status" aria-live="polite"></div>' +
+      '<p class="discovery-submit-error" id="discoverySubmitError" role="alert" hidden></p>' +
       '<div class="discovery-progress" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="Application progress">' +
         '<div class="discovery-progress__bar" style="width:' + pct + '%"></div>' +
       '</div>' +
@@ -760,6 +762,7 @@
       '</div>';
     panel.appendChild(chrome);
     setSavingStatus(storageAvailable ? 'saved' : 'error');
+    if (state.submitting) setSubmitButtonBusy(true);
   }
 
   /* ── Events ─────────────────────────────────────────────── */
@@ -937,6 +940,33 @@
   }
 
   /* ── Submit ─────────────────────────────────────────────── */
+  var SUBMIT_URL = '/.netlify/functions/discovery-submit';
+
+  function setSubmitButtonBusy(busy) {
+    var btn = document.querySelector('#discoveryChrome [data-action="submit"]');
+    if (!btn) return;
+    if (busy) {
+      btn.dataset.originalLabel = btn.dataset.originalLabel || btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.setAttribute('aria-disabled', 'true');
+    } else {
+      btn.textContent = btn.dataset.originalLabel || 'Send to Elevate';
+      btn.removeAttribute('aria-disabled');
+    }
+  }
+
+  function showSubmitError(message) {
+    var el = document.getElementById('discoverySubmitError');
+    if (!el) return;
+    el.textContent = message;
+    el.hidden = false;
+  }
+
+  function clearSubmitError() {
+    var el = document.getElementById('discoverySubmitError');
+    if (el) { el.hidden = true; el.textContent = ''; }
+  }
+
   function handleSubmit() {
     var incompleteScreen = null;
     for (var i = 1; i <= TOTAL_CONTENT_SCREENS; i++) {
@@ -947,15 +977,53 @@
       goToScreen(incompleteScreen, 'fwd');
       return;
     }
-    if (BACKEND_CONNECTED) {
-      // Real submission path — not wired yet. Once a backend exists,
-      // this replaces showSubmitPreviewNotice() everywhere, including
-      // production: a durable-accept response sets status 'submitted',
-      // clears the draft, and routes to the real confirmation screen.
-      // Never shown until that's true and tested end to end.
+    if (!BACKEND_CONNECTED) {
+      showSubmitPreviewNotice();
       return;
     }
-    showSubmitPreviewNotice();
+    if (state.submitting) return; // guards against a double-click firing two requests
+    submitToBackend();
+  }
+
+  function submitToBackend() {
+    state.submitting = true;
+    clearSubmitError();
+    setSubmitButtonBusy(true);
+
+    var payload = { applicationId: state.applicationId, answers: state.answers };
+
+    fetch(SUBMIT_URL, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        return res.json().catch(function () { return null; }).then(function (data) {
+          return { ok: res.ok, data: data };
+        });
+      })
+      .then(function (result) {
+        state.submitting = false;
+        if (result.ok && result.data && result.data.status === 'accepted') {
+          // Durable acceptance confirmed by the server -- only now is it
+          // safe to clear the local draft and show real success. The
+          // applicationId stays the same throughout, so if this response
+          // is ever lost to a network error after the server already
+          // accepted it, retrying re-sends the same ID and the server
+          // returns that same accepted result rather than a duplicate.
+          state.status = 'submitted';
+          clearDraft();
+          goToScreen('confirmation', 'fwd');
+          return;
+        }
+        setSubmitButtonBusy(false);
+        showSubmitError("Something went wrong sending your application. Your answers are saved on this device — nothing is lost. Please try again.");
+      })
+      .catch(function () {
+        state.submitting = false;
+        setSubmitButtonBusy(false);
+        showSubmitError("Couldn't reach the server to send your application. Your answers are saved on this device — nothing is lost. Check your connection and try again.");
+      });
   }
 
   function showSubmitPreviewNotice() {
