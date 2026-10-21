@@ -12,7 +12,7 @@
    detail is console.error'd (server-side only, visible in Netlify's
    own Function logs) and nowhere else. */
 
-import { validateSubmission, buildCanonicalRecord, acceptOnce } from './lib/discovery-core.mjs';
+import { validateSubmission, buildCanonicalRecord, acceptOnce, recordDeliverySuccess } from './lib/discovery-core.mjs';
 import { deliverToGoogleSheets } from './lib/deliver-sheets.mjs';
 import { sendNotificationEmail } from './lib/deliver-email.mjs';
 
@@ -92,32 +92,40 @@ async function handleRequest(req, context) {
 
   // Durable acceptance has already happened at this point (or had
   // already happened on a prior attempt with the same applicationId) --
-  // everything below is best-effort delivery. A delivery failure is
-  // logged, never returned to the client as a failed submission: the
-  // application is safely recorded either way.
-  var deliveryStatus = { sheets: 'skipped', email: 'skipped' };
+  // everything below is best-effort delivery, retried PER CHANNEL based
+  // on the record's own stored delivery status, not on whether this is
+  // technically a "new" acceptance. That distinction matters: a prior
+  // attempt can crash between accepting and delivering (exactly what
+  // happened on the two real failures that led to this fix), leaving an
+  // accepted record whose delivery never actually ran. Treating "a
+  // record exists" as "delivery is done" would silently drop that
+  // submission. Each channel is only skipped once it's actually
+  // confirmed 'ok' on the record itself.
+  var delivery = accepted.record.delivery;
+  var deliveryStatus = { sheets: delivery.sheets, email: delivery.email };
+  var sheetTab = null;
 
-  if (accepted.created) {
-    var sheetTab = null;
+  if (delivery.sheets !== 'ok') {
     try {
       var sheetsResult = await deliverToGoogleSheets(accepted.record, context);
       sheetTab = sheetsResult.tab;
+      await recordDeliverySuccess(accepted.record.applicationId, 'sheets', context);
       deliveryStatus.sheets = 'ok';
     } catch (e) {
       console.error('discovery-submit [' + context.requestId + ']: sheets delivery failed:', e);
       deliveryStatus.sheets = 'failed';
     }
+  }
 
+  if (delivery.email !== 'ok') {
     try {
-      await sendNotificationEmail(accepted.record, sheetTab || 'unknown');
+      await sendNotificationEmail(accepted.record, sheetTab || 'unknown (already delivered on a prior attempt)');
+      await recordDeliverySuccess(accepted.record.applicationId, 'email', context);
       deliveryStatus.email = 'ok';
     } catch (e) {
       console.error('discovery-submit [' + context.requestId + ']: email delivery failed:', e);
       deliveryStatus.email = 'failed';
     }
-  } else {
-    deliveryStatus.sheets = 'already-delivered';
-    deliveryStatus.email = 'already-delivered';
   }
 
   return json({
