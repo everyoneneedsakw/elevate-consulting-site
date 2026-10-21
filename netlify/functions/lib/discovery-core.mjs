@@ -104,49 +104,97 @@ function acceptedStore(context) {
   return env;
 }
 
-/**
- * Idempotent accept: if this applicationId was already accepted, returns
- * the previously-stored canonical record instead of creating a new one --
- * a retried request can never produce two accepted applications. If this
- * is the first acceptance, stores and returns the new canonical record.
- * The `created` flag tells the caller whether delivery (Sheets, email)
- * should run -- it must not re-run on a replayed retry.
- *
- * Throws a plain Error with a specific, non-secret message on failure --
- * never lets an unexpected exception reach the caller unlabeled. The
- * handler is responsible for turning that into a clean JSON response.
- */
-export async function acceptOnce(canonicalRecord, context) {
+var DELIVERY_CHANNELS = ['sheets', 'email'];
+var DELIVERY_PENDING = { sheets: 'pending', email: 'pending' };
+
+// Normalizes a record's delivery sub-object for records written before
+// this tracking existed (e.g. the two real crashed attempts that hit the
+// old library-version bug: they wrote a plain record with no `delivery`
+// field at all, having crashed before reaching this point). Treated as
+// fully pending, never as already-delivered -- the whole reason this
+// exists is to stop an incomplete submission from being read as finished.
+function normalizeDelivery(record) {
+  var d = (record && record.delivery) || {};
+  return {
+    sheets: d.sheets === 'ok' ? 'ok' : 'pending',
+    email: d.email === 'ok' ? 'ok' : 'pending'
+  };
+}
+
+async function getBlobsStore(context) {
   var getStore;
   try {
     getStore = await loadBlobsStore();
   } catch (e) {
     throw new Error('blobs_module_unavailable: ' + (e && e.message));
   }
-
-  var store;
   try {
-    store = getStore('discovery-accepted-' + acceptedStore(context));
+    return getStore('discovery-accepted-' + acceptedStore(context));
   } catch (e) {
     throw new Error('blobs_store_init_failed: ' + (e && e.message));
   }
+}
 
+/**
+ * Idempotent accept: if this applicationId was already accepted, returns
+ * the previously-stored record (with its delivery status normalized, see
+ * above) instead of creating a new one -- a retried request can never
+ * produce a second accepted record. If this is the first acceptance,
+ * stores the canonical record with both delivery channels pending and
+ * returns it. Either way, the caller is responsible for checking
+ * record.delivery per channel and retrying whichever isn't 'ok' yet --
+ * "a record exists" is never treated as "delivery is done".
+ *
+ * Throws a plain Error with a specific, non-secret message on failure --
+ * never lets an unexpected exception reach the caller unlabeled. The
+ * handler is responsible for turning that into a clean JSON response.
+ */
+export async function acceptOnce(canonicalRecord, context) {
+  var store = await getBlobsStore(context);
   var key = canonicalRecord.applicationId;
+  var recordToStore = Object.assign({}, canonicalRecord, { delivery: Object.assign({}, DELIVERY_PENDING) });
+
   var result;
   try {
-    result = await store.setJSON(key, canonicalRecord, { onlyIfNew: true });
+    result = await store.setJSON(key, recordToStore, { onlyIfNew: true });
   } catch (e) {
     throw new Error('blobs_write_failed: ' + (e && e.message));
   }
 
   if (result.modified) {
-    return { record: canonicalRecord, created: true };
+    return { record: recordToStore };
   }
 
   try {
     var existing = await store.get(key, { type: 'json' });
-    return { record: existing || canonicalRecord, created: false };
+    var record = existing || recordToStore;
+    record.delivery = normalizeDelivery(record);
+    return { record: record };
   } catch (e) {
     throw new Error('blobs_read_failed: ' + (e && e.message));
   }
+}
+
+/**
+ * Persists that a delivery channel succeeded for this applicationId, so
+ * a future retry won't re-deliver it. A plain (non-conditional)
+ * read-modify-write -- intentionally last-write-wins, which is fine at
+ * this volume (one submission at a time, guarded client-side and by
+ * rate limiting) and keeps this from depending on @netlify/blobs'
+ * onlyIfMatch retry dance for a low-stakes status flag. If this write
+ * itself fails right after a real Sheets/email success, the channel
+ * would be retried on a future attempt -- a disclosed, accepted
+ * residual risk rather than a silent one; see the delivery channels'
+ * own idempotency (Sheets dedup is not implemented at this volume).
+ */
+export async function recordDeliverySuccess(applicationId, channel, context) {
+  if (DELIVERY_CHANNELS.indexOf(channel) === -1) {
+    throw new Error('unknown_delivery_channel: ' + channel);
+  }
+  var store = await getBlobsStore(context);
+  var current = await store.get(applicationId, { type: 'json' });
+  if (!current) return; // nothing to update -- shouldn't happen, not fatal either way
+  current.delivery = normalizeDelivery(current);
+  current.delivery[channel] = 'ok';
+  await store.setJSON(applicationId, current);
 }
